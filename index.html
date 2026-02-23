@@ -5,39 +5,82 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Trimly</title>
     <link rel="stylesheet" href="style.css">
-    <!-- Google Font -->
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
 
-    <!-- Icons (Same style as screenshot) -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+B5    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
 
     <link rel="stylesheet" href="services.css">
 
 </head>
 <body>
 
-<!-- Offer Bar -->
 <div class="offer-bar">
     Flat <strong>15% Off</strong> for First-Time Clients — Use Code <b>TRIMLY15</b>
 </div>
 
-<!-- Navbar -->
 <header class="navbar">
     <div class="logo">TRIMLY</div>
 
     <nav class="menu">
-        <a href="#">Home</a>
-        <a href="#">About</a>
-        <a href="#">Services</a>
-        <a href="#">Pages</a>
-        <a href="#">Pricing</a>
-        <a href="#">Contact</a>
+        <a href="#"id="homeLink">Home</a>
+        <a href="#"id="about">About</a>
+        <a href="#"id="Services ">services</a>
+        <a href="#"id="Pages Link">pages</a>
+        <a href="#"id="Pricing Link">pricing</a>
+        <a href="#"id="Contact Link">contact</a>
     </nav>
+  <div id="header-actions"></div>
+</header>
+<section class="hero">
+
+    <div class="hero-slider">
+
+        <!-- Slide 1 -->
+        <div class="hero-slide active">
+            <img src="image\slide1.jpg" class="hero-bg">
+
+            <div class="hero-content">
+                <h1>SHARP LOOKS.<br>TIMELESS STYLE.</h1>
+                <p>Expert Barbers. Modern Styles. A grooming experience you'll love.</p>
+                <button>Get Groomed Today →</button>
+            </div>
+        </div>
+
+        <!-- Slide 2 -->
+        <div class="hero-slide">
+            <img src="image\slide2.jpg" class="hero-bg">
+
+            <div class="hero-content">
+                <h1>MODERN CUTS.<br>CLASSIC CONFIDENCE.</h1>
+                <p>Precision styling tailored for you.</p>
+                <button>Book Appointment →</button>
+            </div>
+        </div>
+
+        <!-- Slide 3 -->
+        <div class="hero-slide">
+            <img src="image\slide3.jpg" class="hero-bg">
+
+            <div class="hero-content">
+                <h1>STYLE THAT<br>SPEAKS.</h1>
+                <p>Because first impressions matter.</p>
+                <button>Explore Services →</button>
+            </div>
+        </div>
+
+        <!-- Arrows -->
+        <div class="hero-prev">&#10094;</div>
+        <div class="hero-next">&#10095;</div>
+
+    </div>
+
+</section>
+</body>
+</html>
+<script src="script.js"></script>
 
     <button class="book-btn">Book Appointment</button>
 </header>
-
-<!-- Hero Section -->
 <section class="hero">
 
     <div class="hero-text">
@@ -47,7 +90,6 @@
 
         <button class="main-btn">Get Groomed Today ➜</button>
 
-        <!-- Rating -->
         <div class="rating">
             <span class="google">G</span>
             <span class="score">4.9</span>
@@ -57,24 +99,20 @@
     </div>
 
     <div class="hero-img">
-        <img src="C:\Users\ELCOT\Desktop\aishu\image\images (3).jpg" alt="Barber">
+        <img src="image/banner.jpg.jpg" alt="">
     </div>
 
 </section>
 
+</section>
 <section class="experience">
 
-    <p class="subtitle">The Trimly Experience</p>
-    <h1 class="title">Where Style Meets Experience</h1>
+<div class="experience-container">
 
-    <div class="experience-container">
-
-        <!-- Left Image -->
         <div class="left">
-            <img src="C:\Users\ELCOT\Desktop\aishu\image\salon2.jpg" alt="">
+            <img src="image\salon2.jpg" alt="">
         </div>
-
-        <!-- Right Content -->
+z
         <div class="right">
 
             <h2>Innovative Hair Solutions Backed by<br>Decades of Experience</h2>
@@ -86,7 +124,30 @@
             </p>
 
             <div class="action-row">
-                <a href="#" class="btn">Learn More</a>
+                <section class="about-section">
+
+    <div class="about-content">
+        <h2>Innovative Hair Solutions Backed by Decades of Experience</h2>
+
+        <button id="learnBtn" class="learn-btn">Learn More</button>
+    </div>
+
+    <!-- Hidden Content -->
+    <div id="moreInfo" class="more-info">
+        <h3>Why Choose Our Salon?</h3>
+        <p>
+            Our salon offers expert stylists, personalized consultation,
+            and modern techniques to give you the perfect look.
+            We focus on comfort, quality, and customer satisfaction.
+        </p>
+
+        <ul>
+            <li>✔ Experienced Stylists</li>
+            <li>✔ Premium Products</li>
+            <li>✔ Relaxing Environment</li>
+            <li>✔ Modern Hair Techniques</li>
+        </ul>
+    </div>
 
                 <div class="phone">
                     <div class="icon">📞</div>
@@ -97,12 +158,10 @@
                 </div>
             </div>
 
-            <!-- Bottom Images -->
             <div class="bottom-images">
-                  <img src="C:\Users\ELCOT\Desktop\aishu\image\service 2.jpg" alt="">
+                  <img src="image\service 2.jpg" alt="">
             </div>
 
-            <!-- Features -->
             <ul class="features">
                 <li>✔ Experienced Stylists</li>
                 <li>✔ Personalized Consultation</li>
@@ -111,7 +170,6 @@
                 <li>✔ Personalized Grooming</li>
             </ul>
 
-            <!-- Experience Box -->
             <div class="experience-box">
                 <h3>15+</h3>
                 <p>Years of Trusted Hair Expertise</p>
@@ -131,9 +189,8 @@
 
     <div class="service-container">
 
-        <!-- Card 1 -->
         <div class="card">
-            <img src="C:\Users\ELCOT\Desktop\aishu\image\p.jpg" alt="Men Service">
+            <img src="image\p.jpg" alt="">
 
             <div class="icon-box">
                 <i class="fa-solid fa-user"></i>
@@ -152,10 +209,8 @@
 
             <button>Learn More</button>
         </div>
-
-        <!-- Card 2 -->
         <div class="card">
-            <img src="C:\Users\ELCOT\Desktop\aishu\image\service.jpg" alt="Women Service">
+            <img src="image\service.jpg" alt="Women Service">
 
             <div class="icon-box">
                 <i class="fa-solid fa-scissors"></i>
@@ -174,9 +229,8 @@
             <button>Learn More</button>
         </div>
 
-        <!-- Card 3 -->
         <div class="card">
-            <img src="C:\Users\ELCOT\Desktop\aishu\image\add on servicess.jpg" alt="Add-on Service">
+            <img src="image\add on servicess.jpg" alt="Add-on Service">
 
             <div class="icon-box">
                 <i class="fa-solid fa-spa"></i>
@@ -233,11 +287,8 @@
 
                 <input type="datetime-local">
 
-                <!-- Button Full Width -->
                 <button type="submit" class="btn">Confirm Booking</button>
             </form>
-
-            <!-- Features -->
             <div class="features">
                 <span><i class="fa-solid fa-circle-check"></i> Instant Confirmation</span>
                 <span><i class="fa-solid fa-clock"></i> No Waiting Time</span>
@@ -259,7 +310,6 @@
             Precision, and Care We Bring to Every Client.
         </p>
 
-        <!-- Buttons -->
         <div class="filters">
             <button class="active">All</button>
             <button>Haircuts</button>
@@ -269,13 +319,13 @@
             <button>Before & After</button>
         </div>
 
-        <!-- Images -->
+
         <div class="gallery">
-            <img src="C:\Users\ELCOT\Desktop\aishu\image\salon.jpg.jpeg">
-            <img src="C:\Users\ELCOT\Desktop\aishu\image\salon.jpg">
-            <img src="C:\Users\ELCOT\Desktop\aishu\image\image4.jpg">
-            <img src="C:\Users\ELCOT\Desktop\aishu\image\images.jpg">
-            <img src="C:\Users\ELCOT\Desktop\aishu\image\images (1).jpg">
+            <img src="image\salon.jpg.jpeg">
+            <img src="image\salon.jpg">
+            <img src="image\immg.jpg">
+            <img src="image\images.jpg">
+            <img src="image\images (1).jpg">
         </div>
 
     </div>
@@ -292,7 +342,7 @@
 
     <h3 class="category">Men's Services:</h3>
 
-    <!-- Classic Cut -->
+ 
     <div class="price-box">
         <div class="service">
             <h2>Classic Cut</h2>
@@ -356,15 +406,15 @@
             Services for Every Client.
         </p>
 
-        <!-- Arrows -->
+    
         <button class="arrow left">&#10094;</button>
         <button class="arrow right">&#10095;</button>
 
-        <!-- Cards -->
+    
         <div class="card-wrapper">
 
             <div class="card">
-                <img src="C:\Users\ELCOT\Desktop\aishu\image\images (2).jpg" alt="Barber">
+                <img src="image\kk.jpg"alt="Barber">
                 <h3>Alex Morgan</h3>
                 <p class="role">Specializes in Modern Cuts</p>
 
@@ -374,7 +424,7 @@
             </div>
 
             <div class="card">
-                <img src="C:\Users\ELCOT\Desktop\aishu\image\ss.jpg" alt="Barber">
+                <img src="image\ss.jpg" alt="Barber">
                 <h3>Sophia Bennett</h3>
                 <p class="role">Specializes in Styling</p>
 
@@ -384,7 +434,7 @@
             </div>
 
             <div class="card">
-                <img src="C:\Users\ELCOT\Desktop\aishu\image\uu.jpg" alt="Barber">
+                <img src="image\ll.jpg" alt="Barber">
                 <h3>Marcus Lee</h3>
                 <p class="role">Specializes in Beard Design</p>
 
@@ -403,13 +453,12 @@
 
     <div class="club-container">
 
-        <!-- LEFT IMAGE -->
+    
         <div class="club-image">
             <div class="circle-bg"></div>
-            <img src="C:\Users\ELCOT\Desktop\aishu\image\images (5).jpg" alt="Barber Image">
+            <img src="image\images (5).jpg" alt="Barber Image">
         </div>
 
-        <!-- RIGHT CONTENT -->
         <div class="club-content">
             <h1>TRIMLY <br> CLUB</h1>
 
@@ -430,13 +479,10 @@
 
     </div>
 
-    <!-- WAVE -->
     <div class="wave"></div>
 
 </section>
 
-
-<!-- ====== TESTIMONIAL ====== -->
 <section class="testimonial">
 
     <h2>What Our Clients Say</h2>
@@ -451,10 +497,10 @@
     <h4>Fergus Douchebag</h4>
 
     <div class="clients">
-        <img src="C:\Users\ELCOT\Desktop\aishu\image\tt.jpg" alt="">
-        <img src="C:\Users\ELCOT\Desktop\aishu\image\vv.jpg" alt="">
-        <img src="C:\Users\ELCOT\Desktop\aishu\image\download (1).jpg" alt="">
-        <img src="C:\Users\ELCOT\Desktop\aishu\image\download.jpg" alt="">
+        <img src="image\tt.jpg" alt="">
+        <img src="image\vv.jpg" alt="">
+        <img src="image\download (1).jpg" alt="">
+        <img src="image\download.jpg" alt="">
     </div>
 
 </section>
@@ -470,15 +516,10 @@
             or Book Your Appointment Online—whatever Works Best for You.
         </p>
 
-        <!-- FLEX CONTAINER -->
         <div class="visit-wrapper">
-
-            <!-- LEFT SIDE MAP -->
             <div class="map-box">
-                <img src="C:\Users\ELCOT\Desktop\aishu\image\mm.jpg" alt="Map">
+                <img src="image\mm.jpg" alt="Map">
             </div>
-
-            <!-- RIGHT SIDE DETAILS -->
             <div class="contact-box">
 
                 <div class="item">
@@ -523,39 +564,36 @@
         </p>
 
         <div class="cards">
-
-            <!-- Card 1 -->
             <div class="card">
-                <img src="C:\Users\ELCOT\Desktop\aishu\image\p.jpg" alt="Beard Care">
+                <img src="image\p.jpg" alt="Beard Care">
                 <p class="meta">By Admin &nbsp; | &nbsp; December 25, 2025</p>
                 <h3>Beard Care Tips Every Man Should Know</h3>
                 <a href="#" class="btn">Read More</a>
             </div>
-
-            <!-- Card 2 -->
             <div class="card">
-                <img src="C:\Users\ELCOT\Desktop\aishu\image\immg.jpg"alt="Hair Care">
+                <img src="image\immg.jpg"alt="Hair Care">
                 <p class="meta">By Admin &nbsp; | &nbsp; November 20, 2025</p>
                 <h3>Hair Care Essentials for Strong, Healthy Hair</h3>
                 <a href="#" class="btn">Read More</a>
             </div>
-
-            <!-- Card 3 -->
             <div class="card">
-                <img src="C:\Users\ELCOT\Desktop\aishu\image\o.jpg" alt="Trending Styles">
+                <img src="image\o.jpg" alt="Trending Styles">
                 <p class="meta">By Admin &nbsp; | &nbsp; January 5, 2026</p>
                 <h3>Trending Hairstyles This Season</h3>
                 <a href="#" class="btn">Read More</a>
             </div>
 
-        </div>
 
+
+        </div>
+        <button class="arrow right">&#10095;</button>
+
+ 
     </div>
 </section>
 
-<footer class="footer">
 
-    <!-- Top Wave Shape -->
+<footer class="footer">
     <div class="footer-wave">
         <svg viewBox="0 0 1440 120">
             <path fill="#1f2a33"
@@ -565,8 +603,6 @@
     </div>
 
     <div class="footer-container">
-
-        <!-- Column 1 -->
         <div class="footer-col">
             <h2 class="footer-logo">TRIMLY <span>✂</span></h2>
             <p class="newsletter-title">Subscribe to Our Newsletter.</p>
@@ -580,8 +616,6 @@
                 <input type="checkbox"> I agree to the Privacy Policy.
             </label>
         </div>
-
-        <!-- Column 2 -->
         <div class="footer-col">
             <h3>Navigation</h3>
             <ul class="footer-links">
@@ -592,8 +626,6 @@
                 <li>Blog</li>
             </ul>
         </div>
-
-        <!-- Column 3 -->
         <div class="footer-col">
             <h3>Contact Info</h3>
             <p>+61 3 8376 6284</p>
@@ -601,8 +633,6 @@
             <p>Swanston Street, Melbourne<br>Victoria 3053 Australia</p>
             <p>Mon - Sat: 9:00 am to 6:00 pm</p>
         </div>
-
-        <!-- Column 4 -->
         <div class="footer-col">
             <h3>Follow Us</h3>
             <div class="social-icons">
@@ -619,3 +649,6 @@
     </div>
 
 </footer>
+<script src="js/script.js"></script>
+</body>
+</html>
