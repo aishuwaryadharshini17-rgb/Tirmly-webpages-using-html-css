@@ -2,6 +2,7 @@ const toggleBtn = document.getElementById("theme-toggle");
 const icon = document.getElementById("theme-icon");
 
 /* Load saved theme */
+
 let savedTheme = localStorage.getItem("theme");
 
 if(savedTheme === "dark"){
@@ -63,3 +64,34 @@ if(swapBtn){
 
     });
 }
+
+
+// scroll reveal animation
+const revealElements = document.querySelectorAll(
+  ".reveal, .reveal-up, .reveal-left, .reveal-right, .reveal-zoom"
+);
+
+const progressBars = document.querySelectorAll(".bar-fill");
+
+function revealOnScroll() {
+  const windowHeight = window.innerHeight;
+
+  revealElements.forEach((element) => {
+    const elementTop = element.getBoundingClientRect().top;
+    const revealPoint = 120;
+
+    if (elementTop < windowHeight - revealPoint) {
+      element.classList.add("active");
+    }
+  });
+
+  progressBars.forEach((bar) => {
+    const barTop = bar.getBoundingClientRect().top;
+    if (barTop < windowHeight - 100) {
+      bar.classList.add("animate");
+    }
+  });
+}
+
+window.addEventListener("scroll", revealOnScroll);
+window.addEventListener("load", revealOnScroll);

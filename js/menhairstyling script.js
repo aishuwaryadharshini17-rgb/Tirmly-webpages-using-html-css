@@ -29,8 +29,6 @@ if(toggleBtn){
 
 }
 
-
-
 let scrollBtn = document.getElementById("scrollTop");
 
 window.onscroll = function(){
