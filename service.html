@@ -10,11 +10,12 @@
     <link rel="stylesheet" href="css/service.css">  
     <link rel="stylesheet" href="css/about.css"> 
     <link rel="stylesheet" href="css/pricing.css"> 
-   
- 
+    <link rel="stylesheet" href="css/style.css">
+     <link rel="icon" type="image/png" href="image/logo.png">
 
 </head>  
 <body>
+   
     
 <!-- ===== TOP OFFER ===== -->
 <div class="top-offer">
@@ -25,7 +26,12 @@
 <header class="navbar">
   <div class="nav-container">
 
-    <div class="logo">TRIMLY</div>
+    
+  <div class="logo">
+    <img src="image/logo.png" alt="logo">
+
+</div>
+ 
       
     <ul class="nav-links">
         <a href="index.html">Home</a>
@@ -33,23 +39,30 @@
         <a href="service.html">Service</a>
         <a href="pricing.html">Pricing</a>
         <a href="contact.html">Contact</a>
-    
     </ul>
 
-  <button id="theme-toggle">
-    <span id="theme-icon">🌙</span>
-</button>
+     <!-- Theme Toggle -->
+    <div class="theme-toggle">
+      <button id="theme-toggle">
+        <span id="theme-icon">🌙</span>
+      </button>
+    </div>
+
+
+
+<button id="swapBtn" class="swap-btn">⇄</button>
+
+
+<button class="book-btn">Book Appointment</button>
 
   </div>
-  <button id="swapBtn" class="swap-btn">⇄</button>
-  <button class="book-btn">Book Appointment</button>
 
 </header>
 
 
-<section class="services-hero">
+<section class="services-hero  ">
     <div class="overlay">
-        <div class="hero-content">
+        <div class="hero-content ">
             <h1>Our Premium Services</h1>
             <p>Professional Grooming Tailored For You</p>
         </div>
@@ -59,28 +72,29 @@
 
 <!-- SERVICES CONTENT SECTION -->
 
-<section class="services-content">
+<section class="services-content reveal">
 
     <h2 class="section-title">Our Professional Salon Services</h2>
 
-    <p class="section-text">
+    <p class="section-text  reveal-up">
         At Trimly Salon, we provide professional grooming and beauty services
         designed to enhance your style and confidence.
     </p>
 
     <div class="service-cards">
 
-        <div class="card">
+
+        <div class="card reveal-up">
             <h3>Expert Stylists</h3>
             <p>Our skilled professionals stay updated with the latest hair and beauty trends.</p>
         </div>
 
-        <div class="card">
+        <div class="card reveal-up">
             <h3>Premium Products</h3>
             <p>We use high-quality salon products to ensure safe and long-lasting results.</p>
         </div>
 
-        <div class="card">
+        <div class="card reveal-right">
             <h3>Personalized Care</h3>
             <p>Every service is customized according to your style and preferences.</p>
         </div>
@@ -91,15 +105,15 @@
 
 <!-- WOMEN SERVICE SECTION -->
 
-<section class="women-salon">
+<section class="women-salon reeal">
 
-<h2 class="section-title">Women's Services</h2>
-<p class="subtitle">Explore our premium hair and beauty services</p>
+<h2 class="section-title reveal-up">Women's Services</h2>
+<p class="subtitle reveal-up">Explore our premium hair and beauty services</p>
 
 <div class="women-services-grid">
 
 <!-- Haircuts -->
-<div class="service-card">
+<div class="service-card reveal-zoom">
     <img src="image/uy.jpg" alt="Haircuts">
 
     <div class="service-overlay">
@@ -111,7 +125,7 @@
 
 
 <!-- Hair Styling -->
-<div class="service-card">
+<div class="service-card reveal-zoom">
     <img src="image/opp.jpg.jpg" alt="Hair Styling">
 
     <div class="service-overlay">
@@ -123,7 +137,7 @@
 
 
 <!-- Hair Coloring -->
-<div class="service-card">
+<div class="service-card reveal-zoom">
     <img src="image/g.jpg" alt="Hair Coloring">
 
     <div class="service-overlay">
@@ -135,7 +149,7 @@
 
 
 <!-- Hair Spa -->
-<div class="service-card">
+<div class="service-card reveal-zoom">
     <img src="image/qq.jpg" alt="Hair Spa">
 
     <div class="service-overlay">
@@ -147,7 +161,7 @@
 
 
 <!-- Facial -->
-<div class="service-card">
+<div class="service-card reveal-zoom">
     <img src="image/kl.jpg" alt="Facial">
 
     <div class="service-overlay">
@@ -159,7 +173,7 @@
 
 
 <!-- Manicure -->
-<div class="service-card">
+<div class="service-card reveal-zoom">
     <img src="image/ft.jpg" alt="Manicure">
 
     <div class="service-overlay">
@@ -179,15 +193,15 @@
 
 <!-- MEN SERVICE SECTION -->
 
-<section class="men-services">
+<section class="men-services reveal">
 
 <h2 class="section-title">Men's Grooming Services</h2>
-<p class="subtitle">Premium grooming services for modern men</p>
+<p class="subtitlereveal-up">Premium grooming services for modern men</p>
 
 <div class="men-services-grid">
 
 <!-- Haircut -->
-<div class="service-card">
+<div class="service-card reveal-zoom">
     <img src="image/hhjj.jpg" alt="Haircut">
 
     <div class="service-overlay">
@@ -199,7 +213,7 @@
 
 
 <!-- Beard Trim -->
-<div class="service-card">
+<div class="service-card reveal-zoom">
     <img src="image/oi.jpg" alt="Beard Trim">
 
     <div class="service-overlay">
@@ -211,7 +225,7 @@
 
 
 <!-- Hair Coloring -->
-<div class="service-card">
+<div class="service-card reveal-zoom">
     <img src="image/gf.jpg" alt="Hair Coloring">
 
     <div class="service-overlay">
@@ -223,7 +237,7 @@
 
 
 <!-- Hair Styling -->
-<div class="service-card">
+<div class="service-card reveal-zoom">
     <img src="image/df.jpg" alt="Hair Styling">
 
     <div class="service-overlay">
@@ -235,7 +249,7 @@
 
 
 <!-- Facial -->
-<div class="service-card">
+<div class="service-card reveal-zoom">
     <img src="image/fd.jpg" alt="Facial">
 
     <div class="service-overlay">
@@ -247,7 +261,7 @@
 
 
 <!-- Hair Spa -->
-<div class="service-card">
+<div class="service-card reveal-zoom">
     <img src="image/yu.jpg" alt="Hair Spa">
 
     <div class="service-overlay">
@@ -262,14 +276,14 @@
 </section>
 
 
-<section class="client-reviews">
+<section class="client-reviews reveal">
 
     <h2 class="section-title">What Our Clients Say</h2>
-    <p class="subtitle">Customer satisfaction is our top priority</p>
+    <p class="subtitle reveal-up">Customer satisfaction is our top priority</p>
 
     <div class="reviews-container">
 
-        <div class="review-card">
+        <div class="review-card reveal-left">
             <p>"Amazing service and very professional stylists. I loved my haircut!"</p>
 
             <div class="stars">
@@ -279,7 +293,7 @@
             <h4>Priya S.</h4>
         </div>
 
-        <div class="review-card">
+        <div class="review-card reveal-up">
             <p>"The salon atmosphere is relaxing and the staff are very friendly."</p>
 
             <div class="stars">
@@ -289,7 +303,7 @@
             <h4>Anjali R.</h4>
         </div>
 
-        <div class="review-card">
+        <div class="review-card reveal-right">
             <p>"Best grooming service I have experienced. Highly recommended!"</p>
 
             <div class="stars">
@@ -303,20 +317,25 @@
 
 </section>
 
+<!-- FOOTER SECTION -->
+    <footer class="footer reveal-up">
 
-<!-- footer section -->
-    <footer class="footer">
+        <!-- WAVE -->
         <div class="footer-wave">
-            <svg viewBox="0 0 1440 120">
-                <path fill="#1f2a33"
-                    d="M0,64L60,58.7C120,53,240,43,360,48C480,53,600,75,720,74.7C840,75,960,53,1080,42.7C1200,32,1320,32,1380,32L1440,32L1440,0L0,0Z">
-                </path>
+            <svg viewBox="0 0 1440 100" preserveAspectRatio="none">
+                <path d="M0,40 C240,80 480,0 720,40 C960,80 1200,0 1440,30 L1440,0 L0,0 Z" fill="#1f2a33"></path>
             </svg>
         </div>
 
         <div class="footer-container">
-            <div class="footer-col">
-                <h2 class="footer-logo">TRIMLY <span>✂</span></h2>
+
+            <!-- COLUMN 1 -->
+            <div class="footer-col1 reveal-up">
+
+                <div class="footer-logo">
+                    <img src="image/logo.png" alt="footer logo">
+                </div>
+
                 <p class="newsletter-title">Subscribe to Our Newsletter.</p>
 
                 <div class="newsletter-box">
@@ -327,8 +346,11 @@
                 <label class="privacy">
                     <input type="checkbox"> I agree to the Privacy Policy.
                 </label>
+
             </div>
-            <div class="footer-col">
+
+            <!-- COLUMN 2 -->
+            <div class="footer-col2 reveal-up">
                 <h3>Navigation</h3>
                 <ul class="footer-links">
                     <li>Home</li>
@@ -338,14 +360,18 @@
                     <li>Blog</li>
                 </ul>
             </div>
-            <div class="footer-col">
+
+            <!-- COLUMN 3 -->
+            <div class="footer-col3 reveal-up">
                 <h3>Contact Info</h3>
                 <p>+61 3 8376 6284</p>
                 <p>info@trimlystyle.com</p>
                 <p>Swanston Street, Melbourne<br>Victoria 3053 Australia</p>
                 <p>Mon - Sat: 9:00 am to 6:00 pm</p>
             </div>
-            <div class="footer-col">
+
+            <!-- COLUMN 4 -->
+            <div class="footer-col4 reveal-up">
                 <h3>Follow Us</h3>
                 <div class="social-icons">
                     <span>f</span>
@@ -356,12 +382,14 @@
 
         </div>
 
-        <div class="footer-bottom">
+        <div class="footer-bottom reveal-up">
             Copyright ©2026 TrimlyStyle. All Rights Reserved.
         </div>
 
     </footer>
-    </div>
+</body>
+
+</html>
 <!-- Scroll Top Button -->
 <button id="scrollTop">
     ↑

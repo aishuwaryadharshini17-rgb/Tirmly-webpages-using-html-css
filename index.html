@@ -11,7 +11,7 @@
 <link rel="stylesheet" href="css/about.css">
 <link rel="stylesheet" href="css/pricing.css"> 
 <link rel="stylesheet" href="css/style.css">
-
+<link rel="icon" type="image/png" href="image/logo.png">
 </head>  
 <body>
     
@@ -24,7 +24,11 @@
 <header class="navbar">
   <div class="nav-container">
 
-  <div class="logo">TRIMLY</div>
+  
+  <div class="logo">
+    <img src="image/logo.png" alt="logo">
+</div>
+ 
 
     <nav class="nav-links">
       <a href="index.html">Home</a>
@@ -33,7 +37,10 @@
       <a href="pricing.html">pricing</a>
       <a href="contact.html">Contact</a>
       
+      
     </nav>
+
+    
  <div class="theme-toggle">
       <button id="theme-toggle">
         <span id="theme-icon">🌙</span>
@@ -54,6 +61,7 @@
         <!-- Slide 1 -->
         <div class="hero-slide active">
             <img src="image/jh.jpg" class="hero-bg" alt="Slide 1">
+            <div class="hero-content"></div>
 
             <div class="hero-content">
                 <h1>SHINE.<br>TIMELESS STYLE.</h1>
@@ -63,7 +71,9 @@
 
         <!-- Slide 2 -->
         <div class="hero-slide">
-            <img src="image/slide,jpg.jpg" class="hero-bg" alt="Slide 2">
+            <img src="image/hti.jpg.jpg" class="hero-bg" alt="Slide 2">
+                 <div class="hero-content ">
+
 
             <div class="hero-content">
                 <h1>MODERN CUTS.<br>CLASSIC CONFIDENCE.</h1>
@@ -71,15 +81,7 @@
             </div>
         </div>
 
-        <!-- Slide 3 -->
-        <div class="hero-slide">
-            <img src="image/hho.jpg" class="hero-bg" alt="Slide 3">
-
-            <div class="hero-content">
-                <h1>STYLE THAT<br>SPEAKS.</h1>
-                <p>Because first impressions matter.</p>
-            </div>
-        </div>
+    
 <button class="prev">&#10094;</button>
 <button class="next">&#10095;</button>
     
@@ -88,27 +90,31 @@
 </section>
 
 
-
-
 <!----=====hero section ====-->
 
-
 <section class="hero">
-    <div class="hero-text">
-        <h1>SHARP LOOKS.<br>TIMELESS STYLE.</h1>
-        <p>✂️ Expert Barbers. Modern Styles. A Grooming Experience You'll Love.</p>
+
+    <div class="hero-content ">
+        <h1>
+            SHARP LOOKS.<br>
+            TIMELESS STYLE.
+        </h1>
+
+        <p>
+            Expert Barbers. Modern Styles. A Grooming Experience You'll Love.
+        </p>
+
+        <button class="hero-btn">Get Groomed Today</button>
+
         <div class="rating">
-            <span class="google">G</span>
-            <span class="score">4.9</span>
-            <span class="stars">★★★★★</span>
-            <small>4.9/5 Reviews</small>
+            ⭐ 4.9 / 5 Reviews
         </div>
     </div>
-
-    <div class="hero-img">
-        <img src="image\hhg.jpg" alt="Barber Tools">
-    </div>
 </section>
+
+
+
+
 
 
 <!----=====experience=====-->
@@ -117,7 +123,7 @@
 
     <div class="top-title">
         <p class="sub">The Trimly Experience</p>
-        <h1>Where Style Meets Experience</h1>
+        <h1>Where Style Meets        Experience</h1>
     </div>
 
 <div class="experience-container">
@@ -127,8 +133,8 @@
             <img src="image\qq.jpg" alt="Barber">
         </div>
 
+        <div class="right-content reveal-right">
 
-    <div class="right-content">
 
             <h2>Innovative Hair Solutions Backed by Decades of Experience</h2>
 
@@ -138,7 +144,7 @@
                 blend classic techniques with modern trends to give you a look that truly fits.
             </p>
 
-            <div class="phone-box">
+            <div class="phone-box reveal-up">
                 <span>Book Appointment</span>
                 <h3>+1 (234) 5678 005</h3>
             </div>
@@ -148,7 +154,7 @@
                     <img src="image\service 2.jpg" alt="Hair Wash">
                 </div>
 
-                <div class="features">
+                <div class="features reveal-right">
                     <ul>
                         <li>Experienced Stylists</li>
                         <li>Personalized Consultations</li>
@@ -157,7 +163,7 @@
                         <li>Specialized Grooming</li>
                     </ul>
 
-                    <div class="experience-box">
+                    <div class="experience-box reveal-zoom">
                         <h3>15+</h3>
                         <p>Years of Trusted Hair Experience</p>
                     </div>
@@ -170,16 +176,16 @@
 
 </section>
 <!-- service -->
-<section class="services">
-    <h1>Grooming Services</h1>
-    <p class="subtitle">
+<section class="services reveal">
+    <h1> Grooming Services</h1>
+    <p class="subtitle reveal-up">
         From Precision Haircuts to Complete Grooming and Advanced Hair Care Solutions,
         Trimly Offers Personalized Services Designed to Help You Look Sharp and Feel Confident—every Visit.
     </p>
 
     <div class="service-container">
 
-        <div class="card">
+        <div class="card reveal-zoom">
             <img src="image\p.jpg" alt="">
 
             <div class="icon-box">
@@ -200,7 +206,7 @@
             <button>Learn More</button>
         
         </div>
-        <div class="card">
+        <div class="card reveal-zoom">
             <img src="image\service.jpg" alt="Women Service">
 
             <div class="icon-box">
@@ -220,7 +226,7 @@
             <button>Learn More</button>
         </div>
 
-        <div class="card">
+        <div class="card reveal-zoom">
             <img src="image\add on servicess.jpg" alt="Add-on Service">
 
             <div class="icon-box">
@@ -249,7 +255,7 @@
 
     <h2 class="section-title">Featured Styles</h2>
 
-    <div class="filter-buttons">
+    <div class="filter-buttons reveal-up">
        <button data-filter="all">All</button>
         <button data-filter="haircuts">Haircuts</button>
         <button data-filter="beards">Beards</button>
@@ -259,82 +265,82 @@
     </div>
 <div class="gallery">
 
-        <div class="image-box haircuts">
+        <div class="image-box haircuts  reveal-zoom">
             <img src="image\hairstyle.jpg" alt="">
         </div>
 
-        <div class="image-box haircuts">
+        <div class="image-box haircuts reveal-zoom">
             <img src="image\ghh.jpg" alt="">
         </div>
 
-        <div class="image-box haircuts">
+        <div class="image-box haircuts  reveal-zoom">
             <img src="image\haircut4.jpg" alt="">
         </div>
 
-        <div class="image-box haircuts">
+        <div class="image-box haircuts  reveal-zoom">
             <img src="image\hair.jpg" alt="">
         </div>
 
 
-        <div class="image-box beards">
+        <div class="image-box beards  reveal-zoom">
             <img src="image\beared.jpg" alt="">
         </div>
 
-         <div class="image-box beards">
+         <div class="image-box beards reveal-zoom">
             <img src="image\beard1,jpg.jpg" alt="">
         </div>
 
-        <div class="image-box beards">
+        <div class="image-box beards  reveal-zoom">
             <img src="image\beard.jpg" alt="">
         </div>
 
-        <div class="image-box styling">
+        <div class="image-box styling  reveal-zoom">
             <img src="image\ii.jpg" alt="">
         </div>
 
-        <div class="image-box styling">
+        <div class="image-box styling reveal-zoom">
             <img src="image\ee.jpg" alt="">
         </div>
 
-        <div class="image-box styling">
+        <div class="image-box styling  reveal-zoom">
             <img src="image\2.jpg" alt="">
         </div>
 
-        <div class="image-box styling">
+        <div class="image-box styling  reveal-zoom">
             <img src="image\z.jpg" alt="">
         </div>
 
 
-        <div class="image-box color">
+        <div class="image-box color  reveal-zoom">
             <img src="image\color.jpg" alt="">
         </div>
 
-        <div class="image-box color">
+        <div class="image-box color  reveal-zoom">
             <img src="image\tt,jpg.jpg" alt="">
         </div>
 
-        <div class="image-box beforeafter">
+        <div class="image-box beforeafter  reveal-zoom">
             <img src="image\before and after haircut.jpg" alt="">
         </div>
 
-        <div class="image-box beforeafter">
+        <div class="image-box beforeafter reveal-zoom">
             <img src="image\r,jpg.jpg" alt="">
         </div>
     </div>
 </section>
 
 <!-- BOOK APPOINTMENT -->
-<section class="booking">
+<section class="booking reveal">
   <div class="overlay"></div>
 
-  <div class="booking-content">
+  <div class="booking-content reveal-up">
     <h1>Book Your Appointment</h1>
     <p>
       Schedule your visit in just a few clicks. Choose your service,
       select your preferred barber and pick a time that works best for you.
     </p>
 
-    <div class="booking-box">
+    <div class="booking-box reveal-zoom">
 
       <!-- form connected to Java servlet -->
       <form class="booking-form" action="BookingServlet" method="post">
@@ -382,16 +388,16 @@
   </div>
 </section>
 
-<!-- pricing section -->
+<!-- pricing section reveal -->
 <section class="pricing">
     <h1>Transparent Pricing</h1>
 
-    <p class="subtitle">
+    <p class="subtitle revealup">
         No Surprises, No Hidden Fees. At Trimly, Our Pricing is Clear and Upfront —
         So You Know Exactly What to Expect Before You Book Your Appointment.
     </p>
 
-    <h3 class="category">Men's Services:</h3>
+    <h3 class="category reveal-left">Men's Services:</h3>
     <div class="price-box">
         <div class="service">
             <h2>Classic Cut</h2>
@@ -428,9 +434,9 @@
         </div>
     </div>
 
-    <h3 class="category">Women's Services</h3>
+    <h3 class="category reveal-left">Women's Services</h3>
 
-    <div class="price-box">
+    <div class="price-box reveal-up">
         <div class="service">
             <h2>Trimly Signature</h2>
             <p>Haircut & Styling — $35+ • Hair Coloring — $70+ • Hair Spa — $45+</p>
@@ -443,11 +449,11 @@
 
 </section>
 <!-- Services silder session -->
-<section class="services-slider">
+<section class="services-slider reveal ">
 
-    <div class="service-slide active">
+    <div class="service-slide active ">
         <img src="image\hhm.jpg" alt="Service 1">
-        <div class="service-content">
+        <div class="service-content reveal-left">
             <h2>Classic Haircut</h2>
             <p>Professional haircut tailored to your style.</p>
         </div>
@@ -475,51 +481,51 @@
 </section>
 
 <!-- team session -->
-<section class="team-section">
-    <h2>Our Barbers & Stylists</h2>
-    <p class="subtitle">
+<section class="team-section reveal">
+     <h2 class="reveal-up"></h2>Our Barbers & Stylists</h2>
+    <p class="subtitle reveal-up ">
         Our Team Combines Years of Experience, Modern Techniques, and Creative Passion
         to Deliver Professional Grooming Services for Every Client
     </p>
 
-    <div class="slider-container">
+    <div class="slider-container reveal-up">
         <button class="arrow left">&#10094;</button>
 
         <div class="slider">
             <div class="team-wrapper">
 
                 <!-- 1 -->
-                <div class="team-card">
+                <div class="team-card reveal-zoom">
                     <img src="image\images (2).jpg">
                     <h3>Alex Morgan</h3>
                 </div>
 
                 <!-- 2 -->
-                <div class="team-card">
+                <div class="team-card reveal-zoom ">
                     <img src="image\slidesssss.jpg">
                     <h3>Sophia Bennett</h3>
                 </div>
 
                 <!-- 3 -->
-                <div class="team-card">
+                <div class="team-card reveal-zoom">
                     <img src="image\yt.jpg">
                     <h3>Marcus Lee</h3>
                 </div>
 
                 <!-- 4 -->
-                <div class="team-card">
+                <div class="team-card reveal-zoom">
                     <img src="image\x.jpg">
                     <h3>Daniel Smith</h3>
                 </div>
 
                 <!-- 5 -->
-                <div class="team-card">
+                <div class="team-card reveal-zoom">
                     <img src="image\b,jpg.jpg">
                     <h3>Chris Brown</h3>
                 </div>
 
                 <!-- 6 -->
-                <div class="team-card">
+                <div class="team-card reveal-zoom">
                     <img src="image\cx.jpg">
                     <h3>Emma Watson</h3>
                 </div>
@@ -531,17 +537,17 @@
     </div>
 </section>
 <!-- club section -->
-<section class="club-hero">
+<section class="club-hero reveal">
     <div class="club-wrapper">
 
         <!-- Left Image -->
-        <div class="club-image">
+        <div class="club-image reveal-left re">
             <div class="circle-bg"></div>
             <img src="image\hhk.j[g.jpg"alt="Trimly Staff">
         </div>
 
         <!-- Right Content -->
-        <div class="club-content">
+        <div class="club-content reveal-right">
             <h1>TRIMLY <br> CLUB</h1>
 
             <p>
@@ -564,56 +570,55 @@
 
 
 <!-- testimonial session -->
-<section class="testimonial-section">
-  <h1 class="testimonial-title">What Our Clients Say</h1>
+<section class="testimonial-section reveal">
+  <h1 class="testimonial-title reveal-up">What Our Clients Say</h1>
 
   <div class="stars">
     ★ ★ ★ ★ ★
   </div>
 
-  <p class="testimonial-text active">
+  <p class="testimonial-text active reveal-up">
     "Best haircut I've had in years. The barber took time to understand what I wanted and delivered perfectly. Highly recommend Trimly!"
   </p>
 
-  <p class="testimonial-text">
+  <p class="testimonial-text reveal-up">
     "Amazing service and friendly staff. The ambience is premium and worth every rupee."
   </p>
 
-  <p class="testimonial-text">
+  <p class="testimonial-text reveal-up">
     "Professional grooming at its best. Clean shop and excellent styling!"
   </p>
 
-  <h3 class="client-name">Fergus Douchebag</h3>
-  <p class="client-role">Happy Customer</p>
+  <h3 class="client-name reveal-up">Fergus Douchebag</h3>
+  <p class="client-role reveal-up">Happy Customer</p>
 
-  <div class="profile-container">
-    <span class="arrow" id="prev">&#10094;</span>
+  <div class="profile-container reveal-zoom">
+   
 
     <img src="image\vv.jpg" class="profile active" data-index="0">
     <img src="image\download.jpg" class="profile" data-index="1">
     <img src="image\tt.jpg" class="profile" data-index="2">
     
-    <span class="arrow" id="next">&#10095;</span>
+
   </div>
 
 </section>
 
 <!-- map section-->
- <!DOCTYPE html>
+<!DOCTYPE html> 
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <title>Visit Trimly</title>
+     <head> 
+        <meta charset="UTF-8"> 
+    <title>Visit Trimly</title> 
+    <!-- Google Icons --> 
+     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet"> 
+     <link rel="stylesheet" href="style.css"> 
+    </head>
+     <body>
 
-    <!-- Google Icons -->
-    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
-
-    <link rel="stylesheet" href="style.css">
-</head>
-<body>
-
-<section class="visit">
-    <h1>Visit Trimly</h1>
+     </body>
+<section class="visit reveal">
+        <h1>Visit Trimly</h1>
     <p class="subtitle">
         We'd Love to Welcome You to Trimly. Visit Us at Our Salon, 
         Give Us a Call, or Book Your Appointment Online—whatever Works Best for You.
@@ -622,7 +627,7 @@
     <div class="visit-container">
 
         <!-- MAP SECTION -->
-        <div class="map-frame">
+        <div class="map-frame reveal-left">
             <iframe 
                 src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2450.0796926348016!2d144.9660665749709!3d-37.81671733420532!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x6ad642b6583650c9%3A0x15266114788a40f0!2s180%20Flinders%20St%2C%20Melbourne%20VIC%203000%2C%20Australia!5e1!3m2!1sen!2sin!4v1772106994428!5m2!1sen!2sin" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>"
 
@@ -630,7 +635,7 @@
         </div>
 
         <!-- CONTACT INFO -->
-        <div class="contact-info">
+        <div class="contact-info reveal-right ">
 
             <div class="info-box">
                 <span class="material-icons icon">location_on</span>
@@ -640,7 +645,7 @@
                 </div>
             </div>
 
-            <div class="info-box">
+            <div class="info-box reveal-right">
                 <span class="material-icons icon">phone</span>
                 <div>
                     <h3>Phone</h3>
@@ -648,7 +653,7 @@
                 </div>
             </div>
 
-            <div class="info-box">
+            <div class="info-box reveal-right">
                 <span class="material-icons icon">email</span>
                 <div>
                     <h3>Email</h3>
@@ -656,7 +661,7 @@
                 </div>
             </div>
 
-            <div class="info-box">
+            <div class="info-boxreveal-right">
                 <span class="material-icons icon">schedule</span>
                 <div>
                     <h3>Hours of Operation</h3>
@@ -675,9 +680,9 @@
 </body>
 </html>
 <!-- chair section-->
-<section class="blog">
+<section class="blog reveal">
 
-  <div class="blog-header">
+  <div class="blog-header reveal-up">
     <h2>From the Chair</h2>
     <p>
       Expert Tips, Grooming Advice, and Style Inspiration—straight from the Professionals at Trimly.
@@ -704,7 +709,7 @@
     </div>
 
     <!-- CARD 2 -->
-    <div class="blog-card">
+    <div class="blog-card reveal-zoom">
       <img src=" image\immg.jpg  " alt="">
       <p class="meta">By Admin | November 30, 2025</p>
       <h3>Hair Care Essentials for Strong, Healthy Hair</h3>
@@ -720,7 +725,7 @@
     </div>
 
     <!-- CARD 3 -->
-    <div class="blog-card">
+    <div class="blog-card reveal-zoom">
       <img src=" image\o.jpg" alt="">
       <p class="meta">By Admin | January 1, 2026</p>
       <h3>Trending Hairstyles This Season</h3>
@@ -738,64 +743,76 @@
 
 
 
-<!-- footer section -->
-    <footer class="footer">
+<!-- FOOTER SECTION -->
+<footer class="footer reveal">
+
+        <!-- WAVE -->
         <div class="footer-wave">
-            <svg viewBox="0 0 1440 120">
-                <path fill="#1f2a33"
-                    d="M0,64L60,58.7C120,53,240,43,360,48C480,53,600,75,720,74.7C840,75,960,53,1080,42.7C1200,32,1320,32,1380,32L1440,32L1440,0L0,0Z">
-                </path>
-            </svg>
+        <svg viewBox="0 0 1440 100" preserveAspectRatio="none">
+            <path d="M0,40 C240,80 480,0 720,40 C960,80 1200,0 1440,30 L1440,0 L0,0 Z" fill="#1f2a33"></path>
+        </svg>
         </div>
 
         <div class="footer-container">
-            <div class="footer-col">
-                <h2 class="footer-logo">TRIMLY <span>✂</span></h2>
-                <p class="newsletter-title">Subscribe to Our Newsletter.</p>
 
-                <div class="newsletter-box">
-                    <input type="email" placeholder="Enter Email Address">
-                    <button>Subscribe</button>
-                </div>
+        <!-- COLUMN 1 -->
+        <div class="footer-col1 reveal-up">
 
-                <label class="privacy">
-                    <input type="checkbox"> I agree to the Privacy Policy.
-                </label>
+            <div class="footer-logo">
+                <img src="image/logo.png" alt="footer logo">
             </div>
-            <div class="footer-col">
-                <h3>Navigation</h3>
-                <ul class="footer-links">
-                    <li>Home</li>
-                    <li>About</li>
-                    <li>Services</li>
-                    <li>Pricing</li>
-                    <li>Blog</li>
-                </ul>
+
+            <p class="newsletter-title">Subscribe to Our Newsletter.</p>
+
+            <div class="newsletter-box">
+                <input type="email" placeholder="Enter Email Address">
+                <button>Subscribe</button>
             </div>
-            <div class="footer-col">
-                <h3>Contact Info</h3>
-                <p>+61 3 8376 6284</p>
-                <p>info@trimlystyle.com</p>
-                <p>Swanston Street, Melbourne<br>Victoria 3053 Australia</p>
-                <p>Mon - Sat: 9:00 am to 6:00 pm</p>
-            </div>
-            <div class="footer-col">
-                <h3>Follow Us</h3>
-                <div class="social-icons">
-                    <span>f</span>
-                    <span>◎</span>
-                    <span>in</span>
-                </div>
-            </div>
+
+            <label class="privacy">
+                <input type="checkbox"> I agree to the Privacy Policy.
+            </label>
 
         </div>
 
-        <div class="footer-bottom">
-            Copyright ©2026 TrimlyStyle. All Rights Reserved.
+        <!-- COLUMN 2 -->
+        <div class="footer-col2  reveal-up">
+            <h3>Navigation</h3>
+            <ul class="footer-links">
+                <li>Home</li>
+                <li>About</li>
+                <li>Services</li>
+                <li>Pricing</li>
+                <li>Blog</li>
+            </ul>
         </div>
 
-    </footer>
+        <!-- COLUMN 3 -->
+        <div class="footer-col3 reveal-up">
+            <h3>Contact Info</h3>
+            <p>+61 3 8376 6284</p>
+            <p>info@trimlystyle.com</p>
+            <p>Swanston Street, Melbourne<br>Victoria 3053 Australia</p>
+            <p>Mon - Sat: 9:00 am to 6:00 pm</p>
+        </div>
+
+        <!-- COLUMN 4 -->
+        <div class="footer-col4  reveal-up">
+            <h3>Follow Us</h3>
+            <div class="social-icons">
+                <span>f</span>
+                <span>◎</span>
+                <span>in</span>
+            </div>
+        </div>
+
     </div>
+
+    <div class="footer-bottom  reveal-up">
+        Copyright ©2026 TrimlyStyle. All Rights Reserved.
+    </div>
+
+</footer>
 <!-- Scroll Top Button -->
 <button id="scrollTop">
     ↑
