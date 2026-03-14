@@ -32,18 +32,35 @@ box-sizing:border-box;
   align-items:center;
 }
 
-.logo{
-  color:rgb(150, 123, 6);
-  font-size:22px;
-  font-weight:bold;
-  letter-spacing:2px;
+.nav-links{
+  margin-left:80px;   
+  display:flex;
+  gap:35px;
 }
 .nav-links{
   margin-left:80px;   
   display:flex;
   gap:35px;
 }
+logo{
+display:flex;
+align-items:center;
+gap:3px;
+font-size:22px;
+font-weight:bold;
+letter-spacing:2px;
+color:#503c02;
+}
 
+.logo img{
+width:130px;
+height:auto;
+object-fit:contain;
+}
+
+.logo:hover img{
+  transform:scale(1.08) rotate(-2deg);
+}
 .nav-links a{
   text-decoration:none;
   color:rgb(0, 0, 0);    
@@ -114,6 +131,7 @@ max-width:1200px;
 margin:auto;
 padding:70px 0;
 text-align:center;
+margin-top: 70px;
 }
 
 .content-title{
@@ -191,4 +209,89 @@ text-align:center;
 padding-left:15px;
 }
 
+}
+/* BODY */
+body{
+    background:#ffffff;
+    color:#111;
+    transition:0.3s;
+}
+
+/* DARK MODE */
+body.dark-mode{
+    background:#121212;
+    color:#ffffff;
+}
+
+body.dark-mode .top-offer{
+    background:#a96f34;
+    color:#fff;
+}
+
+body.dark-mode .navbar{
+    background:#111;
+}
+
+body.dark-mode .logo{
+    color:#f1b74a;
+}
+
+body.dark-mode .nav-links a{
+    color:#fff;
+}
+
+body.dark-mode .book-btn{
+    background:#f1b74a;
+    color:#111;
+}
+
+body.dark-mode .content-title{
+    color:#fff;
+}
+
+body.dark-mode .spa-content-box{
+    background:#1e1e1e;
+}
+
+body.dark-mode .spa-content-box h3,
+body.dark-mode .spa-content-box p,
+body.dark-mode .spa-content-box ul{
+    color:#fff;
+}
+
+/* RTL MODE */
+body.rtl-mode{
+    direction:rtl;
+    text-align:right;
+}
+
+body.rtl-mode .navbar{
+    direction:rtl;
+}
+
+body.rtl-mode .nav-container{
+    flex-direction:row-reverse;
+}
+
+body.rtl-mode .nav-right{
+    flex-direction:row-reverse;
+}
+
+body.rtl-mode .nav-links{
+    margin-left:0;
+    margin-right:80px;
+}
+
+body.rtl-mode .book-btn{
+    margin-left:0;
+    margin-right:300px;
+}
+
+body.rtl-mode .spa-content-box{
+    text-align:right;
+}
+
+body.rtl-mode .spa-content-box ul{
+    padding-left:0;
+    padding-right:20px;
 }

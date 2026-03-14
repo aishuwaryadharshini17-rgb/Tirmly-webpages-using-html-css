@@ -32,12 +32,28 @@ box-sizing:border-box;
   align-items:center;
 }
 
+
+
 .logo{
-  color:rgb(150, 123, 6);
-  font-size:22px;
-  font-weight:bold;
-  letter-spacing:2px;
+display:flex;
+align-items:center;
+gap:3px;
+font-size:22px;
+font-weight:bold;
+letter-spacing:2px;
+color:#503c02;
 }
+
+.logo img{
+width:100px;
+height:auto;
+object-fit:contain;
+}
+
+.logo:hover img{
+  transform:scale(1.08) rotate(-2deg);
+}
+
 .nav-links{
   margin-left:80px;   
   display:flex;
@@ -107,13 +123,6 @@ body.dark-mode{
     margin-left:20px;
 }
 
-/* Reset */
-
-*{
-margin:0;
-padding:0;
-box-sizing:border-box;
-}
 
 /* SECTION */
 
@@ -123,6 +132,7 @@ max-width:1200px;
 margin:auto;
 padding:70px 0;
 text-align:center;
+margin-top: 70px;
 }
 
 /* TITLE */
@@ -130,7 +140,7 @@ text-align:center;
 .section-title{
 font-size:36px;
 margin-bottom:15px;
-color: #864646;
+
 }
 
 /* SUBTITLE */
@@ -138,7 +148,6 @@ color: #864646;
 .section-subtitle{
 max-width:700px;
 margin:0 auto 40px;
-color:#555;
 line-height:1.6;
 }
 
@@ -154,7 +163,6 @@ align-items:stretch;
 /* CARD */
 
 .haircolor-card{
-background:#fff;
 padding:20px;
 border-radius:12px;
 box-shadow:0 5px 20px rgba(0,0,0,0.08);
@@ -181,12 +189,10 @@ transition:transform 0.3s ease;
 .haircolor-card h3{
 font-size:20px;
 margin-bottom:8px;
-color:#080808;
 }
 
 .haircolor-card p{
 font-size:14px;
-color:#666;
 line-height:1.5;
 }
 
@@ -246,7 +252,7 @@ gap:30px;
 /* BOX */
 
 .color-box{
-background:#aaaaaa;
+
 padding:30px;
 border-radius:12px;
 box-shadow:0 5px 20px rgba(0,0,0,0.1);
@@ -257,19 +263,19 @@ animation:fadeUp 1s ease;
 
 .color-box h3{
 margin-bottom:10px;
-color: #2b0e0e;
+
 }
 
 .color-box p{
 line-height:1.6;
 margin-bottom:10px;
-color: #441c1c;
+
 }
 
 .color-box ul{
 padding-left:20px;
 line-height:1.6;
-color: #300c0c;
+
 }
 
 /* HOVER */
@@ -308,4 +314,107 @@ text-align:center;
 padding-left:15px;
 }
 
+}
+
+/* BODY */
+body{
+    background:#ffffff;
+    color:#111;
+    transition:0.3s;
+}
+
+/* DARK MODE */
+body.dark-mode{
+    background:#121212;
+    color:#ffffff;
+}
+
+body.dark-mode .top-offer{
+    background:#a96f34;
+    color:#fff;
+}
+
+body.dark-mode .navbar{
+    background:#111;
+}
+
+body.dark-mode .logo{
+    color:#f1b74a;
+}
+
+body.dark-mode .nav-links a{
+    color:#fff;
+}
+
+body.dark-mode .book-btn{
+    background:#f1b74a;
+    color:#111;
+}
+
+body.dark-mode .section-title,
+body.dark-mode .content-title{
+    color:#fff;
+}
+
+body.dark-mode .section-subtitle{
+    color:#ccc;
+}
+
+body.dark-mode .haircolor-card{
+    background:#1e1e1e;
+}
+
+body.dark-mode .haircolor-card h3{
+    color:#fff;
+}
+
+body.dark-mode .haircolor-card p{
+    color:#ccc;
+}
+
+body.dark-mode .color-box{
+    background:#2a2a2a;
+}
+
+body.dark-mode .color-box h3,
+body.dark-mode .color-box p,
+body.dark-mode .color-box ul{
+    color:#fff;
+}
+
+/* RTL MODE */
+body.rtl-mode{
+    direction:rtl;
+    text-align:right;
+}
+
+body.rtl-mode .navbar{
+    direction:rtl;
+}
+
+body.rtl-mode .nav-container{
+    flex-direction:row-reverse;
+}
+
+body.rtl-mode .nav-right{
+    flex-direction:row-reverse;
+}
+
+body.rtl-mode .nav-links{
+    margin-left:0;
+    margin-right:80px;
+}
+
+body.rtl-mode .book-btn{
+    margin-left:0;
+    margin-right:300px;
+}
+
+body.rtl-mode .color-box{
+    text-align:right;
+}
+
+body.rtl-mode .color-box ul{
+    padding-left:0;
+    padding-right:20px;
 }

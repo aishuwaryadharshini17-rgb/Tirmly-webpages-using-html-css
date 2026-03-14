@@ -32,11 +32,25 @@ box-sizing:border-box;
   align-items:center;
 }
 
+
 .logo{
-  color:rgb(150, 123, 6);
-  font-size:22px;
-  font-weight:bold;
-  letter-spacing:2px;
+display:flex;
+align-items:center;
+gap:3px;
+font-size:22px;
+font-weight:bold;
+letter-spacing:2px;
+color:#503c02;
+}
+
+.logo img{
+width:100px;
+height:auto;
+object-fit:contain;
+}
+
+.logo:hover img{
+  transform:scale(1.08) rotate(-2deg);
 }
 .nav-links{
   margin-left:80px;   
@@ -113,6 +127,7 @@ width:90%;
 margin:auto;
 padding:60px 0;
 text-align:center;
+margin: 70px;
 }
 
 .page-title{
@@ -123,7 +138,6 @@ margin-bottom:10px;
 .page-subtitle{
 max-width:700px;
 margin:auto;
-color:#555;
 margin-bottom:40px;
 }
 
@@ -143,7 +157,6 @@ gap:30px;
 /* Card */
 
 .hairstyle-card{
-background:#fff;
 padding:15px;
 border-radius:12px;
 box-shadow:0 5px 20px rgba(0,0,0,0.1);
@@ -164,12 +177,12 @@ border-radius:10px;
 .hairstyle-card h3{
 margin-top:15px;
 font-size:20px;
-color: #2c0808;
+
 }
 
 .hairstyle-card p{
 font-size:14px;
-color:#2b0808;
+
 margin-top:5px;
 }
 
@@ -205,7 +218,7 @@ gap:40px;
 }
 
 .style-box{
-background:#e7e7e7;
+
 padding:30px;
 border-radius:10px;
 box-shadow:0 4px 15px rgba(0,0,0,0.08);
@@ -226,4 +239,54 @@ color: #000;
 padding-left:20px;
 line-height:1.6;
 color: #000;
+}
+
+
+/* ================= DARK MODE - HAIRSTYLE SECTION ================= */
+
+/* Section background */
+
+body.dark-mode .hairstyle-section{
+background:#181818;
+}
+
+/* Titles */
+
+body.dark-mode .page-title,
+body.dark-mode .section-heading{
+color:#f1b74a;
+}
+
+body.dark-mode .page-subtitle{
+color:#cccccc;
+}
+
+/* Hairstyle Cards */
+
+body.dark-mode .hairstyle-card{
+background:#222;
+box-shadow:0 5px 20px rgba(0,0,0,0.6);
+}
+
+body.dark-mode .hairstyle-card h3{
+color:#ffffff;
+}
+
+body.dark-mode .hairstyle-card p{
+color:#cccccc;
+}
+
+/* Hairstyle Info Section */
+
+body.dark-mode .style-box{
+background:#222;
+}
+
+body.dark-mode .style-box h2{
+color:#f1b74a;
+}
+
+body.dark-mode .style-box p,
+body.dark-mode .style-box ul{
+color:#cccccc;
 }

@@ -32,12 +32,27 @@ box-sizing:border-box;
   align-items:center;
 }
 
+
+
 .logo{
-  color:rgb(150, 123, 6);
-  font-size:22px;
-  font-weight:bold;
-  letter-spacing:2px;
+display:flex;
+align-items:center;
+gap:3px;
+font-size:22px;
+font-weight:bold;
+letter-spacing:2px;
+color:#503c02;
 }
+
+.logo img{
+width:100px;
+height:auto;
+object-fit:contain;
+}
+.logo:hover img{
+  transform:scale(1.08) rotate(-2deg);
+}
+
 .nav-links{
   margin-left:80px;   
   display:flex;
@@ -123,7 +138,6 @@ margin-bottom:10px;
 .section-subtitle{
 max-width:700px;
 margin:auto;
-color:#555;
 margin-bottom:50px;
 line-height:1.6;
 }
@@ -139,7 +153,6 @@ gap:30px;
 /* CARD */
 
 .men-card{
-background:white;
 padding:20px;
 border-radius:12px;
 box-shadow:0 5px 20px rgba(0,0,0,0.1);
@@ -163,12 +176,10 @@ margin-bottom:15px;
 .men-card h3{
 margin-bottom:8px;
 font-size:20px;
-color: #1d0505;
 }
 
 .men-card p{
 font-size:14px;
-color:#350202;
 line-height:1.5;
 
 }
@@ -219,13 +230,12 @@ margin-bottom:40px;
 display:grid;
 grid-template-columns:repeat(auto-fit,minmax(280px,1fr));
 gap:30px;
-color: #310606;
+
 }
 
 /* BOX */
 
 .men-content-box{
-background:#c2c1c0;
 padding:30px;
 border-radius:12px;
 box-shadow:0 5px 20px rgba(0,0,0,0.1);
@@ -284,4 +294,101 @@ text-align:center;
 padding-left:15px;
 }
 
+}
+
+
+/* BODY */
+body{
+    background:#ffffff;
+    color:#111;
+    transition:0.3s;
+}
+
+/* DARK MODE */
+body.dark-mode{
+    background:#121212;
+    color:#ffffff;
+}
+
+body.dark-mode .top-offer{
+    background:#a96f34;
+    color:#fff;
+}
+
+body.dark-mode .navbar{
+    background:#111;
+}
+
+body.dark-mode .logo{
+    color:#f1b74a;
+}
+
+body.dark-mode .nav-links a{
+    color:#fff;
+}
+
+body.dark-mode .book-btn{
+    background:#f1b74a;
+    color:#111;
+}
+
+body.dark-mode .men-card{
+    background:#1e1e1e;
+}
+
+body.dark-mode .men-card h3,
+body.dark-mode .men-card p{
+    color:#fff;
+}
+
+body.dark-mode .section-subtitle{
+    color:#ccc;
+}
+
+body.dark-mode .men-content-box{
+    background:#2a2a2a;
+    color:#fff;
+}
+
+body.dark-mode .men-content-box h3,
+body.dark-mode .men-content-box p,
+body.dark-mode .men-content-box ul{
+    color:#fff;
+}
+
+/* RTL MODE */
+body.rtl-mode{
+    direction:rtl;
+    text-align:right;
+}
+
+body.rtl-mode .navbar{
+    direction:rtl;
+}
+
+body.rtl-mode .nav-container{
+    flex-direction:row-reverse;
+}
+
+body.rtl-mode .nav-right{
+    flex-direction:row-reverse;
+}
+
+body.rtl-mode .nav-links{
+    margin-left:0;
+    margin-right:80px;
+}
+
+body.rtl-mode .book-btn{
+    margin-left:0;
+    margin-right:300px;
+}
+
+body.rtl-mode .men-content-box{
+    text-align:right;
+}
+
+body.rtl-mode .men-content-box ul{
+    padding-left:0;
+    padding-right:20px;
 }

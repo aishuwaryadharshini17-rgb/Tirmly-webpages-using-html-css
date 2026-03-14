@@ -32,12 +32,27 @@ box-sizing:border-box;
   align-items:center;
 }
 
+
 .logo{
-  color:rgb(150, 123, 6);
-  font-size:22px;
-  font-weight:bold;
-  letter-spacing:2px;
+display:flex;
+align-items:center;
+gap:3px;
+font-size:22px;
+font-weight:bold;
+letter-spacing:2px;
+color:#503c02;
 }
+
+.logo img{
+width:100px;
+height:auto;
+object-fit:contain;
+}
+
+.logo:hover img{
+  transform:scale(1.08) rotate(-2deg);
+}
+
 .nav-links{
   margin-left:80px;   
   display:flex;
@@ -123,7 +138,6 @@ margin-bottom:10px;
 .section-subtitle{
 max-width:700px;
 margin:auto;
-color:#ddbcbc;
 margin-bottom:50px;
 line-height:1.6;
 }
@@ -134,13 +148,12 @@ line-height:1.6;
 display:grid;
 grid-template-columns:repeat(auto-fit,minmax(280px,1fr));
 gap:30px;
-color:#662b2b;
+
 }
 
 /* BOX */
 
 .manicure-box{
-background:#fff1df;
 padding:30px;
 border-radius:12px;
 box-shadow:0 5px 20px rgba(0,0,0,0.1);
@@ -246,4 +259,84 @@ body.rtl .navbar,
 body.rtl .container,
 body.rtl .section{
     direction: rtl;
+}
+/* DEFAULT */
+body{
+    background:#ffffff;
+    color:#111;
+    transition:0.3s;
+}
+
+/* DARK MODE */
+body.dark-mode{
+    background:#121212;
+    color:#ffffff;
+}
+
+body.dark-mode .navbar{
+    background:#111;
+}
+
+body.dark-mode .top-offer{
+    background:#a96f34;
+    color:#fff;
+}
+
+body.dark-mode .nav-links a{
+    color:#fff;
+}
+
+body.dark-mode .logo{
+    color:#f1b74a;
+}
+
+body.dark-mode .book-btn{
+    background:#f1b74a;
+    color:#111;
+}
+
+body.dark-mode .manicure-box{
+    background:#1e1e1e;
+    color:#fff;
+}
+
+body.dark-mode .section-subtitle{
+    color:#ccc;
+}
+
+/* RTL MODE */
+body.rtl-mode{
+    direction: rtl;
+    text-align: right;
+}
+
+body.rtl-mode .navbar{
+    direction: rtl;
+}
+
+body.rtl-mode .nav-container{
+    flex-direction: row-reverse;
+}
+
+body.rtl-mode .nav-right{
+    flex-direction: row-reverse;
+}
+
+body.rtl-mode .nav-links{
+    margin-left: 0;
+    margin-right: 80px;
+}
+
+body.rtl-mode .book-btn{
+    margin-left: 0;
+    margin-right: 300px;
+}
+
+body.rtl-mode .manicure-box{
+    text-align: right;
+}
+
+body.rtl-mode .manicure-box ul{
+    padding-left: 0;
+    padding-right: 20px;
 }
