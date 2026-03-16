@@ -441,3 +441,106 @@ body.rtl{
     color: #aaa;
 }
 
+
+@media (max-width: 1024px) {
+    .navbar {
+        padding: 18px 5%;
+        top: 35px;
+    }
+
+    .nav-container {
+        justify-content: space-between;
+        flex-wrap: wrap;
+        gap: 15px;
+    }
+
+    .logo img {
+        width: 110px;
+    }
+
+    .nav-links {
+        margin-left: 30px;
+        gap: 20px;
+        flex-wrap: wrap;
+    }
+
+    .nav-links a {
+        font-size: 14px;
+    }
+
+    .nav-right {
+        gap: 15px;
+    }
+
+    .book-btn {
+        margin-left: 0;
+        padding: 10px 16px;
+        font-size: 13px;
+    }
+
+    .beard-trim-section {
+        width: 92%;
+        padding: 60px 0;
+    }
+
+    .beard-wrapper {
+        gap: 25px;
+    }
+
+    .beard-img img {
+        width: 300px;
+        height: 220px;
+    }
+
+    .beard-title {
+        font-size: 32px;
+    }
+
+    .beard-text h2 {
+        font-size: 24px;
+    }
+
+    .beard-text p,
+    .beard-text ul {
+        font-size: 15px;
+    }
+
+    .footer {
+        padding: 100px 5% 20px;
+    }
+
+    .footer-grid {
+        grid-template-columns: 1.5fr 1fr 1fr 1fr;
+        gap: 25px;
+    }
+
+    .footer-logo {
+        width: 140px;
+        margin-top: -20px;
+        margin-left: 0;
+    }
+
+    .footer-nav {
+        margin-top: 0;
+        margin-left: 0;
+    }
+
+    .footer-contact {
+        margin-top: 0;
+        margin-left: 0;
+    }
+
+    .footer-social {
+        margin-top: 0;
+    }
+
+    .newsletter {
+        flex-direction: column;
+        gap: 10px;
+    }
+
+    .newsletter input,
+    .newsletter button {
+        width: 100%;
+    }
+}

@@ -1341,3 +1341,176 @@ body.rtl .nav-right{
 body.rtl .book-btn{
     margin-right:120px;
 }
+
+
+/* ===============================
+   1024px RESPONSIVE
+=============================== */
+@media (max-width:1024px){
+
+    /* NAVBAR */
+    .navbar{
+        padding:16px 24px;
+    }
+
+    .nav-container{
+        gap:15px;
+    }
+
+    .logo img{
+        width:100px;
+    }
+
+    .nav-links{
+        gap:18px;
+        flex-wrap:wrap;
+    }
+
+    .nav-links a{
+        font-size:15px;
+        padding:6px 8px;
+    }
+
+    .nav-actions,
+    .nav-right{
+        gap:10px;
+    }
+
+    .nav-appointment-btn{
+        padding:10px 18px;
+        font-size:14px;
+    }
+
+    /* HERO */
+    .about-hero{
+        height:320px;
+        margin-top:60px;
+    }
+
+    .about-overlay h1{
+        font-size:38px;
+    }
+
+    .about-overlay p{
+        font-size:16px;
+    }
+
+    .services-hero{
+        height:75vh;
+    }
+
+    .overlay h1{
+        font-size:40px;
+    }
+
+    .overlay p{
+        font-size:16px;
+    }
+
+    /* COMMON SECTION */
+    .services-content,
+    .men-services,
+    .women-salon,
+    .client-reviews{
+        padding:60px 6%;
+    }
+
+    .section-title{
+        font-size:32px;
+    }
+
+    .section-text,
+    .subtitle{
+        font-size:15px;
+    }
+
+    /* SERVICE CARDS */
+    .service-cards{
+        gap:20px;
+    }
+
+    .card{
+        width:calc(50% - 15px);
+        padding:28px 20px;
+    }
+
+    .card h3{
+        font-size:20px;
+    }
+
+    .card p{
+        font-size:14px;
+    }
+
+    /* MEN / WOMEN SERVICE GRID */
+    .men-services-grid,
+    .women-services-grid{
+        grid-template-columns:repeat(2, 1fr);
+        gap:20px;
+    }
+
+    .service-card img{
+        height:220px;
+    }
+
+    /* REVIEWS */
+    .reviews-container{
+        grid-template-columns:repeat(2, 1fr);
+        gap:20px;
+    }
+
+    .review-card{
+        padding:24px;
+    }
+
+    /* FOOTER */
+    .footer{
+        padding:90px 6% 20px;
+    }
+
+    .footer-grid{
+        grid-template-columns:1.4fr 1fr 1fr 1fr;
+        gap:25px;
+    }
+
+    .footer-logo{
+        width:140px;
+        margin-top:-20px;
+        margin-left:0;
+    }
+
+    .footer-nav{
+        margin-top:0;
+        margin-left:0;
+    }
+
+    .footer-contact{
+        margin-top:0;
+        margin-left:0;
+    }
+
+    .footer-social{
+        margin-top:0;
+    }
+
+    .newsletter{
+        flex-direction:column;
+        gap:10px;
+    }
+
+    .newsletter input,
+    .newsletter button{
+        width:100%;
+    }
+
+    /* RTL */
+    html[dir="rtl"] .footer-nav,
+    html[dir="rtl"] .footer-contact,
+    html[dir="rtl"] .footer-social{
+        text-align:right;
+    }
+
+    body.rtl .book-btn{
+        margin-right:0;
+    }
+}
