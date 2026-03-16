@@ -1,19 +1,24 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en"dir="ltr">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Trimly</title>
-    <link rel="stylesheet" href="style.css">
+ 
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"> 
+    <link rel="stylesheet" href="css/about.css">
+      <link rel="stylesheet" href="css/style.css">
+   
+    <link rel="icon" type="image/png" href="image/logo.png">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
-<link rel="stylesheet" href="style.css">  
-<link rel="stylesheet" href="css/about.css">
-<link rel="stylesheet" href="css/pricing.css"> 
-<link rel="stylesheet" href="css/style.css">
-<link rel="icon" type="image/png" href="image/logo.png">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap"
+        rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;500;600&display=swap" rel="stylesheet">
+
 </head>  
 <body>
+   
     
 <!-- ===== TOP OFFER ===== -->
 <div class="top-offer">
@@ -24,118 +29,93 @@
 <header class="navbar">
   <div class="nav-container">
 
-  
+    
   <div class="logo">
     <img src="image/logo.png" alt="logo">
+
 </div>
  
-
-    <nav class="nav-links">
-      <a href="index.html">Home</a>
-      <a href="about.html">About</a>
-      <a href="service.html">Services</a>
-      <a href="pricing.html">pricing</a>
-      <a href="contact.html">Contact</a>
       
-      
-    </nav>
+    <ul class="nav-links">
+        <a href="index.html"class="active">Home</a>
+        <a href="about.html">About</a>
+        <a href="service.html">Service</a>
+        <a href="pricing.html">Pricing</a>
+        <a href="contact.html">Contact</a>
+    </ul>
 
-    
- <div class="theme-toggle">
+     <!-- Theme Toggle -->
+    <div class="theme-toggle">
       <button id="theme-toggle">
         <span id="theme-icon">🌙</span>
       </button>
     </div>
 
-<button id="swapBtn" class="swap-btn">⇄</button>
-<button class="book-btn">Book Appointment</button>
+
+<button id="swap-btn" class="swap-btn">⇄</button>
+
+
+<button class="nav-appointment-btn">Book Appointment</button>
 
   </div>
+
 </header>
 
 
-<section class="hero">
 
+<section class="hero">
     <div class="hero-slider">
 
-        <!-- Slide 1 -->
         <div class="hero-slide active">
             <img src="image/jh.jpg" class="hero-bg" alt="Slide 1">
-            <div class="hero-content"></div>
-
             <div class="hero-content">
                 <h1>SHINE.<br>TIMELESS STYLE.</h1>
                 <p>Modern styles. Grooming that makes you feel elegant.</p>
+                <button class="hero-btn">Get Groomed Today →</button>
             </div>
         </div>
 
-        <!-- Slide 2 -->
         <div class="hero-slide">
             <img src="image/hti.jpg.jpg" class="hero-bg" alt="Slide 2">
-                 <div class="hero-content ">
-
-
             <div class="hero-content">
                 <h1>MODERN CUTS.<br>CLASSIC CONFIDENCE.</h1>
                 <p>Precision styling tailored for you.</p>
+                <button class="hero-btn">Book Appointment →</button>
             </div>
         </div>
 
-    
-<button class="prev">&#10094;</button>
-<button class="next">&#10095;</button>
-    
-    </div>
-
-</section>
-
-
-<!----=====hero section ====-->
-
-<section class="hero">
-
-    <div class="hero-content ">
-        <h1>
-            SHARP LOOKS.<br>
-            TIMELESS STYLE.
-        </h1>
-
-        <p>
-            Expert Barbers. Modern Styles. A Grooming Experience You'll Love.
-        </p>
-
-        <button class="hero-btn">Get Groomed Today</button>
-
-        <div class="rating">
-            ⭐ 4.9 / 5 Reviews
+        <div class="hero-slide">
+            <img src="image\ghj,lpg.jpg" class="hero-bg" alt="Slide 3">
+            <div class="hero-content">
+                <h1>STYLE THAT<br>SPEAKS.</h1>
+                <p>Because first impressions matter.</p>
+                <button class="hero-btn">Explore Services →</button>
+            </div>
         </div>
+
+        <div class="hero-prev">&#10094;</div>
+        <div class="hero-next">&#10095;</div>
     </div>
 </section>
 
 
 
 
+<section class="experience reveal">
 
-
-<!----=====experience=====-->
-
-<section class="experience">
-
-    <div class="top-title">
+    <div class="top-title reveal-up">
         <p class="sub">The Trimly Experience</p>
-        <h1>Where Style Meets        Experience</h1>
+        <h1>Where Style Meets Experience</h1>
     </div>
 
-<div class="experience-container">
+    <div class="experience-container">
 
         <!-- LEFT IMAGE -->
-        <div class="left-image">
-            <img src="image\qq.jpg" alt="Barber">
+        <div class="left-image reveal-left">
+            <img src="image/qq.jpg" alt="Barber">
         </div>
 
         <div class="right-content reveal-right">
-
-
             <h2>Innovative Hair Solutions Backed by Decades of Experience</h2>
 
             <p>
@@ -150,8 +130,8 @@
             </div>
 
             <div class="bottom-section">
-                <div class="small-image">
-                    <img src="image\service 2.jpg" alt="Hair Wash">
+                <div class="small-image reveal-left">
+                    <img src="image/service 2.jpg" alt="Hair Wash">
                 </div>
 
                 <div class="features reveal-right">
@@ -175,9 +155,10 @@
     </div>
 
 </section>
+
 <!-- service -->
 <section class="services reveal">
-    <h1> Grooming Services</h1>
+    <h1 class="reveal-up">Grooming Services</h1>
     <p class="subtitle reveal-up">
         From Precision Haircuts to Complete Grooming and Advanced Hair Care Solutions,
         Trimly Offers Personalized Services Designed to Help You Look Sharp and Feel Confident—every Visit.
@@ -186,7 +167,7 @@
     <div class="service-container">
 
         <div class="card reveal-zoom">
-            <img src="image\p.jpg" alt="">
+            <img src="image/p.jpg" alt="">
 
             <div class="icon-box">
                 <i class="fa-solid fa-user"></i>
@@ -204,10 +185,10 @@
             </ul>
 
             <button>Learn More</button>
-        
         </div>
+
         <div class="card reveal-zoom">
-            <img src="image\service.jpg" alt="Women Service">
+            <img src="image/service.jpg" alt="Women Service">
 
             <div class="icon-box">
                 <i class="fa-solid fa-scissors"></i>
@@ -227,7 +208,7 @@
         </div>
 
         <div class="card reveal-zoom">
-            <img src="image\add on servicess.jpg" alt="Add-on Service">
+            <img src="image/add on servicess.jpg" alt="Add-on Service">
 
             <div class="icon-box">
                 <i class="fa-solid fa-spa"></i>
@@ -249,227 +230,329 @@
     </div>
 </section>
 
+<section class="appointment reveal">
 
-<!-- feature section -->
-<section class="featured">
+    <div class="appointment-overlay"></div>
 
-    <h2 class="section-title">Featured Styles</h2>
+    <div class="appointment-content reveal-up">
+        <h2>Book Your Appointment</h2>
 
-    <div class="filter-buttons reveal-up">
-       <button data-filter="all">All</button>
-        <button data-filter="haircuts">Haircuts</button>
-        <button data-filter="beards">Beards</button>
-        <button data-filter="styling">Styling</button>
-        <button data-filter="color">Hair Color</button>
-        <button data-filter="beforeafter">Before & After</button>
-    </div>
-<div class="gallery">
-
-        <div class="image-box haircuts  reveal-zoom">
-            <img src="image\hairstyle.jpg" alt="">
-        </div>
-
-        <div class="image-box haircuts reveal-zoom">
-            <img src="image\ghh.jpg" alt="">
-        </div>
-
-        <div class="image-box haircuts  reveal-zoom">
-            <img src="image\haircut4.jpg" alt="">
-        </div>
-
-        <div class="image-box haircuts  reveal-zoom">
-            <img src="image\hair.jpg" alt="">
-        </div>
-
-
-        <div class="image-box beards  reveal-zoom">
-            <img src="image\beared.jpg" alt="">
-        </div>
-
-         <div class="image-box beards reveal-zoom">
-            <img src="image\beard1,jpg.jpg" alt="">
-        </div>
-
-        <div class="image-box beards  reveal-zoom">
-            <img src="image\beard.jpg" alt="">
-        </div>
-
-        <div class="image-box styling  reveal-zoom">
-            <img src="image\ii.jpg" alt="">
-        </div>
-
-        <div class="image-box styling reveal-zoom">
-            <img src="image\ee.jpg" alt="">
-        </div>
-
-        <div class="image-box styling  reveal-zoom">
-            <img src="image\2.jpg" alt="">
-        </div>
-
-        <div class="image-box styling  reveal-zoom">
-            <img src="image\z.jpg" alt="">
-        </div>
-
-
-        <div class="image-box color  reveal-zoom">
-            <img src="image\color.jpg" alt="">
-        </div>
-
-        <div class="image-box color  reveal-zoom">
-            <img src="image\tt,jpg.jpg" alt="">
-        </div>
-
-        <div class="image-box beforeafter  reveal-zoom">
-            <img src="image\before and after haircut.jpg" alt="">
-        </div>
-
-        <div class="image-box beforeafter reveal-zoom">
-            <img src="image\r,jpg.jpg" alt="">
-        </div>
-    </div>
-</section>
-
-<!-- BOOK APPOINTMENT -->
-<section class="booking reveal">
-  <div class="overlay"></div>
-
-  <div class="booking-content reveal-up">
-    <h1>Book Your Appointment</h1>
-    <p>
-      Schedule your visit in just a few clicks. Choose your service,
-      select your preferred barber and pick a time that works best for you.
-    </p>
-
-    <div class="booking-box reveal-zoom">
-
-      <!-- form connected to Java servlet -->
-      <form class="booking-form" action="BookingServlet" method="post">
-
-        <!-- NAME -->
-        <input type="text" name="name" placeholder="Full Name" required>
-
-        <!-- EMAIL -->
-        <input type="email" name="email" placeholder="Email Address" required>
-
-        <!-- BARBER -->
-        <select name="barber" required>
-          <option value="">Choose Barber</option>
-          <option value="Alex Morgan">Alex Morgan</option>
-          <option value="Sophia Bennett">Sophia Bennett</option>
-          <option value="Marcus Lee">Marcus Lee</option>
-        </select>
-
-        <!-- PHONE -->
-        <input type="text" name="phone" placeholder="Phone Number" required>
-
-        <!-- SERVICE -->
-        <select name="service" required>
-          <option value="">Select Service</option>
-          <option value="Haircut">Haircut</option>
-          <option value="Beard Trim">Beard Trim</option>
-          <option value="Hair Styling">Hair Styling</option>
-          <option value="Hair Spa">Hair Spa</option>
-        </select>
-
-        <!-- DATE -->
-        <input type="datetime-local" name="date" required>
-
-        <!-- NOTES -->
-        <input type="text" name="notes" placeholder="Additional Notes" class="full-width">
-
-        <!-- SUBMIT -->
-        <button type="submit" class="full-width-btn">
-          Confirm Booking
-        </button>
-
-      </form>
-
-    </div>
-  </div>
-</section>
-
-<!-- pricing section reveal -->
-<section class="pricing">
-    <h1>Transparent Pricing</h1>
-
-    <p class="subtitle revealup">
-        No Surprises, No Hidden Fees. At Trimly, Our Pricing is Clear and Upfront —
-        So You Know Exactly What to Expect Before You Book Your Appointment.
-    </p>
-
-    <h3 class="category reveal-left">Men's Services:</h3>
-    <div class="price-box">
-        <div class="service">
-            <h2>Classic Cut</h2>
-            <p>Professional haircut • Neck & line cleanup • Styling finish</p>
-        </div>
-
-        <div class="action">
-            <span>$25</span>
-            <button>Book Now</button>
-        </div>
-    </div>
-    <div class="price-box highlight">
-        <div class="popular">POPULAR</div>
-
-        <div class="service">
-            <h2>Grooming Combo</h2>
-            <p>Haircut • Beard trim & shape • Head & scalp massage</p>
-        </div>
-
-        <div class="action">
-            <span>$40</span>
-            <button class="filled">Book Now</button>
-        </div>
-    </div>
-    <div class="price-box">
-        <div class="service">
-            <h2>Premium Experience</h2>
-            <p>Haircut • Scalp massage • Beard styling • Hot towel shave</p>
-        </div>
-
-        <div class="action">
-            <span>$60</span>
-            <button>Book Now</button>
-        </div>
+        <p>
+            Schedule Your Visit in Just a Few Clicks. Choose Your Service,
+            Select Your Preferred Barber or Stylist, and Pick a Time
+            That Works Best for You—quick, Easy, and Hassle-free.
+        </p>
     </div>
 
-    <h3 class="category reveal-left">Women's Services</h3>
+    <div class="global-container">
+        <div class="appointment-box reveal-zoom">
 
-    <div class="price-box reveal-up">
-        <div class="service">
-            <h2>Trimly Signature</h2>
-            <p>Haircut & Styling — $35+ • Hair Coloring — $70+ • Hair Spa — $45+</p>
-        </div>
+            <form class="appointment-form">
+                <div class="form-group reveal-up">
+                    <label>Full Name:</label>
+                    <input type="text">
+                </div>
 
-        <div class="action">
-            <button>Book Now</button>
+                <div class="form-group reveal-up">
+                    <label>Phone Number:</label>
+                    <input type="text">
+                </div>
+
+                <div class="form-group textarea reveal-up">
+                    <label>Additional Notes:</label>
+                    <textarea placeholder="Example: terrain conditions, attachments, shift hours"></textarea>
+                </div>
+
+                <div class="form-group reveal-up">
+                    <label>Email Address:</label>
+                    <input type="email">
+                </div>
+
+                <div class="form-group reveal-up">
+                    <label>Choose Barber:</label>
+                    <select>
+                        <option>Select Barber</option>
+                        <option>John</option>
+                        <option>Michael</option>
+                        <option>David</option>
+                    </select>
+                </div>
+
+                <div class="form-group reveal-up">
+                    <label>Select Service:</label>
+                    <select>
+                        <option>Haircut</option>
+                        <option>Beard Trim</option>
+                        <option>Hair Spa</option>
+                    </select>
+                </div>
+
+                <div class="form-group reveal-up">
+                    <label>Pick Date & Time:</label>
+                    <input type="datetime-local">
+                </div>
+
+                <button class="confirm-btn">Confirm Booking</button>
+            </form>
+
+            <div class="appointment-features reveal-right">
+                <span><i class="fa-solid fa-circle-check"></i> Instant Confirmation</span>
+                <span><i class="fa-solid fa-circle-check"></i> No Waiting Time</span>
+                <span><i class="fa-solid fa-circle-check"></i> Easy Rescheduling</span>
+                <span><i class="fa-solid fa-circle-check"></i> Secure Booking</span>
+            </div>
+
         </div>
     </div>
 
 </section>
-<!-- Services silder session -->
-<section class="services-slider reveal ">
 
-    <div class="service-slide active ">
-        <img src="image\hhm.jpg" alt="Service 1">
+    </section>
+<section class="featured-styles reveal">
+
+    <div class="global-container">
+
+        <div class="styles-header reveal-up">
+            <h2>Featured Styles</h2>
+            <p>
+                Take a Look at the Styles We Create Every Day. From Clean Fades and
+                Classic Cuts to Modern Styling and Color Transformations, Our Work
+                Reflects the Skill, Precision, and Care We Bring to Every Client.
+            </p>
+        </div>
+
+        <div class="styles-filter reveal-up">
+            <button class="filter-btn active all-btn">All</button>
+            <button class="filter-btn haircut-btn">Haircuts</button>
+            <button class="filter-btn beard-btn">Beards</button>
+            <button class="filter-btn styling-btn">Styling</button>
+            <button class="filter-btn haircolor-btn">Hair Color</button>
+            <button class="filter-btn beforeafter-btn">Before & After</button>
+        </div>
+
+        <div class="styles-grid reveal">
+            <img src="image/hairstyle.jpg" class="style-item all reveal-zoom">
+            <img src="image/ii.jpg" class="style-item all reveal-zoom">
+            <img src="image/beared.jpg" class="style-item all reveal-zoom">
+            <img src="image/z.jpg" class="style-item all reveal-zoom">
+
+            <img src="image/hairstyle.jpg" class="style-item haircuts reveal-zoom">
+            <img src="image/ghh.jpg" class="style-item haircuts reveal-zoom">
+            <img src="image/haircut4.jpg" class="style-item haircuts reveal-zoom">
+            <img src="image/hair.jpg" class="style-item haircuts reveal-zoom">
+
+            <img src="image/beared.jpg" class="style-item beards reveal-zoom">
+            <img src="image/beard1.jpg" class="style-item beards reveal-zoom">
+            <img src="image/beard.jpg" class="style-item beards reveal-zoom">
+            <img src="image/b2.jpg" class="style-item beards reveal-zoom">
+
+            <img src="image/ii.jpg" class="style-item styling reveal-zoom">
+            <img src="image/ee.jpg" class="style-item styling reveal-zoom">
+            <img src="image/2.jpg" class="style-item styling reveal-zoom">
+            <img src="image/z.jpg" class="style-item styling reveal-zoom">
+
+            <img src="image/color.jpg" class="style-item haircolor reveal-zoom">
+            <img src="image/ttt.jpg" class="style-item haircolor reveal-zoom">
+            <img src="image/er.jpg" class="style-item haircolor reveal-zoom">
+            <img src="image/fg.jpg" class="style-item haircolor reveal-zoom">
+
+            <img src="image/before and after haircut.jpg" class="style-item beforeafter reveal-zoom">
+            <img src="image\r.jpg" class="style-item beforeafter reveal-zoom">
+            <img src="image/ab.jpg" class="style-item beforeafter reveal-zoom">
+            <img src="image\ba.jpg" class="style-item beforeafter reveal-zoom">
+        </div>
+
+        <div class="styles-btn reveal-up">
+            <a href="#">View Our Gallery</a>
+        </div>
+
+    </div>
+
+</section>
+
+<section class="pricing reveal">
+
+    <div class="global-container">
+
+        <div class="pricing-header reveal-up">
+            <h2>Transparent Pricing</h2>
+            <p>
+                No Surprises, No Hidden Fees. At Trimly, Our Pricing is Clear and Upfront—
+                so You Know Exactly What to Expect Before You Book Your Appointment.
+            </p>
+        </div>
+
+        <h4 class="pricing-category reveal-left">Men's Services:</h4>
+
+        <div class="price-row reveal-right">
+            <h3>Classic Cut</h3>
+            <ul>
+                <li>Professional haircut</li>
+                <li>Neck & line cleanup</li>
+                <li>Styling finish</li>
+            </ul>
+            <span class="price">$25</span>
+            <a href="#" class="price-btn">Book Now</a>
+        </div>
+
+        <div class="price-row reveal-right">
+            <span class="popular">POPULAR</span>
+            <h3>Grooming Combo</h3>
+            <ul>
+                <li>Haircut</li>
+                <li>Beard trim & shape</li>
+                <li>Head & scalp massage</li>
+            </ul>
+            <span class="price">$40</span>
+            <a href="#" class="price-btn filled">Book Now</a>
+        </div>
+
+        <div class="price-row reveal-right">
+            <h3>Premium Experience</h3>
+            <ul>
+                <li>Haircut</li>
+                <li>Scalp Massage</li>
+                <li>Beard styling</li>
+                <li>Hot towel shave</li>
+            </ul>
+            <span class="price">$60</span>
+            <a href="#" class="price-btn">Book Now</a>
+        </div>
+
+        <h4 class="pricing-category reveal-left">Women's Services</h4>
+
+        <div class="price-row reveal-right">
+            <h3>Trimly Signature</h3>
+            <ul>
+                <li>Haircut & Styling — $35+</li>
+                <li>Hair Coloring / Highlights — $70+</li>
+                <li>Hair Spa Treatment — $45+</li>
+            </ul>
+            <a href="#" class="price-btn">Book Now</a>
+        </div>
+
+    </div>
+
+</section>
+
+<section class="team reveal">
+
+    <div class="global-container">
+
+        <div class="team-header reveal-up">
+            <h2>Our Barbers & Stylists</h2>
+            <p>
+                Our Team Combines Years of Experience, Modern Techniques, and Genuine Passion
+                to Deliver Personalized Grooming and Styling for Every Client.
+            </p>
+        </div>
+
+        <div class="team-grid">
+
+            <div class="team-card reveal-zoom">
+                <div class="team-img">
+                    <img src="image/images (2).jpg">
+                </div>
+                <h3>Alex Morgan</h3>
+                <p class="role">Senior Barber | Fade & Classic Cuts Specialist</p>
+                <p><strong>Specialties:</strong> Haircuts, blowouts, styling</p>
+                <p><strong>Experience:</strong> 11+ Years</p>
+                <div class="team-social">
+                    <i class="fa-brands fa-facebook-f"></i>
+                    <i class="fa-brands fa-instagram"></i>
+                    <i class="fa-brands fa-youtube"></i>
+                </div>
+            </div>
+
+            <div class="team-card reveal-zoom">
+                <div class="team-img">
+                    <img src="image/slidesssss.jpg">
+                    <a class="book-btn">Book with Sophia</a>
+                </div>
+                <h3>Sophia Bennett</h3>
+                <p class="role">Senior Stylist | Women's Hair & Styling</p>
+                <p><strong>Specialties:</strong> Skin fades, classic cuts, beard shaping</p>
+                <p><strong>Experience:</strong> 12+ Years</p>
+                <div class="team-social">
+                    <i class="fa-brands fa-facebook-f"></i>
+                    <i class="fa-brands fa-instagram"></i>
+                    <i class="fa-brands fa-youtube"></i>
+                </div>
+            </div>
+
+            <div class="team-card reveal-zoom">
+                <div class="team-img">
+                    <img src="image/yt.jpg">
+                </div>
+                <h3>Marcus Lee</h3>
+                <p class="role">Barber | Modern & Trend Styles</p>
+                <p><strong>Specialties:</strong> Tapers, textured cuts, styling, beard grooming, modern fades</p>
+                <p><strong>Experience:</strong> 8+ Years</p>
+                <div class="team-social">
+                    <i class="fa-brands fa-facebook-f"></i>
+                    <i class="fa-brands fa-instagram"></i>
+                    <i class="fa-brands fa-youtube"></i>
+                </div>
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+<section class="loyalty reveal">
+
+    <div class="loyalty-overlay"></div>
+
+    <div class="global-container loyalty-grid">
+
+        <div class="loyalty-img reveal-left">
+            <img src="image/hhk.j[g.jpg" alt="barber">
+        </div>
+
+        <div class="loyalty-content reveal-right">
+            <h2>TRIMLY <br> CLUB</h2>
+            <p>
+                Join the Trimly Club and Enjoy Exclusive Grooming Benefits,
+                Priority Booking, and Special Savings because Great Style
+                Deserves Consistent Care.
+            </p>
+
+            <ul class="loyalty-list reveal-up">
+                <li>Earn Points on Every Service</li>
+                <li>Redeem Points for Discounts or Free Services</li>
+                <li>Birthday & Referral Bonuses</li>
+            </ul>
+
+            <a href="#" class="loyalty-btn reveal-up">Join Loyalty Program</a>
+        </div>
+
+    </div>
+
+</section>
+
+<section class="services-slider reveal">
+
+    <div class="service-slide active reveal-zoom">
+        <img src="image/hhm.jpg" alt="Service 1">
         <div class="service-content reveal-left">
             <h2>Classic Haircut</h2>
             <p>Professional haircut tailored to your style.</p>
         </div>
     </div>
 
-    <div class="service-slide">
-        <img src="image\pppo.jpg" alt="Service 2">
-        <div class="service-content">
+    <div class="service-slide reveal-zoom">
+        <img src="image/pppo.jpg" alt="Service 2">
+        <div class="service-content reveal-left">
             <h2>Beard Grooming</h2>
             <p>Sharp beard shaping and trimming service.</p>
         </div>
     </div>
 
-    <div class="service-slide">
-        <img src="image\hg,jpg.jpg" alt="Service 3">
-        <div class="service-content">
+    <div class="service-slide reveal-zoom">
+        <img src="image/hg,jpg.jpg" alt="Service 3">
+        <div class="service-content reveal-left">
             <h2>Hair Styling</h2>
             <p>Modern styling techniques for a fresh look.</p>
         </div>
@@ -480,339 +563,242 @@
 
 </section>
 
-<!-- team session -->
-<section class="team-section reveal">
-     <h2 class="reveal-up"></h2>Our Barbers & Stylists</h2>
-    <p class="subtitle reveal-up ">
-        Our Team Combines Years of Experience, Modern Techniques, and Creative Passion
-        to Deliver Professional Grooming Services for Every Client
-    </p>
+<section class="testimonials reveal">
 
-    <div class="slider-container reveal-up">
-        <button class="arrow left">&#10094;</button>
+    <div class="global-container">
 
-        <div class="slider">
-            <div class="team-wrapper">
+        <div class="testimonial-header reveal-up">
+            <h2>What Our Clients Say</h2>
+        </div>
 
-                <!-- 1 -->
-                <div class="team-card reveal-zoom">
-                    <img src="image\images (2).jpg">
-                    <h3>Alex Morgan</h3>
-                </div>
-
-                <!-- 2 -->
-                <div class="team-card reveal-zoom ">
-                    <img src="image\slidesssss.jpg">
-                    <h3>Sophia Bennett</h3>
-                </div>
-
-                <!-- 3 -->
-                <div class="team-card reveal-zoom">
-                    <img src="image\yt.jpg">
-                    <h3>Marcus Lee</h3>
-                </div>
-
-                <!-- 4 -->
-                <div class="team-card reveal-zoom">
-                    <img src="image\x.jpg">
-                    <h3>Daniel Smith</h3>
-                </div>
-
-                <!-- 5 -->
-                <div class="team-card reveal-zoom">
-                    <img src="image\b,jpg.jpg">
-                    <h3>Chris Brown</h3>
-                </div>
-
-                <!-- 6 -->
-                <div class="team-card reveal-zoom">
-                    <img src="image\cx.jpg">
-                    <h3>Emma Watson</h3>
-                </div>
-
+        <div class="testimonial-content reveal-zoom">
+            <div class="stars reveal-up">
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-solid fa-star"></i>
             </div>
-        </div>
 
-        <button class="arrow right">&#10095;</button>
-    </div>
-</section>
-<!-- club section -->
-<section class="club-hero reveal">
-    <div class="club-wrapper">
-
-        <!-- Left Image -->
-        <div class="club-image reveal-left re">
-            <div class="circle-bg"></div>
-            <img src="image\hhk.j[g.jpg"alt="Trimly Staff">
-        </div>
-
-        <!-- Right Content -->
-        <div class="club-content reveal-right">
-            <h1>TRIMLY <br> CLUB</h1>
-
-            <p>
-                Join the Trimly Club and Enjoy Exclusive Grooming
-                Benefits, Priority Booking, and Special Savings because
-                Great Style Deserves Consistent Care.
+            <p class="testimonial-text reveal-up">
+                “Best haircut I’ve had in years. The barber took time to understand
+                what I wanted and delivered perfectly. Highly recommend Trimly!”
             </p>
 
-            <ul>
-                <li>✔ Earn Points on Every Service</li>
-                <li>✔ Redeem Points for Discounts or Free Services</li>
-                <li>✔ Birthday & Referral Bonuses</li>
-            </ul>
+            <h3 class="client-name reveal-up">Fergus Douchebag</h3>
+            <span class="client-role reveal-up">Happy Customer</span>
 
-            <button class="club-btn">Join Loyalty Program</button>
+            <div class="testimonial-nav reveal-up">
+                <i class="fa-solid fa-arrow-left nav-arrow"></i>
+
+                <div class="client-images">
+                    <img src="image/vv.jpg">
+                    <img src="image/download.jpg">
+                    <img src="image/tt.jpg">
+                </div>
+
+                <i class="fa-solid fa-arrow-right nav-arrow"></i>
+            </div>
         </div>
 
     </div>
-</section>
-
-
-<!-- testimonial session -->
-<section class="testimonial-section reveal">
-  <h1 class="testimonial-title reveal-up">What Our Clients Say</h1>
-
-  <div class="stars">
-    ★ ★ ★ ★ ★
-  </div>
-
-  <p class="testimonial-text active reveal-up">
-    "Best haircut I've had in years. The barber took time to understand what I wanted and delivered perfectly. Highly recommend Trimly!"
-  </p>
-
-  <p class="testimonial-text reveal-up">
-    "Amazing service and friendly staff. The ambience is premium and worth every rupee."
-  </p>
-
-  <p class="testimonial-text reveal-up">
-    "Professional grooming at its best. Clean shop and excellent styling!"
-  </p>
-
-  <h3 class="client-name reveal-up">Fergus Douchebag</h3>
-  <p class="client-role reveal-up">Happy Customer</p>
-
-  <div class="profile-container reveal-zoom">
-   
-
-    <img src="image\vv.jpg" class="profile active" data-index="0">
-    <img src="image\download.jpg" class="profile" data-index="1">
-    <img src="image\tt.jpg" class="profile" data-index="2">
-    
-
-  </div>
 
 </section>
 
-<!-- map section-->
-<!DOCTYPE html> 
-<html lang="en">
-     <head> 
-        <meta charset="UTF-8"> 
-    <title>Visit Trimly</title> 
-    <!-- Google Icons --> 
-     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet"> 
-     <link rel="stylesheet" href="style.css"> 
-    </head>
-     <body>
+<section class="visit-section reveal">
 
-     </body>
-<section class="visit reveal">
-        <h1>Visit Trimly</h1>
-    <p class="subtitle">
-        We'd Love to Welcome You to Trimly. Visit Us at Our Salon, 
-        Give Us a Call, or Book Your Appointment Online—whatever Works Best for You.
-    </p>
+    <div class="global-container">
 
-    <div class="visit-container">
-
-        <!-- MAP SECTION -->
-        <div class="map-frame reveal-left">
-            <iframe 
-                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2450.0796926348016!2d144.9660665749709!3d-37.81671733420532!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x6ad642b6583650c9%3A0x15266114788a40f0!2s180%20Flinders%20St%2C%20Melbourne%20VIC%203000%2C%20Australia!5e1!3m2!1sen!2sin!4v1772106994428!5m2!1sen!2sin" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>"
-
-            </iframe>
+        <div class="visit-header reveal-up">
+            <h2>Visit Trimly</h2>
+            <p>
+                We’d Love to Welcome You to Trimly. Visit Us at Our Salon, Give Us a Call,
+                or Book Your Appointment Online—whatever Works Best for You.
+            </p>
         </div>
 
-        <!-- CONTACT INFO -->
-        <div class="contact-info reveal-right ">
-
-            <div class="info-box">
-                <span class="material-icons icon">location_on</span>
-                <div>
-                    <h3>Address</h3>
-                    <p>180 Flinders St, Melbourne Victoria,<br>3000 Australia</p>
-                </div>
+        <div class="visit-grid">
+            <div class="visit-map reveal-left">
+                <iframe src="https://www.google.com/maps?q=180+Flinders+Street+Melbourne&output=embed"
+                    loading="lazy">
+                </iframe>
             </div>
 
-            <div class="info-box reveal-right">
-                <span class="material-icons icon">phone</span>
-                <div>
-                    <h3>Phone</h3>
-                    <p>+01 (800) 123 4567<br>+01 (215) 800 7890</p>
-                </div>
-            </div>
+            <div class="visit-info reveal-right">
 
-            <div class="info-box reveal-right">
-                <span class="material-icons icon">email</span>
-                <div>
-                    <h3>Email</h3>
-                    <p>hello@trimlystyle.com<br>support@trimlystyle.com</p>
+                <div class="info-box reveal-up">
+                    <i class="fa-solid fa-location-dot"></i>
+                    <div>
+                        <h4>Address</h4>
+                        <p>180 Flinders St, Melbourne Victoria,<br>3000 Australia</p>
+                    </div>
                 </div>
-            </div>
 
-            <div class="info-boxreveal-right">
-                <span class="material-icons icon">schedule</span>
-                <div>
-                    <h3>Hours of Operation</h3>
-                    <p>
-                        Mon - Thu: 12:00 PM – 9:00 PM<br>
-                        Fri - Sat: 12:00 PM – 11:00 PM<br>
-                        Sun: 10:00 AM – 8:00 PM
-                    </p>
+                <div class="info-box reveal-up">
+                    <i class="fa-solid fa-phone"></i>
+                    <div>
+                        <h4>Phone</h4>
+                        <p>+01 (800) 123 4567</p>
+                        <p>+01 (215) 800 7890</p>
+                    </div>
                 </div>
+
+                <div class="info-box reveal-up">
+                    <i class="fa-solid fa-envelope"></i>
+                    <div>
+                        <h4>Email</h4>
+                        <p>hello@trimlystyle.com</p>
+                        <p>support@trimlystyle.com</p>
+                    </div>
+                </div>
+
+                <div class="info-hours reveal-up">
+                    <h4>Hours of Operation</h4>
+                    <p>Mon - Thu: 12:00 PM - 9:00 PM</p>
+                    <p>Fri - Sat: 12:00 PM - 11:00 PM</p>
+                    <p>Sun: 10:00 PM - 8:00 PM</p>
+                </div>
+
             </div>
 
         </div>
+
     </div>
+
 </section>
 
-</body>
-</html>
-<!-- chair section-->
-<section class="blog reveal">
+<section class="blog-section reveal">
 
-  <div class="blog-header reveal-up">
-    <h2>From the Chair</h2>
-    <p>
-      Expert Tips, Grooming Advice, and Style Inspiration—straight from the Professionals at Trimly.
-      Stay Updated With the Latest Trends, Hair Care Routines, and Styling Insights.
-    </p>
-  </div>
+    <div class="global-container">
 
-  <div class="blog-container">
+        <div class="blog-header reveal-up">
+            <h2>From the Chair</h2>
+            <p>
+                Expert Tips, Grooming Advice, and Style Inspiration—straight From the
+                Professionals at Trimly. Stay Updated With the Latest Trends,
+                Hair Care Routines, and Styling Insights.
+            </p>
+        </div>
 
-    <!-- CARD 1 -->
-    <div class="blog-card">
-      <img src="image\hh.jpg" alt="">
-      <p class="meta">By Admin | December 25, 2025</p>
-      <h3>Beard Care Tips Every Man Should Know</h3>
+        <div class="blog-grid">
 
-      <button class="read-btn">Read More</button>
+            <div class="blog-card reveal-zoom">
+                <img src="image/silde5.jpg" alt="blog">
+                <div class="blog-content">
+                    <span class="blog-meta">By Admin | December 25, 2025</span>
+                    <h3>Beard Care Tips Every Man Should Know</h3>
+                    <a href="#" class="blog-btn">Read More</a>
+                </div>
+            </div>
 
-      <div class="more-content">
-        <p>
-          Regular trimming, beard oil application, and proper washing
-          keeps your beard healthy, soft, and stylish.
-        </p>
-      </div>
+            <div class="blog-card reveal-zoom">
+                <img src="image/immg.jpg" alt="blog">
+                <div class="blog-content">
+                    <span class="blog-meta">By Admin | November 30, 2025</span>
+                    <h3>Hair Care Essentials for Strong, Healthy Hair</h3>
+                    <a href="#" class="blog-btn">Read More</a>
+                </div>
+            </div>
+
+            <div class="blog-card reveal-zoom">
+                <img src="image/o.jpg" alt="blog">
+                <div class="blog-content">
+                    <span class="blog-meta">By Admin | January 1, 2026</span>
+                    <h3>Trending Hairstyles This Season</h3>
+                    <a href="#" class="blog-btn">Read More</a>
+                </div>
+            </div>
+
+        </div>
+
     </div>
 
-    <!-- CARD 2 -->
-    <div class="blog-card reveal-zoom">
-      <img src=" image\immg.jpg  " alt="">
-      <p class="meta">By Admin | November 30, 2025</p>
-      <h3>Hair Care Essentials for Strong, Healthy Hair</h3>
-
-      <button class="read-btn">Read More</button>
-
-      <div class="more-content">
-        <p>
-          Use sulfate-free shampoo, condition weekly,
-          and avoid excessive heat styling for stronger hair.
-        </p>
-      </div>
-    </div>
-
-    <!-- CARD 3 -->
-    <div class="blog-card reveal-zoom">
-      <img src=" image\o.jpg" alt="">
-      <p class="meta">By Admin | January 1, 2026</p>
-      <h3>Trending Hairstyles This Season</h3>
-
-      <button class="read-btn">Read More</button>
-
-      <div class="more-content">
-        <p>
-          Textured crops, fades, and modern slick-backs
-          are dominating this season’s style trends.
-        </p>
-      </div>
-    </div>
 </section>
 
-
-
-<!-- FOOTER SECTION -->
 <footer class="footer reveal">
 
-        <!-- WAVE -->
-        <div class="footer-wave">
-        <svg viewBox="0 0 1440 100" preserveAspectRatio="none">
-            <path d="M0,40 C240,80 480,0 720,40 C960,80 1200,0 1440,30 L1440,0 L0,0 Z" fill="#1f2a33"></path>
-        </svg>
-        </div>
+    <div class="global-container footer-grid">
 
-        <div class="footer-container">
+        <div class="footer-left reveal-left">
+            <img src="image/logo.png" class="footer-logo">
 
-        <!-- COLUMN 1 -->
-        <div class="footer-col1 reveal-up">
+            <h3>Subscribe to Our Newsletter.</h3>
 
-            <div class="footer-logo">
-                <img src="image/logo.png" alt="footer logo">
-            </div>
-
-            <p class="newsletter-title">Subscribe to Our Newsletter.</p>
-
-            <div class="newsletter-box">
-                <input type="email" placeholder="Enter Email Address">
+            <div class="newsletter reveal-up">
+                <input type="email" placeholder="Enter Email Address:">
                 <button>Subscribe</button>
             </div>
 
-            <label class="privacy">
-                <input type="checkbox"> I agree to the Privacy Policy.
+            <label class="policy reveal-up">
+                <input type="checkbox">
+                I agree to the <a href="#">Privacy Policy</a>.
             </label>
-
         </div>
 
-        <!-- COLUMN 2 -->
-        <div class="footer-col2  reveal-up">
-            <h3>Navigation</h3>
-            <ul class="footer-links">
-                <li>Home</li>
-                <li>About</li>
-                <li>Services</li>
-                <li>Pricing</li>
-                <li>Blog</li>
+        <div class="footer-nav reveal-up">
+            <h4>Navigation</h4>
+            <ul>
+                <li><a href="#">Home</a></li>
+                <li><a href="#">About</a></li>
+                <li><a href="#">Services</a></li>
+                <li><a href="#">Pricing</a></li>
+                <li><a href="#">Contact</a></li>
             </ul>
         </div>
 
-        <!-- COLUMN 3 -->
-        <div class="footer-col3 reveal-up">
-            <h3>Contact Info</h3>
-            <p>+61 3 8376 6284</p>
-            <p>info@trimlystyle.com</p>
-            <p>Swanston Street, Melbourne<br>Victoria 3053 Australia</p>
-            <p>Mon - Sat: 9:00 am to 6:00 pm</p>
+        <div class="footer-contact reveal-up">
+            <h4>Contact Info</h4>
+            <p>
+                <i class="fa-solid fa-phone"></i>
+                <span>+61 3 8376 6284</span>
+            </p>
+
+            <p>
+                <i class="fa-solid fa-envelope"></i>
+                <span>info@Trimlystyle.com</span>
+            </p>
+
+            <p>
+                <i class="fa-solid fa-location-dot"></i>
+                <span>
+                    Swanston Street, Melbourne<br>
+                    Victoria 3053 Australia
+                </span>
+            </p>
+
+            <p>
+                <i class="fa-solid fa-clock"></i>
+                <span>Mon – Sat: 9:00 am to 6:00 pm</span>
+            </p>
         </div>
 
-        <!-- COLUMN 4 -->
-        <div class="footer-col4  reveal-up">
-            <h3>Follow Us</h3>
+        <div class="footer-social reveal-right">
+            <h4>Follow Us</h4>
             <div class="social-icons">
-                <span>f</span>
-                <span>◎</span>
-                <span>in</span>
+                <a href="#"><i class="fa-brands fa-facebook-f"></i></a>
+                <a href="#"><i class="fa-brands fa-instagram"></i></a>
+                <a href="#"><i class="fa-brands fa-linkedin-in"></i></a>
             </div>
         </div>
 
     </div>
 
-    <div class="footer-bottom  reveal-up">
-        Copyright ©2026 TrimlyStyle. All Rights Reserved.
+    <div class="footer-bottom ">
+        <p>Copyright © 2026 TrimlyStyle. All Rights Reserved.</p>
     </div>
 
 </footer>
+
+
+
+
+
+
+
+
+
+
+
 <!-- Scroll Top Button -->
 <button id="scrollTop">
     ↑

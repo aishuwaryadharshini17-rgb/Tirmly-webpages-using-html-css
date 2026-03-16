@@ -4,13 +4,16 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Trimly</title>
-    <link rel="stylesheet" href="style.css">
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
-    <link rel="stylesheet" href="css/service.css">  
-    <link rel="stylesheet" href="css/about.css"> 
+    <link rel="stylesheet" href="css/service.css">   
     <link rel="stylesheet" href="css/pricing.css"> 
-    <link rel="stylesheet" href="css/style.css">
+
+     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap"
+        rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;500;600&display=swap" rel="stylesheet">
+
      <link rel="icon" type="image/png" href="image/logo.png">
 
 </head>  
@@ -36,7 +39,7 @@
     <ul class="nav-links">
         <a href="index.html">Home</a>
         <a href="about.html">About</a>
-        <a href="service.html">Service</a>
+        <a href="service.html"class="active">Service</a>
         <a href="pricing.html">Pricing</a>
         <a href="contact.html">Contact</a>
     </ul>
@@ -53,7 +56,7 @@
 <button id="swapBtn" class="swap-btn">⇄</button>
 
 
-<button class="book-btn">Book Appointment</button>
+<button class="nav-appointment-btn">Book Appointment</button>
 
   </div>
 
@@ -317,79 +320,83 @@
 
 </section>
 
-<!-- FOOTER SECTION -->
-    <footer class="footer reveal-up">
 
-        <!-- WAVE -->
-        <div class="footer-wave">
-            <svg viewBox="0 0 1440 100" preserveAspectRatio="none">
-                <path d="M0,40 C240,80 480,0 720,40 C960,80 1200,0 1440,30 L1440,0 L0,0 Z" fill="#1f2a33"></path>
-            </svg>
+
+<footer class="footer ">
+
+    <div class="global-container footer-grid">
+
+        <div class="footer-left reveal-left">
+            <img src="image/logo.png" class="footer-logo">
+
+            <h3>Subscribe to Our Newsletter.</h3>
+
+            <div class="newsletter ">
+                <input type="email" placeholder="Enter Email Address:">
+                <button>Subscribe</button>
+            </div>
+
+            <label class="policy reveal-up">
+                <input type="checkbox">
+                I agree to the <a href="#">Privacy Policy</a>.
+            </label>
         </div>
 
-        <div class="footer-container">
-
-            <!-- COLUMN 1 -->
-            <div class="footer-col1 reveal-up">
-
-                <div class="footer-logo">
-                    <img src="image/logo.png" alt="footer logo">
-                </div>
-
-                <p class="newsletter-title">Subscribe to Our Newsletter.</p>
-
-                <div class="newsletter-box">
-                    <input type="email" placeholder="Enter Email Address">
-                    <button>Subscribe</button>
-                </div>
-
-                <label class="privacy">
-                    <input type="checkbox"> I agree to the Privacy Policy.
-                </label>
-
-            </div>
-
-            <!-- COLUMN 2 -->
-            <div class="footer-col2 reveal-up">
-                <h3>Navigation</h3>
-                <ul class="footer-links">
-                    <li>Home</li>
-                    <li>About</li>
-                    <li>Services</li>
-                    <li>Pricing</li>
-                    <li>Blog</li>
-                </ul>
-            </div>
-
-            <!-- COLUMN 3 -->
-            <div class="footer-col3 reveal-up">
-                <h3>Contact Info</h3>
-                <p>+61 3 8376 6284</p>
-                <p>info@trimlystyle.com</p>
-                <p>Swanston Street, Melbourne<br>Victoria 3053 Australia</p>
-                <p>Mon - Sat: 9:00 am to 6:00 pm</p>
-            </div>
-
-            <!-- COLUMN 4 -->
-            <div class="footer-col4 reveal-up">
-                <h3>Follow Us</h3>
-                <div class="social-icons">
-                    <span>f</span>
-                    <span>◎</span>
-                    <span>in</span>
-                </div>
-            </div>
-
+        <div class="footer-nav reveal-up">
+            <h4>Navigation</h4>
+            <ul>
+                <li><a href="#">Home</a></li>
+                <li><a href="#">About</a></li>
+                <li><a href="#">Services</a></li>
+                <li><a href="#">Pricing</a></li>
+                <li><a href="#">Contact</a></li>
+            </ul>
         </div>
 
-        <div class="footer-bottom reveal-up">
-            Copyright ©2026 TrimlyStyle. All Rights Reserved.
+        <div class="footer-contact reveal-up">
+            <h4>Contact Info</h4>
+            <p>
+                <i class="fa-solid fa-phone"></i>
+                <span>+61 3 8376 6284</span>
+            </p>
+
+            <p>
+                <i class="fa-solid fa-envelope"></i>
+                <span>info@Trimlystyle.com</span>
+            </p>
+
+            <p>
+                <i class="fa-solid fa-location-dot"></i>
+                <span>
+                    Swanston Street, Melbourne<br>
+                    Victoria 3053 Australia
+                </span>
+            </p>
+
+            <p>
+                <i class="fa-solid fa-clock"></i>
+                <span>Mon – Sat: 9:00 am to 6:00 pm</span>
+            </p>
         </div>
 
-    </footer>
-</body>
+        <div class="footer-social reveal-right">
+            <h4>Follow Us</h4>
+            <div class="social-icons">
+                <a href="#"><i class="fa-brands fa-facebook-f"></i></a>
+                <a href="#"><i class="fa-brands fa-instagram"></i></a>
+                <a href="#"><i class="fa-brands fa-linkedin-in"></i></a>
+            </div>
+        </div>
 
-</html>
+    </div>
+
+    <div class="footer-bottom ">
+        <p>Copyright © 2026 TrimlyStyle. All Rights Reserved.</p>
+    </div>
+
+</footer>
+
+
 <!-- Scroll Top Button -->
 <button id="scrollTop">
     ↑
