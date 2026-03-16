@@ -68,3 +68,47 @@ if(swapBtn){
 
     });
 }
+
+
+
+document.addEventListener("DOMContentLoaded", function () {
+    const reveals = document.querySelectorAll(".reveal, .reveal-up");
+
+    function revealOnScroll() {
+        const windowHeight = window.innerHeight;
+
+        reveals.forEach(function (element) {
+            const elementTop = element.getBoundingClientRect().top;
+
+            if (elementTop < windowHeight - 100) {
+                element.classList.add("active");
+            }
+        });
+    }
+
+    window.addEventListener("scroll", revealOnScroll);
+    revealOnScroll();
+});
+
+
+document.addEventListener("DOMContentLoaded", function () {
+    const reveals = document.querySelectorAll(
+        ".reveal, .reveal-up, .reveal-left, .reveal-right, .reveal-zoom"
+    );
+
+    function revealOnScroll() {
+        const windowHeight = window.innerHeight;
+        const revealPoint = 100;
+
+        reveals.forEach(function (element) {
+            const revealTop = element.getBoundingClientRect().top;
+
+            if (revealTop < windowHeight - revealPoint) {
+                element.classList.add("active");
+            }
+        });
+    }
+
+    window.addEventListener("scroll", revealOnScroll);
+    revealOnScroll();
+});

@@ -95,3 +95,77 @@ function revealOnScroll() {
 
 window.addEventListener("scroll", revealOnScroll);
 window.addEventListener("load", revealOnScroll);
+
+
+
+const swapButton = document.getElementById("swap-btn");
+
+/* store original text once */
+function saveOriginalText() {
+    const elements = document.querySelectorAll("h1, h2, h3, h4, h5, h6, p, li, a, span, button, label");
+
+    elements.forEach(el => {
+        if (!el.dataset.originalText) {
+            el.dataset.originalText = el.textContent;
+        }
+    });
+}
+
+/* reverse words safely */
+function reverseWords(text) {
+    return text.trim().split(/\s+/).reverse().join(" ");
+}
+
+/* apply rtl text */
+function applyRTLText() {
+    const elements = document.querySelectorAll("h1, h2, h3, h4, h5, h6, p, li, a, span, button, label");
+
+    elements.forEach(el => {
+        if (el.dataset.originalText) {
+            el.textContent = reverseWords(el.dataset.originalText);
+        }
+    });
+}
+
+/* restore original text */
+function restoreText() {
+    const elements = document.querySelectorAll("h1, h2, h3, h4, h5, h6, p, li, a, span, button, label");
+
+    elements.forEach(el => {
+        if (el.dataset.originalText) {
+            el.textContent = el.dataset.originalText;
+        }
+    });
+}
+
+/* apply direction */
+function applyDirection(dir) {
+    document.documentElement.setAttribute("dir", dir);
+
+    if (dir === "rtl") {
+        document.body.classList.add("rtl-mode");
+        applyRTLText();
+    } else {
+        document.body.classList.remove("rtl-mode");
+        restoreText();
+    }
+}
+
+/* click event */
+if (swapBtn) {
+    swapBtn.addEventListener("click", () => {
+        const currentDir = document.documentElement.getAttribute("dir") || "ltr";
+        const newDir = currentDir === "rtl" ? "ltr" : "rtl";
+
+        localStorage.setItem("direction", newDir);
+        applyDirection(newDir);
+    });
+}
+
+/* load saved mode */
+window.addEventListener("DOMContentLoaded", () => {
+    saveOriginalText();
+
+    const savedDir = localStorage.getItem("direction") || "ltr";
+    applyDirection(savedDir);
+});
