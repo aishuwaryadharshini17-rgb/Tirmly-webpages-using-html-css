@@ -1,8 +1,25 @@
-*{
-  margin:0;
-  padding:0;
-  box-sizing:border-box;
-  font-family: Arial, Helvetica, sans-serif;
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Montserrat', sans-serif;
+}
+
+body {
+    background: #fff;
+    color: #222;
+    font-family: 'Poppins', sans-serif;
+}
+
+h1,
+h2,
+h3,
+h4 {
+    font-family: 'Cinzel', serif;
+}
+
+p {
+    font-family: 'Poppins', sans-serif;
 }
 .top-offer{
   background:#c48b47;   
@@ -192,3 +209,356 @@ body.dark-mode .spa-box p,
 body.dark-mode .spa-box ul{
 color:#cccccc;
 }
+
+
+/* ===== HAIR SPA GALLERY ===== */
+.hairspa-gallery{
+    width:90%;
+    max-width:1200px;
+    margin:60px auto;
+    text-align:center;
+}
+
+.spa-grid{
+    display:grid;
+    grid-template-columns:repeat(3, 1fr);
+    gap:25px;
+    margin-top:30px;
+}
+
+.spa-card{
+    background:#fff;
+    border:1px solid #ddd;
+    border-radius:12px;
+    overflow:hidden;
+    box-shadow:0 5px 15px rgba(0,0,0,0.08);
+    transition:0.3s;
+}
+
+.spa-card:hover{
+    transform:translateY(-8px);
+    box-shadow:0 12px 25px rgba(0,0,0,0.15);
+}
+
+.spa-card img{
+    width:100%;
+    height:220px;
+    object-fit:cover;
+    display:block;
+}
+
+.spa-card h3{
+    font-size:22px;
+    margin:15px 0 10px;
+    color:#111;
+}
+
+.spa-card p{
+    font-size:15px;
+    color:#444;
+    line-height:1.6;
+    padding:0 15px 20px;
+}
+
+/* ===== INFO SECTION ===== */
+.hairspa-info{
+    width:90%;
+    max-width:1200px;
+    margin:40px auto 70px;
+    display:grid;
+    grid-template-columns:repeat(3, 1fr);
+    gap:25px;
+}
+
+.spa-box{
+    background:#fff;
+    border:1px solid #ddd;
+    border-radius:12px;
+    padding:28px;
+    box-shadow:0 5px 15px rgba(0,0,0,0.08);
+}
+
+.spa-box h2{
+    font-size:28px;
+    margin-bottom:15px;
+    color:#111;
+}
+
+.spa-box h3{
+    font-size:22px;
+    margin:18px 0 12px;
+    color:#111;
+}
+
+.spa-box p{
+    font-size:15px;
+    line-height:1.7;
+    color:#333;
+    margin-bottom:12px;
+}
+
+.spa-box ul{
+    padding-left:20px;
+}
+
+.spa-box li{
+    margin-bottom:10px;
+    line-height:1.6;
+    color:#333;
+}
+
+/* ===== REVEAL ANIMATION ===== */
+.reveal{
+    opacity:0;
+    transition:all 1s ease;
+}
+
+.reveal-up{
+    opacity:0;
+    transform:translateY(60px);
+    transition:all 1s ease;
+}
+
+.reveal-left{
+    transform:translateX(-80px);
+}
+
+.reveal-right{
+    transform:translateX(80px);
+}
+
+.reveal.active,
+.reveal-up.active{
+    opacity:1;
+    transform:translate(0,0);
+}
+
+/* CARD DELAY */
+.spa-card:nth-child(1){ transition-delay:0.1s; }
+.spa-card:nth-child(2){ transition-delay:0.2s; }
+.spa-card:nth-child(3){ transition-delay:0.3s; }
+.spa-card:nth-child(4){ transition-delay:0.4s; }
+.spa-card:nth-child(5){ transition-delay:0.5s; }
+.spa-card:nth-child(6){ transition-delay:0.6s; }
+
+/* ===== DARK MODE ===== */
+body.dark-mode .spa-card,
+body.dark-mode .spa-box{
+    background:#1e1e1e;
+    border:1px solid #333;
+}
+
+body.dark-mode .spa-card h3,
+body.dark-mode .spa-box h2,
+body.dark-mode .spa-box h3{
+    color:#fff;
+}
+
+body.dark-mode .spa-card p,
+body.dark-mode .spa-box p,
+body.dark-mode .spa-box li{
+    color:#ccc;
+}
+
+/* ===== RTL ===== */
+body.rtl .spa-box{
+    text-align:right;
+}
+
+body.rtl .spa-box ul{
+    padding-left:0;
+    padding-right:20px;
+}
+
+/* ===== MOBILE ===== */
+@media (max-width:992px){
+    .spa-grid,
+    .hairspa-info{
+        grid-template-columns:repeat(2, 1fr);
+    }
+}
+
+@media (max-width:768px){
+    .spa-grid,
+    .hairspa-info{
+        grid-template-columns:1fr;
+    }
+
+    .spa-box,
+    .spa-card{
+        padding:0;
+    }
+
+    .spa-box{
+        padding:22px;
+    }
+
+    .spa-box h2{
+        font-size:24px;
+    }
+}
+
+.footer {
+    background: #222;
+    color: #ddd;
+    padding: 150px 0 20px;
+}
+
+.footer-grid {
+    display: grid;
+    grid-template-columns: 2fr 1fr 1.5fr 1fr;
+    gap: 40px;
+}
+
+
+/* LOGO */
+
+.footer-logo {
+    width: 160px;
+    margin-top: -60px;
+    margin-left: -30px;
+}
+
+
+/* NEWSLETTER */
+
+.newsletter {
+    display: flex;
+    margin: 20px 0;
+}
+
+.newsletter input {
+    flex: 1;
+    padding: 12px;
+    border: 1px solid #555;
+    background: #111;
+    color: white;
+}
+
+.newsletter button {
+    background: #c28b3f;
+    border: none;
+    padding: 12px 20px;
+    color: white;
+    cursor: pointer;
+}
+
+.policy {
+    font-size: 13px;
+    color: #aaa;
+}
+
+.policy a {
+    color: #c28b3f;
+    text-decoration: none;
+}
+
+
+/* NAVIGATION */
+
+.footer-nav {
+    margin-top: -20px;
+    margin-left: 80px;
+}
+
+.footer-nav h4 {
+    margin-bottom: 20px;
+}
+
+.footer-nav ul {
+    list-style: none;
+}
+
+.footer-nav li {
+    margin-bottom: 10px;
+}
+
+.footer-nav a {
+    text-decoration: none;
+    color: #ddd;
+    font-size: 14px;
+}
+
+.footer-nav a:hover {
+    color: #c28b3f;
+}
+
+
+/* CONTACT */
+
+.footer-contact {
+    margin-top: -20px;
+    margin-left: 40px;
+}
+
+.footer-contact h4 {
+    margin-bottom: 20px;
+}
+
+.footer-contact p {
+    margin-bottom: 10px;
+    font-size: 14px;
+    display: flex;
+    align-items: flex-start;
+    gap: 4px;
+    line-height: 1.6;
+
+}
+
+.footer-contact i {
+    color: #c28b3f;
+    margin-top: 2px;
+    margin-right: 8px;
+    width: 20px;
+    /* keeps all icons same width */
+    text-align: center;
+    font-size: 14px;
+
+}
+
+.footer-contact span {
+    line-height: 1.5;
+}
+
+
+/* SOCIAL */
+
+.footer-social {
+    margin-top: -20px;
+}
+
+.social-icons {
+    display: flex;
+    gap: 15px;
+    margin-top: 15px;
+}
+
+.social-icons a {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    border: 1px solid #555;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    text-decoration: none;
+}
+
+.social-icons a:hover {
+    background: #c28b3f;
+    border: none;
+}
+
+
+/* COPYRIGHT */
+
+.footer-bottom {
+    border-top: 1px solid #444;
+    margin-top: 50px;
+    padding-top: 20px;
+    text-align: center;
+    font-size: 14px;
+    color: #aaa;
+}
+
