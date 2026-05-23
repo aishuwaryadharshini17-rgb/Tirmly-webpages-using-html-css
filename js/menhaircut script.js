@@ -1,4 +1,4 @@
-
+﻿
 const toggleBtn = document.getElementById("theme-toggle");
 const icon = document.getElementById("theme-icon");
 
@@ -7,7 +7,7 @@ let savedTheme = localStorage.getItem("theme");
 
 if(savedTheme === "dark"){
     document.body.classList.add("dark-mode");
-    if(icon) icon.textContent = "☀️";
+    if(icon) icon.innerHTML = '<i class="fa-solid fa-sun"></i>';
 }
 
 /* Toggle theme only if button exists */
@@ -19,10 +19,10 @@ if(toggleBtn){
 
         if(document.body.classList.contains("dark-mode")){
             localStorage.setItem("theme","dark");
-            if(icon) icon.textContent = "☀️";
+            if(icon) icon.innerHTML = '<i class="fa-solid fa-sun"></i>';
         }else{
             localStorage.setItem("theme","light");
-            if(icon) icon.textContent = "🌙";
+            if(icon) icon.innerHTML = '<i class="fa-solid fa-moon"></i>';
         }
 
     });
@@ -53,21 +53,6 @@ scrollBtn.onclick = function(){
 
 };
 
-/* Swap page direction */
-
-if(swapBtn){
-    swapBtn.addEventListener("click", function(){
-
-        document.body.classList.toggle("rtl");
-
-        if(document.body.classList.contains("rtl")){
-            localStorage.setItem("direction","rtl");
-        }else{
-            localStorage.setItem("direction","ltr");
-        }
-
-    });
-}
 
 
 
@@ -111,3 +96,4 @@ document.addEventListener("DOMContentLoaded", function () {
     window.addEventListener("scroll", revealOnScroll);
     revealOnScroll();
 });
+

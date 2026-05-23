@@ -1,4 +1,4 @@
-const toggleBtn = document.getElementById("theme-toggle");
+﻿const toggleBtn = document.getElementById("theme-toggle");
 const icon = document.getElementById("theme-icon");
 
 /* Load saved theme */
@@ -7,7 +7,7 @@ let savedTheme = localStorage.getItem("theme");
 if (savedTheme === "dark") {
     document.body.classList.add("dark-mode");
     if (icon) {
-        icon.textContent = "☀️";
+        icon.innerHTML = '<i class="fa-solid fa-sun"></i>';
     }
 }
 
@@ -17,10 +17,10 @@ if (toggleBtn) {
         document.body.classList.toggle("dark-mode");
 
         if (document.body.classList.contains("dark-mode")) {
-            if (icon) icon.textContent = "☀️";
+            if (icon) icon.innerHTML = '<i class="fa-solid fa-sun"></i>';
             localStorage.setItem("theme", "dark");
         } else {
-            if (icon) icon.textContent = "🌙";
+            if (icon) icon.innerHTML = '<i class="fa-solid fa-moon"></i>';
             localStorage.setItem("theme", "light");
         }
     });
@@ -50,27 +50,6 @@ if (scrollBtn) {
     };
 }
 
-/* RTL toggle */
-const swapBtn = document.getElementById("swapBtn");
-
-/* Load saved direction */
-if (localStorage.getItem("direction") === "rtl") {
-    document.body.classList.add("rtl");
-}
-
-/* Swap page direction */
-if (swapBtn) {
-    swapBtn.addEventListener("click", function () {
-        document.body.classList.toggle("rtl");
-
-        if (document.body.classList.contains("rtl")) {
-            localStorage.setItem("direction", "rtl");
-        } else {
-            localStorage.setItem("direction", "ltr");
-        }
-    });
-}
-
 /* Reveal animation */
 function revealOnScroll() {
     const revealItems = document.querySelectorAll(".reveal, .reveal-up, .reveal-left, .reveal-right");
@@ -87,3 +66,5 @@ function revealOnScroll() {
 }
 
 window.addEventListener("load", revealOnScroll);
+
+

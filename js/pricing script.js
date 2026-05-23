@@ -1,4 +1,4 @@
-const toggleBtn = document.getElementById("theme-toggle");
+﻿const toggleBtn = document.getElementById("theme-toggle");
 const icon = document.getElementById("theme-icon");
 
 /* Load saved theme */
@@ -6,7 +6,7 @@ let savedTheme = localStorage.getItem("theme");
 
 if(savedTheme === "dark"){
     document.body.classList.add("dark-mode");
-    if(icon) icon.textContent = "☀️";
+    if(icon) icon.innerHTML = '<i class="fa-solid fa-sun"></i>';
 }
 
 /* Toggle theme only if button exists */
@@ -18,10 +18,10 @@ if(toggleBtn){
 
         if(document.body.classList.contains("dark-mode")){
             localStorage.setItem("theme","dark");
-            if(icon) icon.textContent = "☀️";
+            if(icon) icon.innerHTML = '<i class="fa-solid fa-sun"></i>';
         }else{
             localStorage.setItem("theme","light");
-            if(icon) icon.textContent = "🌙";
+            if(icon) icon.innerHTML = '<i class="fa-solid fa-moon"></i>';
         }
 
     });
@@ -53,26 +53,24 @@ scrollBtn.onclick = function(){
 };
 
 
-const swapBtn = document.getElementById("swapBtn");
 
-/* Load saved direction */
+const revealElements = document.querySelectorAll(
+    ".reveal, .reveal-up, .reveal-left, .reveal-right"
+);
 
-if(localStorage.getItem("direction") === "rtl"){
-    document.body.classList.add("rtl");
-}
+function showVisibleSections(){
+    revealElements.forEach((element) => {
+        const elementTop = element.getBoundingClientRect().top;
+        const triggerPoint = window.innerHeight - 80;
 
-/* Swap page direction */
-
-if(swapBtn){
-    swapBtn.addEventListener("click", function(){
-
-        document.body.classList.toggle("rtl");
-
-        if(document.body.classList.contains("rtl")){
-            localStorage.setItem("direction","rtl");
-        }else{
-            localStorage.setItem("direction","ltr");
+        if(elementTop < triggerPoint){
+            element.classList.add("active");
         }
-
     });
 }
+
+window.addEventListener("load", showVisibleSections);
+window.addEventListener("scroll", showVisibleSections);
+showVisibleSections();
+
+

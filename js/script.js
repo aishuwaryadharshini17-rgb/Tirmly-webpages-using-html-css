@@ -1,4 +1,4 @@
-document.addEventListener("DOMContentLoaded", function () {
+﻿document.addEventListener("DOMContentLoaded", function () {
 
     /* =========================
        FILTER BUTTONS
@@ -122,7 +122,7 @@ document.addEventListener("DOMContentLoaded", function () {
 
     if (savedTheme === "dark") {
         document.body.classList.add("dark-mode");
-        if (icon) icon.textContent = "☀️";
+        if (icon) icon.innerHTML = '<i class="fa-solid fa-sun"></i>';
     }
 
     if (toggleBtn) {
@@ -130,10 +130,10 @@ document.addEventListener("DOMContentLoaded", function () {
             document.body.classList.toggle("dark-mode");
 
             if (document.body.classList.contains("dark-mode")) {
-                if (icon) icon.textContent = "☀️";
+                if (icon) icon.innerHTML = '<i class="fa-solid fa-sun"></i>';
                 localStorage.setItem("theme", "dark");
             } else {
-                if (icon) icon.textContent = "🌙";
+                if (icon) icon.innerHTML = '<i class="fa-solid fa-moon"></i>';
                 localStorage.setItem("theme", "light");
             }
         });
@@ -163,29 +163,6 @@ document.addEventListener("DOMContentLoaded", function () {
             });
         });
     }
-
-
-    /* =========================
-       RTL / LTR SWAP
-    ========================== */
-    const swapBtn = document.getElementById("swapBtn");
-
-    if (localStorage.getItem("direction") === "rtl") {
-        document.body.classList.add("rtl");
-    }
-
-    if (swapBtn) {
-        swapBtn.addEventListener("click", function () {
-            document.body.classList.toggle("rtl");
-
-            if (document.body.classList.contains("rtl")) {
-                localStorage.setItem("direction", "rtl");
-            } else {
-                localStorage.setItem("direction", "ltr");
-            }
-        });
-    }
-
 
     /* =========================
        HERO SLIDER
@@ -286,87 +263,4 @@ window.addEventListener("load", revealOnScroll);
 
 
 
-const swapBtn = document.getElementById("swap-btn");
 
-swapBtn.addEventListener("click", () => {
-    document.body.classList.toggle("rtl-mode");
-
-    if (document.body.classList.contains("rtl-mode")) {
-        document.documentElement.setAttribute("dir", "rtl");
-    } else {
-        document.documentElement.setAttribute("dir", "ltr");
-    }
-});
-
-
-
-const rtlToggle = document.getElementById("swap-btn");
-
-function reverseWords(text) {
-    return text.trim().split(/\s+/).reverse().join(" ");
-}
-
-function reverseElement(el) {
-    if (
-        el.closest(".logo") ||
-        el.id === "swap-btn" ||
-        el.id === "theme-toggle" ||
-        el.tagName === "IMG" ||
-        el.tagName === "INPUT" ||
-        el.tagName === "TEXTAREA" ||
-        el.tagName === "SELECT" ||
-        el.tagName === "OPTION"
-    ) {
-        return;
-    }
-
-    if (!el.dataset.originalHtml) {
-        el.dataset.originalHtml = el.innerHTML;
-    }
-
-    el.childNodes.forEach(node => {
-        if (node.nodeType === 3) {
-            const text = node.textContent.trim();
-            if (text) {
-                node.textContent = reverseWords(text);
-            }
-        }
-    });
-}
-
-function applyRTLText() {
-    document.querySelectorAll("h1, h2, h3, h4, h5, h6, p, li, a, button, span, label")
-        .forEach(reverseElement);
-}
-
-function restoreLTRText() {
-    document.querySelectorAll("h1, h2, h3, h4, h5, h6, p, li, a, button, span, label")
-        .forEach(el => {
-            if (el.dataset.originalHtml) {
-                el.innerHTML = el.dataset.originalHtml;
-            }
-        });
-}
-
-function applyDirection(dir) {
-    document.documentElement.setAttribute("dir", dir);
-    localStorage.setItem("direction", dir);
-
-    if (dir === "rtl") {
-        applyRTLText();
-    } else {
-        restoreLTRText();
-    }
-}
-
-if (rtlToggle) {
-    rtlToggle.addEventListener("click", () => {
-        const currentDir = document.documentElement.getAttribute("dir") || "ltr";
-        applyDirection(currentDir === "rtl" ? "ltr" : "rtl");
-    });
-}
-
-window.addEventListener("DOMContentLoaded", () => {
-    const savedDir = localStorage.getItem("direction") || "ltr";
-    applyDirection(savedDir);
-});

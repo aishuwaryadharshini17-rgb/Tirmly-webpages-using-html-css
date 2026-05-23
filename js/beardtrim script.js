@@ -1,4 +1,4 @@
-
+﻿
 const toggleBtn = document.getElementById("theme-toggle");
 const icon = document.getElementById("theme-icon");
 
@@ -7,7 +7,7 @@ let savedTheme = localStorage.getItem("theme");
 
 if(savedTheme === "dark"){
     document.body.classList.add("dark-mode");
-    if(icon) icon.textContent = "☀️";
+    if(icon) icon.innerHTML = '<i class="fa-solid fa-sun"></i>';
 }
 
 /* Toggle theme only if button exists */
@@ -19,10 +19,10 @@ if(toggleBtn){
 
         if(document.body.classList.contains("dark-mode")){
             localStorage.setItem("theme","dark");
-            if(icon) icon.textContent = "☀️";
+            if(icon) icon.innerHTML = '<i class="fa-solid fa-sun"></i>';
         }else{
             localStorage.setItem("theme","light");
-            if(icon) icon.textContent = "🌙";
+            if(icon) icon.innerHTML = '<i class="fa-solid fa-moon"></i>';
         }
 
     });
@@ -53,18 +53,25 @@ scrollBtn.onclick = function(){
 
 };
 
-/* Swap page direction */
 
-if(swapBtn){
-    swapBtn.addEventListener("click", function(){
+const revealElements = document.querySelectorAll(
+    ".reveal, .reveal-up, .reveal-left, .reveal-right, .reveal-zoom"
+);
 
-        document.body.classList.toggle("rtl");
+function revealOnScroll() {
+    const windowHeight = window.innerHeight;
+    const revealPoint = 100;
 
-        if(document.body.classList.contains("rtl")){
-            localStorage.setItem("direction","rtl");
-        }else{
-            localStorage.setItem("direction","ltr");
+    revealElements.forEach((element) => {
+        const elementTop = element.getBoundingClientRect().top;
+
+        if (elementTop < windowHeight - revealPoint) {
+            element.classList.add("active");
         }
-
     });
 }
+
+window.addEventListener("scroll", revealOnScroll);
+window.addEventListener("load", revealOnScroll);
+document.addEventListener("DOMContentLoaded", revealOnScroll);
+
