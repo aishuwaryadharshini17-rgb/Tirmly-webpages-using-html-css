@@ -1,26 +1,24 @@
-<!DOCTYPE html>
+﻿<!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Trimly</title>
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="css/style.css">
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
-    <link rel="stylesheet" href="css/service.css">  
+    <link rel="stylesheet" href="css/service.css?v=5">  
     <link rel="stylesheet" href="css/about.css"> 
     <link rel="stylesheet" href="css/pricing.css"> 
     <link rel="stylesheet" href="css/haircut-detail.css">
-    <link rel="stylesheet" href="css/hairspa-detail.css">
 
     <link rel="icon" type="image/png" href="image/logo.png">
      <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap"
         rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;500;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/layout-fix.css?v=5">
 </head>
-
-</head>  
 
 <body>
 
@@ -43,7 +41,7 @@
       <a href="index.html">Home</a>
       <a href="about.html">About</a>
       <a href="service.html">Services</a>
-      <a href="pricing.html">pricing</a>
+      <a href="pricing.html">Pricing</a>
       <a href="contact.html">Contact</a>
       
       
@@ -52,11 +50,10 @@
     
  <div class="theme-toggle">
       <button id="theme-toggle">
-        <span id="theme-icon">🌙</span>
+        <span id="theme-icon"><i class="fa-solid fa-moon"></i></span>
       </button>
     </div>
-
-<button id="swapBtn" class="swap-btn">⇄</button>
+<button id="rtl-toggle" class="rtl-toggle"><i class="fa-solid fa-right-left"></i></button>
 <button class="book-btn">Book Appointment</button>
 
   </div>
@@ -188,29 +185,30 @@
             </tr>
             <tr>
                 <td>Basic Haircut</td>
-                <td>₹300</td>
+                <td>&#8377;300</td>
             </tr>
             <tr>
                 <td>Layer Cut</td>
-                <td>₹500</td>
+                <td>&#8377;500</td>
             </tr>
             <tr>
                 <td>Bob Cut</td>
-                <td>₹450</td>
+                <td>&#8377;450</td>
             </tr>
             <tr>
                 <td>Feather Cut</td>
-                <td>₹600</td>
+                <td>&#8377;600</td>
             </tr>
             <tr>
                 <td>Pixie Cut</td>
-                <td>₹700</td>
+                <td>&#8377;700</td>
             </tr>
         </table>
     </div>
 
 </section>
- 
+
+</section>
 
 
 <footer class="footer reveal">
@@ -222,7 +220,7 @@
 
             <h3>Subscribe to Our Newsletter.</h3>
 
-            <div class="newsletter ">
+            <div class="newsletter reveal-up">
                 <input type="email" placeholder="Enter Email Address:">
                 <button>Subscribe</button>
             </div>
@@ -236,11 +234,11 @@
         <div class="footer-nav reveal-up">
             <h4>Navigation</h4>
             <ul>
-                <li><a href="#">Home</a></li>
-                <li><a href="#">About</a></li>
-                <li><a href="#">Services</a></li>
-                <li><a href="#">Pricing</a></li>
-                <li><a href="#">Contact</a></li>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="about.html">About</a></li>
+                <li><a href="service.html">Services</a></li>
+                <li><a href="pricing.html">Pricing</a></li>
+                <li><a href="contact.html">Contact</a></li>
             </ul>
         </div>
 
@@ -281,13 +279,29 @@
 
     </div>
 
+    <div class="footer-bottom ">
+        <p>Copyright © 2026 TrimlyStyle. All Rights Reserved.</p>
+    </div>
+
 </footer>
+
+
+
 <!-- Scroll Top Button -->
 <button id="scrollTop">
-    ↑
+    <i class="fa-solid fa-arrow-up"></i>
 </button>
-    </body>
-<script src="js\haircut script.js"></script>
+    <script src="js/rtl.js"></script>
+<script src="js/haircut script.js"></script>
+</body>
 </html>
  
+
+
+
+
+
+
+
+
 

@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+﻿<!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
@@ -6,7 +6,7 @@
     <title>Trimly</title>
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
-    <link rel="stylesheet" href="css/service.css">   
+    <link rel="stylesheet" href="css/service.css?v=5">   
     <link rel="stylesheet" href="css/pricing.css"> 
 
      <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
@@ -16,6 +16,7 @@
 
      <link rel="icon" type="image/png" href="image/logo.png">
 
+    <link rel="stylesheet" href="css/layout-fix.css?v=5">
 </head>  
 <body>
    
@@ -47,15 +48,10 @@
      <!-- Theme Toggle -->
     <div class="theme-toggle">
       <button id="theme-toggle">
-        <span id="theme-icon">🌙</span>
+        <span id="theme-icon"><i class="fa-solid fa-moon"></i></span>
       </button>
     </div>
-
-
-
-<button id="swapBtn" class="swap-btn">⇄</button>
-
-
+<button id="rtl-toggle" class="rtl-toggle"><i class="fa-solid fa-right-left"></i></button>
 <button class="nav-appointment-btn">Book Appointment</button>
 
   </div>
@@ -290,7 +286,7 @@
             <p>"Amazing service and very professional stylists. I loved my haircut!"</p>
 
             <div class="stars">
-                ★★★★★
+                ?????
             </div>
 
             <h4>Priya S.</h4>
@@ -300,7 +296,7 @@
             <p>"The salon atmosphere is relaxing and the staff are very friendly."</p>
 
             <div class="stars">
-                ★★★★★
+                ?????
             </div>
 
             <h4>Anjali R.</h4>
@@ -310,7 +306,7 @@
             <p>"Best grooming service I have experienced. Highly recommended!"</p>
 
             <div class="stars">
-                ★★★★★
+                ?????
             </div>
 
             <h4>Rahul K.</h4>
@@ -345,11 +341,11 @@
         <div class="footer-nav reveal-up">
             <h4>Navigation</h4>
             <ul>
-                <li><a href="#">Home</a></li>
-                <li><a href="#">About</a></li>
-                <li><a href="#">Services</a></li>
-                <li><a href="#">Pricing</a></li>
-                <li><a href="#">Contact</a></li>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="about.html">About</a></li>
+                <li><a href="service.html">Services</a></li>
+                <li><a href="pricing.html">Pricing</a></li>
+                <li><a href="contact.html">Contact</a></li>
             </ul>
         </div>
 
@@ -399,9 +395,16 @@
 
 <!-- Scroll Top Button -->
 <button id="scrollTop">
-    ↑
+    <i class="fa-solid fa-arrow-up"></i>
 </button>
-    </body>
-<script src="js\service script.js"></script>
+    <script src="js/rtl.js"></script>
+<script src="js/service script.js"></script>
+</body>
 </html>
  
+
+
+
+
+
+

@@ -1,21 +1,21 @@
-<!DOCTYPE html>
+﻿<!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Trimly</title>
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="css/style.css">
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
-    <link rel="stylesheet" href="service.css">  
-    <link rel="stylesheet" href="about.css"> 
-    <link rel="stylesheet" href="pricing.css"> 
-    <link rel="stylesheet" href="haircut-detail.css">
-    <link rel="stylesheet" href="hair coloring.css"> 
-    <link rel="stylesheet" href="hair spa.css">
-     <link rel="stylesheet" href="facial.css">
-      <link rel="stylesheet" href="manicure.css">
-       <link rel="stylesheet" href="men haircut.css">
+    <link rel="stylesheet" href="css/service.css?v=5">  
+    <link rel="stylesheet" href="css/about.css"> 
+    <link rel="stylesheet" href="css/pricing.css"> 
+    <link rel="stylesheet" href="css/haircut-detail.css">
+    <link rel="stylesheet" href="css/hair coloring.css"> 
+    <link rel="stylesheet" href="css/hair spa.css">
+     <link rel="stylesheet" href="css/facial.css">
+      <link rel="stylesheet" href="css/manicure.css">
+       <link rel="stylesheet" href="css/men haircut.css">
        <link rel="stylesheet" href="css/beardtrim.css">
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap"
@@ -23,6 +23,7 @@
     <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;500;600&display=swap" rel="stylesheet">
  <link rel="icon" type="image/png" href="image/logo.png">
 
+    <link rel="stylesheet" href="css/layout-fix.css?v=5">
 </head>  
 
 <body>
@@ -41,38 +42,36 @@
 </div>
 
     <!-- Navigation Menu -->
-    <nav>
+    <nav class="main-nav">
       <ul class="nav-links">
-        <a href="index.html">Home</a>
-        <a href="about.html">About</a>
-        <a href="service.html">Service</a>
-        <a href="pricing.html">Pricing</a>
-        <a href="contact.html">Contact</a>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="about.html">About</a></li>
+        <li><a href="service.html">Service</a></li>
+        <li><a href="pricing.html">Pricing</a></li>
+        <li><a href="contact.html">Contact</a></li>
       </ul>
     </nav>
 
-    <!-- Theme Toggle -->
-    <div class="theme-toggle">
-      <button id="theme-toggle">
-        <span id="theme-icon">🌙</span>
-      </button>
-    </div>
-
-
-
-<button id="swapBtn" class="swap-btn">⇄</button>
-
-
+    <div class="nav-actions">
+      <!-- Theme Toggle -->
+      <div class="theme-toggle">
+        <button id="theme-toggle">
+          <span id="theme-icon"><i class="fa-solid fa-moon"></i></span>
+        </button>
+      </div>
+<button id="rtl-toggle" class="rtl-toggle"><i class="fa-solid fa-right-left"></i></button>
 <button class="book-btn">Book Appointment</button>
-
-  </div>
-
+    </div>
+</div>
 </header>
 
 
 <section class="beard-trim-section">
 
     <h1 class="beard-title reveal-up">Beard Trim</h1>
+    <p class="beard-subtitle reveal-up">
+        Clean shaping, precise edges, and healthy beard care for a sharper everyday look.
+    </p>
 
     <div class="beard-wrapper">
 
@@ -136,11 +135,11 @@
         <div class="footer-nav reveal-up">
             <h4>Navigation</h4>
             <ul>
-                <li><a href="#">Home</a></li>
-                <li><a href="#">About</a></li>
-                <li><a href="#">Services</a></li>
-                <li><a href="#">Pricing</a></li>
-                <li><a href="#">Contact</a></li>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="about.html">About</a></li>
+                <li><a href="service.html">Services</a></li>
+                <li><a href="pricing.html">Pricing</a></li>
+                <li><a href="contact.html">Contact</a></li>
             </ul>
         </div>
 
@@ -190,9 +189,17 @@
 
 <!-- Scroll Top Button -->
 <button id="scrollTop">
-    ↑
+    <i class="fa-solid fa-arrow-up"></i>
 </button>
-    </body>
-<script src="js\beardtrim script.js"></script>
+    <script src="js/rtl.js"></script>
+<script src="js/beardtrim script.js"></script>
+</body>
 </html>
  
+
+
+
+
+
+
+

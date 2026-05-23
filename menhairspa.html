@@ -1,13 +1,13 @@
-<!DOCTYPE html>
+﻿<!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Trimly</title>
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="css/style.css">
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
-    <link rel="stylesheet" href="css/service.css">  
+    <link rel="stylesheet" href="css/service.css?v=5">  
     <link rel="stylesheet" href="css/about.css"> 
     <link rel="stylesheet" href="css/pricing.css"> 
     <link rel="stylesheet" href="css/haircut-detail.css">
@@ -28,6 +28,7 @@
 
 
 
+    <link rel="stylesheet" href="css/layout-fix.css?v=5">
 </head>  
 
 <body>
@@ -65,15 +66,10 @@
     <!-- Theme Toggle -->
     <div class="theme-toggle">
       <button id="theme-toggle">
-        <span id="theme-icon">🌙</span>
+        <span id="theme-icon"><i class="fa-solid fa-moon"></i></span>
       </button>
     </div>
-
-
-
-<button id="swapBtn" class="swap-btn">⇄</button>
-
-
+<button id="rtl-toggle" class="rtl-toggle"><i class="fa-solid fa-right-left"></i></button>
 <button class="book-btn">Book Appointment</button>
 
   </div>
@@ -146,64 +142,6 @@
 
 </section>
 
-
-
-  <!-- ===== MEN HAIR SPA CONTENT ===== -->
-    <section class="men-hairspa-content">
-        <h2 class="content-title reveal-up">About Our Men Hair Spa Services</h2>
-
-        <div class="hairspa-content-grid">
-
-            <div class="spa-content-box reveal-left">
-                <h3>Professional Hair Spa Treatment</h3>
-                <p>
-                    Hair spa treatments are designed to nourish the scalp, repair damaged hair,
-                    and improve overall hair health. Our professional hair spa services for men
-                    help restore the natural strength, shine, and smoothness of your hair.
-                </p>
-                <p>
-                    The treatment includes scalp massage, deep conditioning, and nourishing hair masks
-                    that improve blood circulation and strengthen hair roots.
-                </p>
-            </div>
-
-            <div class="spa-content-box reveal-up">
-                <h3>Benefits of Hair Spa</h3>
-                <ul>
-                    <li>Deeply nourishes dry and damaged hair.</li>
-                    <li>Improves scalp health and blood circulation.</li>
-                    <li>Reduces hair fall and strengthens hair roots.</li>
-                    <li>Helps control dandruff and scalp irritation.</li>
-                    <li>Makes hair smooth, soft, and shiny.</li>
-                </ul>
-            </div>
-
-            <div class="spa-content-box reveal-up">
-                <h3>Hair Spa Care Tips</h3>
-                <ul>
-                    <li>Use mild shampoo suitable for your hair type.</li>
-                    <li>Avoid excessive heat styling tools.</li>
-                    <li>Maintain a healthy diet for strong hair growth.</li>
-                    <li>Massage your scalp regularly to improve circulation.</li>
-                    <li>Visit the salon for regular hair spa treatments.</li>
-                </ul>
-            </div>
-
-            <div class="spa-content-box reveal-right">
-                <h3>Why Choose Our Hair Spa Experts?</h3>
-                <p>
-                    Our experienced stylists analyze your hair condition and scalp health
-                    before recommending the most suitable hair spa treatment.
-                </p>
-                <p>
-                    We use premium hair care products and advanced techniques to ensure
-                    that your hair receives the best nourishment and care.
-                </p>
-            </div>
-
-        </div>
-    </section>
-
     <!-- ===== FOOTER ===== -->
     <footer class="footer reveal">
         <div class="global-container footer-grid">
@@ -227,11 +165,11 @@
             <div class="footer-nav reveal-up">
                 <h4>Navigation</h4>
                 <ul>
-                    <li><a href="#">Home</a></li>
-                    <li><a href="#">About</a></li>
-                    <li><a href="#">Services</a></li>
-                    <li><a href="#">Pricing</a></li>
-                    <li><a href="#">Contact</a></li>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="about.html">About</a></li>
+                    <li><a href="service.html">Services</a></li>
+                    <li><a href="pricing.html">Pricing</a></li>
+                    <li><a href="contact.html">Contact</a></li>
                 </ul>
             </div>
 
@@ -276,12 +214,21 @@
 
 <!-- Scroll Top Button -->
 <button id="scrollTop">
-    ↑
+    <i class="fa-solid fa-arrow-up"></i>
 </button>
-    </body>
-<script src="js\menhairspa script.js"></script>
+    <script src="js/rtl.js"></script>
+<script src="js/menhairspa script.js"></script>
+</body>
 </html>
  
+
+
+
+
+
+
+
+
 
 
 

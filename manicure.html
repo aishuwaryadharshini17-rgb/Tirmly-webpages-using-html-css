@@ -1,13 +1,13 @@
-<!DOCTYPE html>
+﻿<!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Trimly</title>
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="css/style.css">
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
-    <link rel="stylesheet" href="css/service.css">  
+    <link rel="stylesheet" href="css/service.css?v=5">  
     <link rel="stylesheet" href="css/about.css"> 
     <link rel="stylesheet" href="css/pricing.css"> 
     <link rel="stylesheet" href="css/haircut-detail.css">
@@ -23,6 +23,7 @@
 
 
 
+    <link rel="stylesheet" href="css/layout-fix.css?v=5">
 </head>  
 
 <body>
@@ -60,15 +61,10 @@
     <!-- Theme Toggle -->
     <div class="theme-toggle">
       <button id="theme-toggle">
-        <span id="theme-icon">🌙</span>
+        <span id="theme-icon"><i class="fa-solid fa-moon"></i></span>
       </button>
     </div>
-
-
-
-<button id="swapBtn" class="swap-btn">⇄</button>
-
-
+<button id="rtl-toggle" class="rtl-toggle"><i class="fa-solid fa-right-left"></i></button>
 <button class="book-btn">Book Appointment</button>
 
   </div>
@@ -167,11 +163,11 @@
         <div class="footer-nav reveal-up">
             <h4>Navigation</h4>
             <ul>
-                <li><a href="#">Home</a></li>
-                <li><a href="#">About</a></li>
-                <li><a href="#">Services</a></li>
-                <li><a href="#">Pricing</a></li>
-                <li><a href="#">Contact</a></li>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="about.html">About</a></li>
+                <li><a href="service.html">Services</a></li>
+                <li><a href="pricing.html">Pricing</a></li>
+                <li><a href="contact.html">Contact</a></li>
             </ul>
         </div>
 
@@ -250,9 +246,17 @@
 
 <!-- Scroll Top Button -->
 <button id="scrollTop">
-    ↑
+    <i class="fa-solid fa-arrow-up"></i>
 </button>
-    </body>
-<script src="js\manicure script.js"></script>
+    <script src="js/rtl.js"></script>
+<script src="js/manicure script.js"></script>
+</body>
 </html>
  
+
+
+
+
+
+
+

@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+﻿<!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
@@ -18,9 +18,8 @@
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap"
         rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;500;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/layout-fix.css">
 </head>
-
-</head>  
 <body>
    
     
@@ -40,24 +39,27 @@
 </div>
  
       
-    <ul class="nav-links">
-        <a href="index.html">Home</a>
-        <a href="about.html">About</a>
-        <a href="service.html">Service</a>
-        <a href="pricing.html"class="active">Pricing</a>
-        <a href="contact.html">Contact</a>
-    </ul>
+    <nav class="main-nav">
+      <ul class="nav-links">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="about.html">About</a></li>
+        <li><a href="service.html">Service</a></li>
+        <li><a href="pricing.html" class="active">Pricing</a></li>
+        <li><a href="contact.html">Contact</a></li>
+      </ul>
+    </nav>
 
-     <!-- Theme Toggle -->
-    <div class="theme-toggle">
-      <button id="theme-toggle">
-        <span id="theme-icon">🌙</span>
-      </button>
+    <div class="nav-actions">
+      <!-- Theme Toggle -->
+      <div class="theme-toggle">
+        <button id="theme-toggle">
+          <span id="theme-icon"><i class="fa-solid fa-moon"></i></span>
+        </button>
+      </div>
+<button id="rtl-toggle" class="rtl-toggle"><i class="fa-solid fa-right-left"></i></button>
+<button class="nav-appointment-btn">Book Appointment</button>
     </div>
-<button id="swapBtn" class="swap-btn">⇄</button>
- <button class="nav-appointment-btn">Book Appointment</button>
-
-  </div>
+</div>
 </header>
 
 
@@ -250,11 +252,11 @@
         <div class="footer-nav reveal-up">
             <h4>Navigation</h4>
             <ul>
-                <li><a href="#">Home</a></li>
-                <li><a href="#">About</a></li>
-                <li><a href="#">Services</a></li>
-                <li><a href="#">Pricing</a></li>
-                <li><a href="#">Contact</a></li>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="about.html">About</a></li>
+                <li><a href="service.html">Services</a></li>
+                <li><a href="pricing.html">Pricing</a></li>
+                <li><a href="contact.html">Contact</a></li>
             </ul>
         </div>
 
@@ -302,14 +304,20 @@
 </footer>
 
 
-</html>
 <!-- Scroll Top Button -->
 <button id="scrollTop">
-    ↑
+    <i class="fa-solid fa-arrow-up"></i>
 </button>
 
+<script src="js/rtl.js"></script>
+<script src="js/pricing script.js"></script>
 </body>
-<script src="js\service script.js"></script>
 </html>
  
+
+
+
+
+
+
 
