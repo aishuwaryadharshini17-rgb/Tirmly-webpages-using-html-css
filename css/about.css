@@ -1,4 +1,4 @@
-
+﻿
 body {
     background: #fff;
     color: #222;
@@ -76,15 +76,6 @@ p {
     align-items: center;
     gap: 12px;
 }
-
-#swap-btn,
-#theme-toggle {
-    border: none;
-    background: none;
-    font-size: 22px;
-    cursor: pointer;
-}
-
 .nav-appointment-btn {
     background: #c48b47;
     color: #5a4a00;
@@ -102,19 +93,6 @@ p {
     background: #a06d34;
     color: #fff;
 }
-
-html[dir="rtl"] .nav-container {
-    flex-direction: row-reverse;
-}
-
-html[dir="rtl"] .nav-links {
-    flex-direction: row-reverse;
-}
-
-html[dir="rtl"] .nav-actions {
-    flex-direction: row-reverse;
-}
-
 @media (max-width: 992px) {
     .nav-container {
         flex-wrap: wrap;
@@ -456,20 +434,6 @@ html[dir="rtl"] .nav-actions {
     background: #d89821;
     transform: translateY(-3px);
 }
-
-/* RTL MODE */
-
-body.rtl {
-    direction: rtl;
-    text-align: right;
-}
-
-body.rtl .navbar {
-    flex-direction: row-reverse;
-}
-
-
-
 .footer {
     background: #222;
     color: #ddd;
@@ -680,29 +644,6 @@ body.rtl .navbar {
     background: #d89821;
     transform: translateY(-3px);
 }
-
-.swap-btn{
-background:none;
-border:none;
-font-size:22px;
-cursor:pointer;
-color:#f1b74a;
-padding:5px;
-}
-/* RTL MODE */
-
-body.rtl{
-    direction: rtl;
-    text-align: right;
-}
-
-body.rtl .navbar,
-body.rtl .container,
-body.rtl .section{
-    direction: rtl;
-}
-
-
 /* ================= DARK MODE - TOP OFFER ================= */
 
 body.dark-mode .top-offer{
@@ -724,12 +665,6 @@ body.dark-mode .nav-links a{
 body.dark-mode .nav-links a:hover{
     color:#c48b47;
 }
-
-body.dark-mode #theme-toggle,
-body.dark-mode .swap-btn{
-    color:#f1b74a;
-}
-
 body.dark-mode .book-btn{
     background:#c48b47;
     color:#fff;
@@ -948,166 +883,176 @@ html {
 .bar-fill.animate.pricing {
     width: 92%;
 }
+/* ================= FOOTER FIX ================= */
 
-html[dir="rtl"] {
-    direction: rtl;
+.footer{
+    background:#222;
+    color:#ddd;
+    padding:80px 0 20px;
 }
 
-html[dir="rtl"] body {
-    text-align: right;
+/* CONTAINER */
+.footer-grid{
+    display:grid;
+    grid-template-columns:repeat(4,1fr);
+    gap:30px;
 }
 
-html[dir="rtl"] .nav-container {
-    flex-direction: row-reverse;
+/* REMOVE ALL OLD MARGINS */
+.footer-logo,
+.footer-nav,
+.footer-contact,
+.footer-social{
+    margin:0;
 }
 
-html[dir="rtl"] .nav-links {
-    display: flex;
-    flex-direction: row-reverse;
+/* LOGO */
+.footer-logo{
+    width:140px;
+    margin-bottom:15px;
 }
 
-html[dir="rtl"] .about-text,
-html[dir="rtl"] .mission-box,
-html[dir="rtl"] .chart-box,
-html[dir="rtl"] .footer-left,
-html[dir="rtl"] .footer-nav,
-html[dir="rtl"] .footer-contact,
-html[dir="rtl"] .footer-social {
-    text-align: right;
+/* TEXT */
+.footer h3{
+    font-size:18px;
+    margin-bottom:10px;
+}
+
+/* NEWSLETTER */
+.newsletter{
+    display:flex;
+    gap:8px;
+    margin:15px 0;
+}
+
+.newsletter input{
+    flex:1;
+    padding:10px;
+    border:1px solid #555;
+    background:#111;
+    color:#fff;
+}
+
+.newsletter button{
+    padding:10px 15px;
+    background:#c28b3f;
+    border:none;
+    color:#fff;
+    cursor:pointer;
+}
+
+/* POLICY */
+.policy{
+    font-size:13px;
+    color:#aaa;
+}
+
+.policy a{
+    color:#c28b3f;
+}
+
+/* NAV */
+.footer-nav ul{
+    list-style:none;
+}
+
+.footer-nav li{
+    margin-bottom:8px;
+}
+
+.footer-nav a{
+    color:#ddd;
+    text-decoration:none;
+}
+
+.footer-nav a:hover{
+    color:#c28b3f;
+}
+
+/* CONTACT */
+.footer-contact p{
+    display:flex;
+    gap:10px;
+    font-size:14px;
+    margin-bottom:10px;
+}
+
+.footer-contact i{
+    color:#c28b3f;
+}
+
+/* SOCIAL */
+.social-icons{
+    display:flex;
+    gap:10px;
+}
+
+.social-icons a{
+    width:40px;
+    height:40px;
+    border-radius:50%;
+    border:1px solid #555;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    color:#fff;
+}
+
+.social-icons a:hover{
+    background:#c28b3f;
+}
+
+/* BOTTOM */
+.footer-bottom{
+    border-top:1px solid #444;
+    margin-top:30px;
+    padding-top:15px;
+    text-align:center;
+    font-size:14px;
+}
+
+/* ================= TABLET ================= */
+@media (max-width:1024px){
+
+.footer-grid{
+    grid-template-columns:1fr 1fr;
+}
+
+/* stack newsletter */
+.newsletter{
+    flex-direction:column;
+}
+
+.newsletter input,
+.newsletter button{
+    width:100%;
+}
 }
 
 
-/* =========================
-   RESPONSIVE - 1024px
-========================= */
-@media (max-width: 1024px) {
-    .navbar {
-        padding: 16px 24px;
-    }
+/* ================= MOBILE ================= */
+@media (max-width:768px){
 
-    .nav-container {
-        gap: 15px;
-    }
+.footer{
+    text-align:center;
+    padding:60px 20px;
+}
 
-    .logo img {
-        width: 105px;
-    }
+.footer-grid{
+    grid-template-columns:1fr;
+    gap:25px;
+}
 
-    .nav-links {
-        gap: 18px;
-        flex-wrap: wrap;
-    }
+/* center content */
+.footer-contact p{
+    justify-content:center;
+}
 
-    .nav-links a {
-        font-size: 15px;
-        padding: 6px 8px;
-    }
+.social-icons{
+    justify-content:center;
+}
 
-    .nav-actions {
-        gap: 10px;
-    }
-
-    .nav-appointment-btn {
-        padding: 10px 18px;
-        font-size: 14px;
-    }
-
-    .about-section {
-        min-height: 60vh;
-        padding: 60px 5%;
-    }
-
-    .about-text {
-        max-width: 600px;
-        padding: 24px;
-    }
-
-    .about-text h2 {
-        font-size: 34px;
-    }
-
-    .about-text p {
-        font-size: 15px;
-    }
-
-    .about-gallery {
-        padding: 70px 6%;
-    }
-
-    .about-gallery .section-title {
-        font-size: 30px;
-    }
-
-    .gallery-container {
-        grid-template-columns: repeat(2, 1fr);
-        gap: 18px;
-    }
-
-    .gallery-box img {
-        height: 220px;
-    }
-
-    .clients-choice {
-        padding: 70px 6%;
-    }
-
-    .chart-container {
-        max-width: 100%;
-    }
-
-    .mission-section {
-        padding: 70px 6%;
-        gap: 25px;
-    }
-
-    .mission-box {
-        padding: 30px 22px;
-    }
-
-    .mission-box h2 {
-        font-size: 24px;
-    }
-
-    .mission-box p {
-        font-size: 14px;
-    }
-
-    .footer {
-        padding: 100px 6% 20px;
-    }
-
-    .footer-grid {
-        grid-template-columns: 1.5fr 1fr 1fr 1fr;
-        gap: 25px;
-    }
-
-    .footer-logo {
-        width: 140px;
-        margin-top: -20px;
-        margin-left: 0;
-    }
-
-    .footer-nav {
-        margin-top: 0;
-        margin-left: 0;
-    }
-
-    .footer-contact {
-        margin-top: 0;
-        margin-left: 0;
-    }
-
-    .footer-social {
-        margin-top: 0;
-    }
-
-    .newsletter {
-        flex-direction: column;
-        gap: 10px;
-    }
-
-    .newsletter input,
-    .newsletter button {
-        width: 100%;
-    }
+.newsletter{
+    flex-direction:column;
+}
 }

@@ -1,4 +1,4 @@
-* {
+﻿* {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
@@ -82,15 +82,6 @@ p {
     align-items: center;
     gap: 12px;
 }
-
-#swap-btn,
-#theme-toggle {
-    border: none;
-    background: none;
-    font-size: 22px;
-    cursor: pointer;
-}
-
 .nav-appointment-btn {
     background: #c48b47;
     color: #5a4a00;
@@ -108,19 +99,6 @@ p {
     background: #a06d34;
     color: #fff;
 }
-
-html[dir="rtl"] .nav-container {
-    flex-direction: row-reverse;
-}
-
-html[dir="rtl"] .nav-links {
-    flex-direction: row-reverse;
-}
-
-html[dir="rtl"] .nav-actions {
-    flex-direction: row-reverse;
-}
-
 @media (max-width: 992px) {
     .nav-container {
         flex-wrap: wrap;
@@ -946,7 +924,7 @@ font-size:14px;
     right: 25px;
     width: 50px;
     height: 50px;
-    background: #d50000;
+    background: #e7bd32;
     color: #fff;
     border: none;
     border-radius: 50%;
@@ -962,33 +940,6 @@ font-size:14px;
     background: #d89821;
     transform: translateY(-3px);
 }
-
-.swap-btn{
-background:none;
-border:none;
-font-size:22px;
-cursor:pointer;
-color:#f1b74a;
-padding:5px;
-}
-
-/* RTL MODE */
-
-body.rtl{
-    direction: rtl;
-    text-align: right;
-}
-
-/* keep sections aligned */
-
-body.rtl .navbar,
-body.rtl .container,
-body.rtl .section{
-    direction: rtl;
-}
-
-
-
 /* ===============================
 TABLET RESPONSIVE (max-width:992px)
 =============================== */
@@ -1324,25 +1275,13 @@ color:#fff;
     transform: translateY(-10px);
 }
 
-html {
-    scroll-behavior: smooth;
-}
+
 
 .nav-right{
     display:flex;
     align-items:center;
     gap:10px;
 }
-
-body.rtl .nav-right{
-    flex-direction:row-reverse;
-}
-
-body.rtl .book-btn{
-    margin-right:120px;
-}
-
-
 /* ===============================
    1024px RESPONSIVE
 =============================== */
@@ -1502,15 +1441,190 @@ body.rtl .book-btn{
     .newsletter button{
         width:100%;
     }
-
-    /* RTL */
-    html[dir="rtl"] .footer-nav,
-    html[dir="rtl"] .footer-contact,
-    html[dir="rtl"] .footer-social{
-        text-align:right;
-    }
-
-    body.rtl .book-btn{
-        margin-right:0;
-    }
 }
+
+@media (max-width: 1024px){
+
+/* ================= NAVBAR ================= */
+.navbar{
+    padding: 16px 24px;
+}
+
+.nav-container{
+    gap: 15px;
+}
+
+.logo img{
+    width: 100px;
+}
+
+.nav-links{
+    gap: 18px;
+    flex-wrap: wrap;
+}
+
+.nav-links a{
+    font-size: 15px;
+}
+
+.nav-appointment-btn{
+    padding: 10px 18px;
+    font-size: 14px;
+}
+
+/* ================= HERO ================= */
+.about-hero{
+    height: 300px;
+    margin-top: 60px;
+}
+
+.about-overlay h1{
+    font-size: 36px;
+}
+
+.about-overlay p{
+    font-size: 15px;
+}
+
+.services-hero{
+    height: 70vh;
+}
+
+.overlay h1{
+    font-size: 38px;
+}
+
+.overlay p{
+    font-size: 15px;
+}
+
+/* ================= SERVICES CONTENT ================= */
+.services-content{
+    padding: 60px 6%;
+}
+
+.section-title{
+    font-size: 30px;
+}
+
+.section-text{
+    font-size: 14px;
+}
+
+/* ================= SERVICE CARDS ================= */
+.service-cards{
+    gap: 20px;
+}
+
+.card{
+    width: calc(50% - 15px);
+    padding: 25px 20px;
+}
+
+.card h3{
+    font-size: 20px;
+}
+
+.card p{
+    font-size: 14px;
+}
+
+/* ================= MEN / WOMEN GRID ================= */
+.men-services-grid,
+.women-services-grid{
+    grid-template-columns: repeat(2, 1fr);
+    gap: 20px;
+}
+
+.service-card img{
+    height: 220px;
+}
+
+/* ================= REVIEWS ================= */
+.reviews-container{
+    grid-template-columns: repeat(2, 1fr);
+    gap: 20px;
+}
+
+.review-card{
+    padding: 25px;
+}
+
+/* ================= FOOTER ================= */
+.footer{
+    padding: 80px 6% 20px;
+}
+
+.footer-grid{
+    grid-template-columns: repeat(2, 1fr);
+    gap: 25px;
+}
+
+/* REMOVE BREAKING MARGINS */
+.footer-logo,
+.footer-nav,
+.footer-contact{
+    margin: 0;
+}
+
+.footer-logo{
+    width: 140px;
+}
+
+/* NEWSLETTER FIX */
+.newsletter{
+    flex-direction: column;
+    gap: 10px;
+}
+
+.newsletter input,
+.newsletter button{
+    width: 100%;
+}
+}
+@media (max-width: 480px){
+
+.section-title{
+    font-size: 24px;
+}
+
+.card h3{
+    font-size: 18px;
+}
+
+.card p{
+    font-size: 13px;
+}
+
+.footer-bottom{
+    font-size: 12px;
+}
+} 
+
+/* Final footer gap fix */
+html,
+body {
+    margin-bottom: 0 !important;
+    padding-bottom: 0 !important;
+}
+
+body.dark-mode {
+    background: #121212 !important;
+}
+
+.footer {
+    margin-bottom: 0 !important;
+    padding-bottom: 0 !important;
+    background: #000 !important;
+}
+
+.footer-bottom {
+    display: block !important;
+    height: auto !important;
+    margin: 20px auto 0 !important;
+    padding: 12px 0 0 !important;
+    border-top: 1px solid #222 !important;
+    overflow: visible !important;
+    text-align: center !important;
+}
+

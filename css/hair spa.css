@@ -1,4 +1,4 @@
-* {
+﻿* {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
@@ -89,7 +89,6 @@ object-fit:contain;
 }
 
 .book-btn{
-  margin-left:300px;   
   background:#c48b47;
   color:rgb(114, 94, 3);
   border:none;
@@ -98,6 +97,7 @@ object-fit:contain;
   cursor:pointer;
   font-size:14px;
   transition:0.3s;
+  margin-left: auto; /* ✅ IMPORTANT */
 }
 
 .book-btn:hover{
@@ -266,8 +266,9 @@ color:#cccccc;
     max-width:1200px;
     margin:40px auto 70px;
     display:grid;
-    grid-template-columns:repeat(3, 1fr);
+    grid-template-columns:minmax(0, 1.15fr) minmax(300px, 0.85fr);
     gap:25px;
+    align-items:start;
 }
 
 .spa-box{
@@ -276,6 +277,10 @@ color:#cccccc;
     border-radius:12px;
     padding:28px;
     box-shadow:0 5px 15px rgba(0,0,0,0.08);
+}
+
+.spa-box:first-child{
+    grid-row:span 2;
 }
 
 .spa-box h2{
@@ -359,22 +364,15 @@ body.dark-mode .spa-box p,
 body.dark-mode .spa-box li{
     color:#ccc;
 }
-
-/* ===== RTL ===== */
-body.rtl .spa-box{
-    text-align:right;
-}
-
-body.rtl .spa-box ul{
-    padding-left:0;
-    padding-right:20px;
-}
-
 /* ===== MOBILE ===== */
 @media (max-width:992px){
     .spa-grid,
     .hairspa-info{
-        grid-template-columns:repeat(2, 1fr);
+        grid-template-columns:1fr;
+    }
+
+    .spa-box:first-child{
+        grid-row:auto;
     }
 }
 
@@ -560,5 +558,126 @@ body.rtl .spa-box ul{
     text-align: center;
     font-size: 14px;
     color: #aaa;
+}
+
+
+/* ================= MOBILE ================= */
+@media (max-width: 768px){
+
+/* ===== NAVBAR ===== */
+.navbar{
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+}
+
+.nav-container{
+    flex-direction: column;
+}
+
+.nav-links{
+    margin-left: 0;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.nav-right{
+    flex-direction: column;
+    gap: 10px;
+}
+
+.book-btn{
+    margin-left: 0;
+}
+
+/* ===== HAIR SPA ===== */
+.hairspa-info{
+    grid-template-columns: 1fr;
+    width: 95%;
+}
+
+.spa-box{
+    padding: 20px;
+}
+
+/* ===== SPA GRID ===== */
+.spa-grid{
+    grid-template-columns: 1fr;
+}
+
+.spa-card img{
+    height: 180px;
+}
+
+/* ===== SECTION ===== */
+.hairspa-gallery{
+    width: 95%;
+}
+
+/* ===== FOOTER ===== */
+.footer{
+    text-align: center;
+    padding: 80px 20px 20px;
+}
+
+.footer-grid{
+    grid-template-columns: 1fr;
+    gap: 30px;
+}
+
+.footer-contact p{
+    justify-content: center;
+}
+
+.social-icons{
+    justify-content: center;
+}
+}
+
+/* ===== COMPACT HAIR SPA INFO CARDS ===== */
+.hairspa-gallery {
+    margin: 42px auto 34px;
+}
+
+.spa-card,
+.spa-box {
+    border-radius: 8px;
+    border-color: rgba(116, 84, 49, 0.14);
+    box-shadow: 0 18px 45px rgba(61, 42, 24, 0.08);
+}
+
+.spa-box {
+    padding: 26px;
+}
+
+.spa-box h2 {
+    font-size: clamp(22px, 2.5vw, 28px);
+    line-height: 1.2;
+}
+
+.spa-box p,
+.spa-box li {
+    color: #5c5149;
+}
+
+.spa-box ul {
+    display: grid;
+    gap: 9px;
+}
+
+.spa-box li {
+    margin-bottom: 0;
+}
+
+body.dark-mode .hairspa-info {
+    background: transparent;
+}
+
+@media (max-width: 768px) {
+    .hairspa-info {
+        margin-top: 28px;
+        margin-bottom: 42px;
+        gap: 18px;
+    }
 }
 

@@ -1,0 +1,2275 @@
+﻿:root {
+  --trimly-layout-max: 1200px;
+  --trimly-gutter: 24px;
+  --trimly-bg: #fbf6ef;
+  --trimly-surface: rgba(255, 255, 255, 0.92);
+  --trimly-text: #241d17;
+  --trimly-muted: #6d6155;
+  --trimly-border-soft: rgba(120, 94, 61, 0.12);
+  --trimly-shadow-soft: 0 22px 60px rgba(49, 34, 18, 0.08);
+  --trimly-footer-bg: #252321;
+  --trimly-footer-text: #f5efe3;
+  --trimly-footer-muted: rgba(245, 239, 227, 0.78);
+  --trimly-footer-border: rgba(255, 255, 255, 0.12);
+  --trimly-footer-accent: #cf9c4d;
+  --trimly-action: #c48b47;
+  --trimly-action-hover: #a06d34;
+}
+
+html {
+  scroll-behavior: smooth;
+  scrollbar-width: none !important;
+  -ms-overflow-style: none !important;
+}
+
+*::-webkit-scrollbar,
+html::-webkit-scrollbar,
+body::-webkit-scrollbar {
+  width: 0 !important;
+  height: 0 !important;
+  display: none !important;
+}
+
+*::-webkit-scrollbar-track,
+*::-webkit-scrollbar-thumb {
+  background: transparent !important;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+body {
+  min-height: 100vh;
+  margin: 0;
+  font-family: "Poppins", sans-serif;
+  color: var(--trimly-text);
+  background:
+    radial-gradient(circle at top left, rgba(207, 156, 77, 0.12), transparent 30%),
+    linear-gradient(180deg, #fffaf4 0%, var(--trimly-bg) 46%, #f4ece3 100%);
+  overflow-x: hidden;
+}
+
+img {
+  display: block;
+  max-width: 100%;
+  height: auto;
+}
+
+iframe {
+  width: 100%;
+  border: 0;
+  border-radius: 24px;
+}
+
+button,
+input,
+textarea,
+select {
+  font: inherit;
+}
+
+a {
+  color: inherit;
+}
+
+.global-container {
+  width: min(100%, var(--trimly-layout-max));
+  margin: 0 auto;
+}
+
+.top-offer {
+  position: relative;
+  z-index: 1002;
+  padding: 12px 16px;
+  background: linear-gradient(90deg, #8e622f 0%, var(--trimly-footer-accent) 52%, #b57d33 100%);
+  color: #fff8ef;
+  text-align: center;
+  font-size: 0.92rem;
+  font-weight: 600;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+}
+
+.navbar {
+  box-sizing: border-box;
+  position: sticky;
+  top: 0;
+  z-index: 1001;
+  background: rgba(255, 250, 243, 0.92);
+  border-bottom: 1px solid var(--trimly-border-soft);
+  box-shadow: 0 16px 40px rgba(45, 31, 17, 0.08);
+  backdrop-filter: blur(16px);
+  padding: 10px var(--trimly-gutter);
+}
+
+.navbar .nav-container {
+  width: min(100%, var(--trimly-layout-max));
+  margin: 0 auto;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 16px 24px;
+  flex-wrap: wrap;
+}
+
+.navbar .nav-container > .theme-toggle {
+  margin-left: auto;
+}
+
+.navbar .main-nav {
+  display: flex;
+  flex: 1 1 420px;
+  min-width: 0;
+  justify-content: center;
+}
+
+.navbar .logo,
+.footer-logo {
+  display: flex;
+  align-items: center;
+  flex: 0 0 auto;
+  cursor: pointer;
+}
+
+.navbar .logo:focus-visible,
+.footer-logo:focus-visible {
+  outline: 2px solid var(--trimly-action);
+  outline-offset: 4px;
+  border-radius: 8px;
+}
+
+.navbar .logo img {
+  display: block;
+  width: 88px;
+  max-width: 100%;
+  height: auto;
+  margin: 0;
+}
+
+.navbar .nav-links {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 12px 26px;
+  flex: 1 1 420px;
+  min-width: 0;
+  flex-wrap: wrap;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.navbar .nav-links li {
+  display: flex;
+}
+
+.navbar .nav-links a {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--trimly-text);
+  font-weight: 500;
+  padding: 8px 0;
+  position: relative;
+}
+
+.navbar .nav-links a::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: -4px;
+  height: 2px;
+  border-radius: 999px;
+  background: var(--trimly-footer-accent);
+  transform: scaleX(0);
+  transform-origin: center;
+  transition: transform 0.28s ease;
+}
+
+.navbar .nav-links a:hover::after,
+.navbar .nav-links a.active::after {
+  transform: scaleX(1);
+}
+
+.navbar .theme-toggle,
+.navbar .rtl-toggle,
+.navbar .nav-menu-toggle,
+.navbar .nav-appointment-btn,
+.navbar .book-btn {
+  flex: 0 0 auto;
+  margin: 0;
+}
+
+.navbar .nav-actions {
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  gap: 12px;
+  flex: 0 0 auto;
+  margin-left: auto;
+  min-width: max-content;
+}
+
+.navbar .theme-toggle {
+  display: flex;
+  align-items: center;
+}
+
+.navbar .nav-menu-toggle {
+  display: none;
+}
+
+.navbar .nav-appointment-btn,
+.navbar .book-btn {
+  position: static !important;
+  inset: auto !important;
+  transform: none !important;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  white-space: nowrap;
+  border: 0;
+  border-radius: 999px;
+  padding: 10px 20px;
+  background: var(--trimly-action);
+  color: #fff;
+  font-weight: 600;
+  box-shadow: 0 14px 32px rgba(177, 123, 45, 0.24);
+  transition: transform 0.28s ease, box-shadow 0.28s ease, filter 0.28s ease;
+}
+
+.navbar .nav-appointment-btn:hover,
+.navbar .book-btn:hover {
+  transform: translateY(-2px);
+  background: var(--trimly-action-hover);
+  filter: none;
+  box-shadow: 0 18px 36px rgba(177, 123, 45, 0.3);
+}
+
+.navbar .theme-toggle button,
+.navbar .nav-menu-toggle,
+.navbar .rtl-toggle {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0 !important;
+  width: 42px !important;
+  height: 42px !important;
+  padding: 0 !important;
+  border-radius: 50% !important;
+  border: 0 !important;
+  background: #fff !important;
+  color: #17120d !important;
+  box-shadow: 0 10px 24px rgba(39, 27, 15, 0.09) !important;
+}
+
+.navbar .theme-toggle button i,
+.navbar .nav-menu-toggle i,
+.navbar .rtl-toggle i {
+  color: #17120d !important;
+  font-size: 18px !important;
+  line-height: 1 !important;
+}
+
+body.dark-mode .navbar .theme-toggle button i,
+body.dark-mode .navbar .nav-menu-toggle i,
+body.dark-mode .navbar .rtl-toggle i {
+  color: #17120d !important;
+}
+
+.navbar .theme-toggle button:hover,
+.navbar .nav-menu-toggle:hover,
+.navbar .rtl-toggle:hover {
+  transform: translateY(-1px);
+  box-shadow: 0 14px 28px rgba(39, 27, 15, 0.13) !important;
+}
+
+.navbar .nav-menu-toggle {
+  display: none !important;
+}
+
+:where(.hero-btn, .price-btn, .blog-btn, .loyalty-btn, .card button, .service-card button, .contact-form button, .appointment-form button) {
+  transition: transform 0.28s ease, box-shadow 0.28s ease, filter 0.28s ease;
+}
+
+:where(.hero-btn, .price-btn, .blog-btn, .loyalty-btn, .card button, .service-card button, .contact-form button, .appointment-form button):hover {
+  transform: translateY(-2px);
+  filter: brightness(1.04);
+}
+
+:where(
+  .card,
+  .service-card,
+  .haircut-card,
+  .gallery-box,
+  .mission-box,
+  .chart-box,
+  .review-card,
+  .appointment-box,
+  .contact-form,
+  .contact-form form,
+  .contact-info
+) {
+  border-radius: 24px;
+  box-shadow: var(--trimly-shadow-soft);
+}
+
+:where(.card, .service-card, .haircut-card, .gallery-box, .mission-box, .chart-box, .review-card) {
+  overflow: hidden;
+}
+
+.chart-box {
+  overflow: visible !important;
+  padding-left: 4px;
+}
+
+.chart-container {
+  width: min(100%, 700px);
+  padding-inline: 8px;
+}
+
+.women-services-grid,
+.men-services-grid {
+  width: min(100%, 1080px);
+  margin: 40px auto 0;
+  display: grid !important;
+  grid-template-columns: repeat(3, minmax(0, 1fr)) !important;
+  gap: 26px !important;
+  align-items: stretch;
+}
+
+.women-services-grid .service-card,
+.men-services-grid .service-card {
+  width: 100%;
+  height: 100%;
+}
+
+.women-services-grid .service-card img,
+.men-services-grid .service-card img {
+  width: 100%;
+  height: 250px;
+  object-fit: cover;
+}
+
+.pricing-hero,
+.add-on-pricing,
+.price-menu,
+.combo-offer {
+  display: block;
+  opacity: 1;
+  visibility: visible;
+}
+
+.pricing-hero {
+  min-height: 520px;
+  display: flex !important;
+  align-items: center;
+  justify-content: center;
+  padding: 120px 24px 80px;
+  text-align: center;
+}
+
+.pricing-hero .pricing-overlay {
+  width: min(100%, 760px);
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  transform: none;
+}
+
+.pricing-hero .pricing-overlay h1 {
+  margin: 0 0 14px;
+  font-size: clamp(42px, 6vw, 72px);
+  line-height: 1.05;
+}
+
+.pricing-hero .pricing-overlay p {
+  margin: 0;
+  font-size: clamp(17px, 2.2vw, 22px);
+}
+
+:where(
+  .experience,
+  .services,
+  .appointment,
+  .about-section,
+  .about-gallery,
+  .mission-section,
+  .clients-choice,
+  .contact-section,
+  .contact-map,
+  .services-content,
+  .women-salon,
+  .men-salon,
+  .reviews,
+  .pricing-section,
+  .add-on-pricing,
+  .haircut-section
+) {
+  scroll-margin-top: 110px;
+}
+
+:where(
+  .haircut-section,
+  .hairstyle-info,
+  .haircolor-info,
+  .hairspa-info,
+  .facial-section,
+  .manicure-section,
+  .men-haircut-info,
+  .beard-trim-section,
+  .men-facial-section,
+  .men-hairspa-content,
+  .men-hairstyle-section
+) {
+  margin-bottom: 0 !important;
+}
+
+.footer + #scrollTop,
+#scrollTop {
+  background: var(--trimly-action) !important;
+  color: #fff !important;
+  box-shadow: 0 16px 30px rgba(40, 28, 15, 0.2);
+}
+
+#scrollTop:hover {
+  background: var(--trimly-action-hover) !important;
+  color: #fff !important;
+}
+
+:where(
+  .detail-btn,
+  .hero-btn,
+  .price-btn:hover,
+  .blog-btn,
+  .loyalty-btn:hover,
+  .filter-btn.active,
+  .filter-buttons button:hover,
+  .filter-buttons button.active,
+  .styles-filter button:hover,
+  .styles-filter button.active,
+  .styles-btn a,
+  .card button,
+  .service-card button,
+  .contact-form button,
+  .appointment-form button,
+  .add-on-card button,
+  .newsletter button
+) {
+  background: var(--trimly-action) !important;
+  border-color: var(--trimly-action) !important;
+  color: #fff !important;
+}
+
+:where(
+  .detail-btn:hover,
+  .hero-btn:hover,
+  .blog-btn:hover,
+  .card button:hover,
+  .service-card button:hover,
+  .contact-form button:hover,
+  .appointment-form button:hover,
+  .add-on-card button:hover,
+  .newsletter button:hover
+) {
+  background: var(--trimly-action-hover) !important;
+  border-color: var(--trimly-action-hover) !important;
+  color: #fff !important;
+}
+
+.footer {
+  box-sizing: border-box;
+  background: var(--trimly-footer-bg);
+  color: var(--trimly-footer-text);
+  margin-top: 0 !important;
+  width: 100vw !important;
+  max-width: none !important;
+  margin-left: calc(50% - 50vw) !important;
+  margin-right: calc(50% - 50vw) !important;
+  padding: 64px var(--trimly-gutter) 0 !important;
+}
+
+.footer.reveal,
+.footer .reveal,
+.footer .reveal-up,
+.footer .reveal-left,
+.footer .reveal-right,
+.footer .reveal-zoom {
+  opacity: 1 !important;
+  transform: none !important;
+  visibility: visible !important;
+}
+
+.footer .footer-grid {
+  width: min(100%, 1120px) !important;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: minmax(260px, 1.25fr) minmax(140px, 0.75fr) minmax(260px, 1.15fr) minmax(180px, 0.75fr) !important;
+  gap: 34px 44px !important;
+  align-items: start;
+}
+
+.footer .footer-left,
+.footer .footer-nav,
+.footer .footer-contact,
+.footer .footer-social,
+.footer .footer-logo {
+  margin: 0;
+}
+
+.footer .footer-logo {
+  display: block;
+  width: 118px;
+  max-width: 100%;
+  height: auto;
+  margin-bottom: 12px;
+}
+
+.footer h3,
+.footer h4 {
+  margin: 0;
+  color: var(--trimly-footer-text);
+  font-family: "Cinzel", serif;
+  font-weight: 500;
+  letter-spacing: 0.01em;
+}
+
+.footer .footer-left h3 {
+  margin: 0 0 18px;
+  font-size: 1.08rem;
+  line-height: 1.45;
+  text-transform: uppercase;
+}
+
+.footer .footer-nav h4,
+.footer .footer-contact h4,
+.footer .footer-social h4 {
+  margin-bottom: 18px;
+  font-size: 1.02rem;
+  text-transform: uppercase;
+}
+
+.footer .newsletter {
+  display: flex;
+  align-items: stretch;
+  flex-wrap: wrap;
+  gap: 12px;
+  margin: 0;
+  max-width: 360px;
+}
+
+.footer .newsletter input {
+  flex: 1 1 220px;
+  min-width: 0;
+  min-height: 42px;
+  padding: 0 14px;
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  background: #161616;
+  color: var(--trimly-footer-text);
+  border-radius: 0;
+  box-shadow: none;
+}
+
+.footer .newsletter input::placeholder {
+  color: rgba(245, 239, 227, 0.52);
+}
+
+.footer .newsletter button {
+  flex: 0 0 auto;
+  min-height: 42px;
+  padding: 0 22px;
+  border: 0;
+  border-radius: 0;
+  background: var(--trimly-footer-accent);
+  color: #fff;
+  font-weight: 600;
+  cursor: pointer;
+  box-shadow: none;
+}
+
+.footer .newsletter button:hover {
+  filter: brightness(1.05);
+}
+
+.footer .policy {
+  display: none !important;
+}
+
+.footer .footer-nav ul {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  display: grid;
+  gap: 10px;
+}
+
+.footer .footer-nav a {
+  color: var(--trimly-footer-text);
+  text-decoration: none;
+  line-height: 1.5;
+}
+
+.footer .footer-nav a:hover {
+  color: var(--trimly-footer-accent);
+}
+
+.footer .footer-contact p {
+  display: flex;
+  align-items: flex-start;
+  gap: 0;
+  margin: 0 0 14px;
+  color: var(--trimly-footer-text);
+  line-height: 1.45;
+}
+
+.footer .footer-contact i {
+  display: none;
+}
+
+.footer .footer-contact span {
+  display: block;
+  color: var(--trimly-footer-text);
+}
+
+.footer .social-icons {
+  display: flex;
+  gap: 14px;
+  flex-wrap: nowrap;
+}
+
+.footer .social-icons a {
+  width: 42px;
+  height: 42px;
+  border-radius: 999px;
+  border: 1px solid rgba(255, 255, 255, 0.22);
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--trimly-footer-text);
+  text-decoration: none;
+  background: transparent;
+  transition: background-color 0.3s ease, border-color 0.3s ease, color 0.3s ease, transform 0.3s ease;
+}
+
+.footer .social-icons a:hover {
+  background: var(--trimly-footer-accent);
+  border-color: var(--trimly-footer-accent);
+  color: #fff;
+  transform: translateY(-2px);
+}
+
+.footer .footer-bottom {
+  display: block !important;
+  width: min(100%, var(--trimly-layout-max));
+  margin: 20px auto 0 !important;
+  padding: 12px 0 0 !important;
+  border-top: 1px solid var(--trimly-footer-border) !important;
+  text-align: center;
+  line-height: 1.4;
+}
+
+.footer .footer-bottom p {
+  margin: 0;
+  color: var(--trimly-footer-muted);
+}
+
+@media (max-width: 1024px) {
+  .navbar .nav-container {
+    justify-content: center;
+  }
+
+  .navbar .logo {
+    width: 100%;
+    justify-content: center;
+  }
+
+  .navbar .nav-links {
+    flex-basis: 100%;
+    order: 3;
+  }
+
+  .navbar .main-nav {
+    flex-basis: 100%;
+    order: 3;
+  }
+
+  .navbar .nav-actions {
+    margin-left: 0;
+  }
+
+  .navbar .nav-container > .theme-toggle {
+    margin-left: 0;
+  }
+
+  .footer .footer-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr)) !important;
+    gap: 32px !important;
+  }
+
+  .footer .footer-left {
+    grid-column: 1 / -1;
+  }
+
+  .women-services-grid,
+  .men-services-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr)) !important;
+  }
+}
+
+@media (max-width: 640px) {
+  :root {
+    --trimly-gutter: 18px;
+  }
+
+  .navbar .nav-container {
+    gap: 14px;
+  }
+
+  .top-offer {
+    font-size: 0.8rem;
+    line-height: 1.45;
+    letter-spacing: 0.02em;
+  }
+
+  .navbar .nav-links {
+    gap: 10px 16px;
+  }
+
+  .navbar .nav-links a {
+    padding-inline: 8px;
+  }
+
+  .navbar .nav-appointment-btn,
+  .navbar .book-btn {
+    width: 100%;
+  }
+
+  .navbar .nav-actions {
+    width: 100%;
+    justify-content: center;
+    flex-wrap: wrap;
+  }
+
+  .navbar .theme-toggle button {
+    width: 38px;
+    height: 38px;
+  }
+
+  .navbar .rtl-toggle {
+    width: 38px !important;
+    height: 38px !important;
+  }
+
+  .women-services-grid,
+  .men-services-grid {
+    grid-template-columns: 1fr !important;
+    gap: 18px !important;
+  }
+
+  .women-services-grid .service-card img,
+  .men-services-grid .service-card img {
+    height: 220px;
+  }
+
+  .footer {
+    text-align: center;
+  }
+
+  .footer .footer-grid {
+    grid-template-columns: 1fr !important;
+    gap: 26px !important;
+  }
+
+  .footer .footer-logo {
+    margin: 0 auto 16px;
+  }
+
+  .footer .newsletter {
+    flex-direction: column;
+    max-width: 100%;
+  }
+
+  .footer .footer-contact p,
+  .footer .social-icons {
+    justify-content: center;
+  }
+
+  .footer .footer-left,
+  .footer .footer-nav,
+  .footer .footer-contact,
+  .footer .footer-social {
+    text-align: center;
+  }
+}
+
+/* ===== RTL MODE ===== */
+html[dir="rtl"],
+body.rtl {
+  direction: rtl;
+}
+
+body.rtl :where(
+  .navbar .nav-container,
+  .navbar .nav-links,
+  .navbar .main-nav,
+  .navbar .nav-actions,
+  .haircut-info-grid,
+  .haircolor-info,
+  .hairstyle-info,
+  .haircolor-content,
+  .hairspa-content-grid,
+  .men-content-container,
+  .manicure-container,
+  .facial-box,
+  .men-facial-box,
+  .beard-wrapper,
+  .footer .footer-grid
+) {
+  direction: rtl;
+}
+
+body.rtl :where(
+  .haircut-card,
+  .box-card,
+  .color-card,
+  .hairstyle-card,
+  .spa-card,
+  .men-card,
+  .haircolor-card,
+  .men-style-card,
+  .color-box,
+  .style-box,
+  .spa-box,
+  .men-content-box,
+  .spa-content-box,
+  .manicure-box,
+  .facial-content,
+  .men-facial-content,
+  .beard-text,
+  .footer-left,
+  .footer-nav,
+  .footer-contact,
+  .footer-social
+) {
+  text-align: right !important;
+}
+
+body.rtl :where(
+  .top-offer,
+  .page-title,
+  .page-subtitle,
+  .section-title,
+  .section-subtitle,
+  .section-heading,
+  .beard-title,
+  .beard-subtitle,
+  .content-title,
+  .men-title,
+  .men-subtitle,
+  .pricing-overlay,
+  .hero-content,
+  .footer-bottom,
+  .hairspa-gallery,
+  .haircolor-gallery
+) {
+  text-align: center !important;
+}
+
+body.rtl :where(ul) {
+  padding-left: 0 !important;
+  padding-right: 20px !important;
+}
+
+body.rtl :where(.trending-section ul, .footer-nav ul) {
+  padding-right: 0 !important;
+}
+
+body.rtl .trending-section li {
+  padding-left: 0 !important;
+  padding-right: 22px !important;
+}
+
+body.rtl .trending-section li::before {
+  left: auto !important;
+  right: 0 !important;
+}
+
+body.rtl .footer .newsletter {
+  justify-content: flex-end;
+}
+
+body.rtl .footer .social-icons {
+  justify-content: flex-start;
+}
+
+body.rtl .footer .footer-contact p {
+  direction: rtl;
+}
+
+/* ===== SERVICE DETAIL PAGE POLISH ===== */
+:where(
+  .haircolor-gallery,
+  .haircolor-section,
+  .hairstyle-section,
+  .facial-section,
+  .manicure-section,
+  .men-haircut-section,
+  .men-hairspa-content,
+  .men-hairstyle-section,
+  .men-facial-section,
+  .beard-trim-section
+) {
+  width: min(100%, 1180px) !important;
+  margin: 34px auto 0 !important;
+  padding: 64px var(--trimly-gutter) 48px !important;
+  background:
+    linear-gradient(135deg, rgba(207, 156, 77, 0.12), rgba(255, 255, 255, 0.84)),
+    #fffaf4 !important;
+}
+
+:where(
+  .haircut-section,
+  .haircolor-gallery,
+  .haircolor-section,
+  .hairstyle-section,
+  .facial-section,
+  .manicure-section,
+  .men-haircut-section,
+  .men-hairspa-content,
+  .men-hairstyle-section,
+  .men-facial-section,
+  .beard-trim-section
+) {
+  background:
+    linear-gradient(135deg, rgba(20, 16, 12, 0.92), rgba(84, 57, 29, 0.82)),
+    #1f1812 !important;
+}
+
+:where(
+  .about-overlay,
+  .services-hero .hero-content,
+  .services-hero .overlay,
+  .pricing-overlay
+) :where(h1, p),
+:where(
+  .haircut-section,
+  .haircolor-gallery,
+  .haircolor-section,
+  .hairstyle-section,
+  .facial-section,
+  .manicure-section,
+  .men-haircut-section,
+  .men-hairspa-content,
+  .men-hairstyle-section,
+  .men-facial-section,
+  .beard-trim-section
+) > :where(.page-title, .section-title, .beard-title, .men-title, .page-subtitle, .section-subtitle, .men-subtitle) {
+  color: #fff !important;
+}
+
+:where(
+  .haircut-section,
+  .haircolor-gallery,
+  .haircolor-section,
+  .hairstyle-section,
+  .facial-section,
+  .manicure-section,
+  .men-haircut-section,
+  .men-hairspa-content,
+  .men-hairstyle-section,
+  .men-facial-section,
+  .beard-trim-section
+) > :where(.page-subtitle, .section-subtitle, .men-subtitle) {
+  color: rgba(255, 255, 255, 0.82) !important;
+}
+
+:where(
+  .haircolor-info,
+  .hairstyle-info,
+  .hairspa-info,
+  .men-haircut-info
+) {
+  width: min(100%, 1180px) !important;
+  margin: 0 auto !important;
+  padding: 0 var(--trimly-gutter) 52px !important;
+  background: transparent !important;
+}
+
+:where(.page-title, .section-title, .beard-title, .men-title) {
+  margin: 0 0 12px !important;
+  color: #221813 !important;
+  font-size: clamp(34px, 5vw, 56px) !important;
+  line-height: 1.06 !important;
+  text-align: center !important;
+}
+
+:where(.page-subtitle, .section-subtitle, .content-title + p, .hairstyle-section > p, .men-subtitle) {
+  max-width: 780px !important;
+  margin: 0 auto 38px !important;
+  color: var(--trimly-muted) !important;
+  font-size: 16px !important;
+  line-height: 1.75 !important;
+  text-align: center !important;
+}
+
+:where(.content-title) {
+  margin: 0 0 34px !important;
+  color: #221813 !important;
+  font-size: clamp(30px, 4.2vw, 48px) !important;
+  line-height: 1.1 !important;
+  text-align: center !important;
+}
+
+.about-overlay h1,
+.about-overlay p,
+.services-hero .hero-content h1,
+.services-hero .hero-content p,
+.services-hero .overlay h1,
+.services-hero .overlay p,
+.pricing-overlay h1,
+.pricing-overlay p,
+.haircut-section > .page-title,
+.haircut-section > .page-subtitle,
+.haircut-section > .section-heading,
+.haircolor-gallery > .section-title,
+.haircolor-gallery > .section-subtitle,
+.haircolor-section > .section-title,
+.haircolor-section > .section-subtitle,
+.hairstyle-section > .page-title,
+.hairstyle-section > .page-subtitle,
+.hairstyle-section > .section-heading,
+.facial-section > .page-title,
+.facial-section > .page-subtitle,
+.manicure-section > .section-title,
+.manicure-section > .section-subtitle,
+.men-haircut-section > .men-title,
+.men-haircut-section > .men-subtitle,
+.men-hairspa-content > .men-title,
+.men-hairspa-content > .men-subtitle,
+.men-hairstyle-section > .section-title,
+.men-hairstyle-section > .section-subtitle,
+.men-facial-section > .men-title,
+.men-facial-section > .men-subtitle,
+.beard-trim-section > .beard-title,
+.beard-trim-section > .beard-subtitle {
+  color: #fff !important;
+}
+
+:where(
+  .color-grid,
+  .hairstyle-grid,
+  .men-haircut-grid,
+  .haircolor-grid,
+  .men-style-grid,
+  .spa-grid
+) {
+  width: 100% !important;
+  max-width: none !important;
+  margin: 30px auto 0 !important;
+  display: grid !important;
+  grid-template-columns: repeat(3, minmax(0, 1fr)) !important;
+  gap: 22px !important;
+  align-items: stretch !important;
+}
+
+:where(
+  .color-card,
+  .hairstyle-card,
+  .spa-card,
+  .men-card,
+  .haircolor-card,
+  .men-style-card
+) {
+  height: 100% !important;
+  padding: 0 !important;
+  overflow: hidden !important;
+  border: 1px solid rgba(116, 84, 49, 0.14) !important;
+  border-radius: 8px !important;
+  background: var(--trimly-surface) !important;
+  box-shadow: 0 18px 45px rgba(61, 42, 24, 0.08) !important;
+  text-align: left !important;
+  transition: transform 0.28s ease, box-shadow 0.28s ease !important;
+}
+
+:where(
+  .color-card,
+  .hairstyle-card,
+  .spa-card,
+  .men-card,
+  .haircolor-card,
+  .men-style-card
+):hover {
+  transform: translateY(-6px) !important;
+  box-shadow: 0 24px 60px rgba(61, 42, 24, 0.14) !important;
+}
+
+:where(
+  .color-card,
+  .hairstyle-card,
+  .spa-card,
+  .men-card,
+  .haircolor-card,
+  .men-style-card
+) img {
+  width: 100% !important;
+  height: 240px !important;
+  object-fit: cover !important;
+  border-radius: 0 !important;
+}
+
+:where(
+  .color-card,
+  .hairstyle-card,
+  .spa-card,
+  .men-card,
+  .haircolor-card,
+  .men-style-card
+) h3 {
+  margin: 18px 20px 8px !important;
+  color: #231914 !important;
+  font-size: 20px !important;
+  line-height: 1.25 !important;
+}
+
+:where(
+  .color-card,
+  .hairstyle-card,
+  .spa-card,
+  .men-card,
+  .haircolor-card,
+  .men-style-card
+) p {
+  margin: 0 !important;
+  padding: 0 20px 22px !important;
+  color: #62564d !important;
+  font-size: 14px !important;
+  line-height: 1.7 !important;
+}
+
+:where(
+  .haircolor-info,
+  .hairstyle-info,
+  .men-haircut-info,
+  .hairspa-content-grid
+) :where(.color-box, .style-box, .men-content-box, .spa-content-box),
+:where(.manicure-box) {
+  border: 1px solid rgba(116, 84, 49, 0.14) !important;
+  border-radius: 8px !important;
+  background: rgba(255, 255, 255, 0.94) !important;
+  box-shadow: 0 18px 45px rgba(61, 42, 24, 0.08) !important;
+}
+
+:where(.haircolor-info, .hairstyle-info) {
+  display: grid !important;
+  grid-template-columns: minmax(0, 1.1fr) minmax(300px, 0.9fr) !important;
+  gap: 22px !important;
+  align-items: start !important;
+}
+
+:where(.haircolor-info, .hairstyle-info) > :where(.color-box, .style-box):first-child {
+  grid-row: span 2 !important;
+}
+
+.hairstyle-info > .style-box:first-child {
+  grid-row: auto !important;
+}
+
+.hairstyle-visual {
+  position: relative !important;
+  align-self: stretch !important;
+  min-height: 100% !important;
+  overflow: hidden !important;
+  border: 1px solid rgba(116, 84, 49, 0.14) !important;
+  border-radius: 8px !important;
+  background: rgba(255, 255, 255, 0.94) !important;
+  box-shadow: 0 18px 45px rgba(61, 42, 24, 0.08) !important;
+}
+
+.hairstyle-visual img {
+  position: absolute !important;
+  inset: 0 !important;
+  display: block !important;
+  width: 100% !important;
+  height: 100% !important;
+  min-height: 360px !important;
+  object-fit: cover !important;
+  border-radius: 8px !important;
+}
+
+:where(.haircolor-info, .hairstyle-info) > :only-child {
+  grid-column: 1 / -1 !important;
+}
+
+.haircolor-info > .content-title,
+.haircolor-info > .haircolor-content {
+  grid-column: 1 / -1 !important;
+}
+
+.haircolor-content,
+.hairspa-content-grid {
+  width: 100% !important;
+  max-width: 1180px !important;
+  margin: 0 auto !important;
+  display: grid !important;
+  grid-template-columns: minmax(0, 1.08fr) minmax(300px, 0.92fr) !important;
+  gap: 22px !important;
+  align-items: start !important;
+}
+
+.hairspa-content-grid {
+  grid-template-columns: repeat(2, minmax(0, 1fr)) !important;
+}
+
+.hairspa-content-grid > :first-child {
+  grid-row: auto !important;
+}
+
+.men-content-container {
+  width: 100% !important;
+  max-width: 1180px !important;
+  margin: 0 auto !important;
+  display: grid !important;
+  grid-template-columns: repeat(2, minmax(0, 1fr)) !important;
+  gap: 22px !important;
+  align-items: start !important;
+}
+
+:where(.color-box, .style-box, .men-content-box, .spa-content-box, .manicure-box, .spa-box) {
+  padding: 26px !important;
+  margin: 0 !important;
+}
+
+:where(.color-box, .style-box, .men-content-box, .spa-content-box, .manicure-box, .spa-box) h2,
+:where(.color-box, .style-box, .men-content-box, .spa-content-box, .manicure-box, .spa-box) h3 {
+  color: #221813 !important;
+  font-size: clamp(22px, 2.5vw, 28px) !important;
+  line-height: 1.2 !important;
+}
+
+:where(.color-box, .style-box, .men-content-box, .spa-content-box, .manicure-box, .spa-box) p,
+:where(.color-box, .style-box, .men-content-box, .spa-content-box, .manicure-box, .spa-box) li {
+  color: #5c5149 !important;
+  line-height: 1.7 !important;
+}
+
+:where(.color-box, .style-box, .men-content-box, .spa-content-box, .manicure-box, .spa-box) ul {
+  display: grid !important;
+  gap: 9px !important;
+  margin-top: 12px !important;
+}
+
+:where(.facial-container, .men-facial-container) {
+  width: 100% !important;
+  max-width: 1180px !important;
+  margin: 34px auto 0 !important;
+  display: grid !important;
+  gap: 22px !important;
+}
+
+.manicure-container {
+  width: 100% !important;
+  max-width: 1180px !important;
+  margin: 34px auto 0 !important;
+  display: grid !important;
+  grid-template-columns: repeat(2, minmax(0, 1fr)) !important;
+  gap: 22px !important;
+  align-items: start !important;
+}
+
+:where(.facial-box, .men-facial-box, .beard-wrapper) {
+  display: grid !important;
+  grid-template-columns: minmax(250px, 0.82fr) minmax(0, 1.18fr) !important;
+  align-items: center !important;
+  gap: 28px !important;
+  padding: 22px !important;
+  border: 1px solid rgba(116, 84, 49, 0.14) !important;
+  border-radius: 8px !important;
+  background: rgba(255, 255, 255, 0.94) !important;
+  box-shadow: 0 18px 45px rgba(61, 42, 24, 0.08) !important;
+  text-align: left !important;
+}
+
+.manicure-box {
+  display: block !important;
+  text-align: left !important;
+}
+
+:where(.facial-box.reverse, .men-facial-box.reverse) {
+  grid-template-columns: minmax(0, 1.18fr) minmax(250px, 0.82fr) !important;
+}
+
+:where(.facial-box.reverse, .men-facial-box.reverse) :where(.facial-img, .men-facial-img) {
+  order: 2 !important;
+}
+
+:where(.facial-img img, .men-facial-img img, .beard-img img) {
+  width: 100% !important;
+  height: 260px !important;
+  object-fit: cover !important;
+  border-radius: 8px !important;
+}
+
+:where(.facial-content h2, .men-facial-content h2, .beard-text h2) {
+  margin: 0 0 10px !important;
+  color: #221813 !important;
+  font-size: clamp(22px, 2.5vw, 30px) !important;
+}
+
+:where(.facial-content p, .men-facial-content p, .beard-text p, .beard-text li) {
+  color: #5c5149 !important;
+  line-height: 1.75 !important;
+}
+
+.beard-wrapper {
+  margin-top: 30px !important;
+}
+
+.beard-text ul {
+  display: grid !important;
+  gap: 9px !important;
+  margin-top: 12px !important;
+}
+
+.beard-subtitle {
+  max-width: 720px !important;
+  margin: 0 auto 34px !important;
+  color: var(--trimly-muted) !important;
+  font-size: 16px !important;
+  line-height: 1.7 !important;
+  text-align: center !important;
+}
+
+.beard-trim-section .beard-wrapper {
+  max-width: 1080px !important;
+  margin: 0 auto !important;
+  grid-template-columns: minmax(280px, 0.9fr) minmax(0, 1.1fr) !important;
+  gap: 34px !important;
+  padding: 26px !important;
+}
+
+.beard-trim-section .beard-img {
+  align-self: stretch !important;
+  min-height: 360px !important;
+}
+
+.beard-trim-section .beard-img img {
+  display: block !important;
+  width: 100% !important;
+  height: 100% !important;
+  min-height: 360px !important;
+  object-fit: cover !important;
+}
+
+.beard-trim-section .beard-text {
+  align-self: center !important;
+}
+
+.beard-trim-section .beard-text h3 {
+  margin: 18px 0 8px !important;
+  color: #221813 !important;
+  font-size: 22px !important;
+  line-height: 1.25 !important;
+  font-family: "Cinzel", serif !important;
+}
+
+.beard-trim-section .beard-text ul {
+  padding-left: 20px !important;
+}
+
+body.dark-mode :where(
+  .haircolor-gallery,
+  .haircolor-section,
+  .hairstyle-section,
+  .facial-section,
+  .manicure-section,
+  .men-haircut-section,
+  .men-hairspa-content,
+  .men-hairstyle-section,
+  .men-facial-section,
+  .beard-trim-section
+) {
+  background:
+    linear-gradient(135deg, rgba(207, 156, 77, 0.1), rgba(18, 18, 18, 0.92)),
+    #121212 !important;
+}
+
+body.dark-mode :where(.page-title, .section-title, .beard-title, .men-title, .content-title),
+body.dark-mode :where(
+  .color-card,
+  .hairstyle-card,
+  .spa-card,
+  .men-card,
+  .haircolor-card,
+  .men-style-card
+) h3,
+body.dark-mode :where(.color-box, .style-box, .men-content-box, .spa-content-box, .manicure-box, .spa-box) h2,
+body.dark-mode :where(.color-box, .style-box, .men-content-box, .spa-content-box, .manicure-box, .spa-box) h3,
+body.dark-mode :where(.facial-content h2, .men-facial-content h2, .beard-text h2) {
+  color: #fff !important;
+}
+
+body.dark-mode :where(
+  .color-card,
+  .hairstyle-card,
+  .spa-card,
+  .men-card,
+  .haircolor-card,
+  .men-style-card,
+  .color-box,
+  .style-box,
+  .men-content-box,
+  .spa-content-box,
+  .manicure-box,
+  .spa-box,
+  .hairstyle-visual,
+  .facial-box,
+  .men-facial-box,
+  .beard-wrapper
+) {
+  border-color: rgba(255, 255, 255, 0.11) !important;
+  background: #1e1e1e !important;
+  box-shadow: 0 18px 45px rgba(0, 0, 0, 0.24) !important;
+}
+
+body.dark-mode :where(.page-subtitle, .hairstyle-section > p, .men-subtitle),
+body.dark-mode :where(
+  .color-card,
+  .hairstyle-card,
+  .spa-card,
+  .men-card,
+  .haircolor-card,
+  .men-style-card
+) p,
+body.dark-mode :where(.color-box, .style-box, .men-content-box, .spa-content-box, .manicure-box, .spa-box) p,
+body.dark-mode :where(.color-box, .style-box, .men-content-box, .spa-content-box, .manicure-box, .spa-box) li,
+body.dark-mode :where(.facial-content p, .men-facial-content p, .beard-text p, .beard-text li) {
+  color: #d3cbc2 !important;
+}
+
+body.dark-mode .beard-subtitle,
+body.dark-mode .beard-trim-section .beard-text h3 {
+  color: #fff !important;
+}
+
+.contact-map .section-title {
+  color: #222 !important;
+}
+
+body.dark-mode .contact-map .section-title {
+  color: #fff !important;
+}
+
+@media (max-width: 1024px) {
+  :where(
+    .color-grid,
+    .hairstyle-grid,
+    .men-haircut-grid,
+    .haircolor-grid,
+    .men-style-grid,
+    .spa-grid
+  ) {
+    grid-template-columns: repeat(2, minmax(0, 1fr)) !important;
+  }
+
+  :where(.haircolor-info, .hairstyle-info),
+  .men-content-container,
+  .haircolor-content,
+  .hairspa-content-grid {
+    grid-template-columns: 1fr !important;
+  }
+
+  :where(.haircolor-info, .hairstyle-info) > :where(.color-box, .style-box):first-child {
+    grid-row: auto !important;
+  }
+
+  .hairstyle-visual img {
+    position: static !important;
+    height: 240px !important;
+    min-height: 240px !important;
+  }
+}
+
+@media (max-width: 720px) {
+  :where(
+    .haircolor-gallery,
+    .haircolor-section,
+    .hairstyle-section,
+    .facial-section,
+    .manicure-section,
+    .men-haircut-section,
+    .men-hairspa-content,
+    .men-hairstyle-section,
+    .men-facial-section,
+    .beard-trim-section
+  ) {
+    margin-top: 20px !important;
+    padding: 44px 18px 38px !important;
+  }
+
+  :where(
+    .color-grid,
+    .hairstyle-grid,
+    .men-haircut-grid,
+    .haircolor-grid,
+    .men-style-grid,
+    .spa-grid
+  ) {
+    grid-template-columns: 1fr !important;
+    gap: 18px !important;
+  }
+
+  :where(
+    .color-card,
+    .hairstyle-card,
+    .spa-card,
+    .men-card,
+    .haircolor-card,
+    .men-style-card
+  ) img {
+    height: 220px !important;
+  }
+
+  .manicure-container {
+    grid-template-columns: 1fr !important;
+  }
+
+  :where(.facial-box, .men-facial-box, .facial-box.reverse, .men-facial-box.reverse, .beard-wrapper) {
+    grid-template-columns: 1fr !important;
+    padding: 18px !important;
+    text-align: left !important;
+  }
+
+  :where(.facial-box.reverse, .men-facial-box.reverse) :where(.facial-img, .men-facial-img) {
+    order: 0 !important;
+  }
+
+  :where(.facial-img img, .men-facial-img img, .beard-img img) {
+    height: 220px !important;
+  }
+
+  .beard-subtitle {
+    margin-bottom: 24px !important;
+  }
+
+  .beard-trim-section .beard-wrapper {
+    gap: 20px !important;
+  }
+
+  .beard-trim-section .beard-img,
+  .beard-trim-section .beard-img img {
+    min-height: 240px !important;
+  }
+}
+
+/* ===== RESPONSIVE ALIGNMENT PASS ===== */
+@media (min-width: 821px) and (max-width: 1180px) {
+  :root {
+    --trimly-gutter: 22px;
+  }
+
+  .navbar .nav-container {
+    justify-content: center !important;
+    gap: 14px 18px !important;
+  }
+
+  .navbar .logo {
+    width: auto !important;
+    justify-content: flex-start !important;
+  }
+
+  .navbar .main-nav,
+  .navbar .nav-links {
+    flex: 1 1 430px !important;
+    width: auto !important;
+    order: 0 !important;
+  }
+
+  .navbar .nav-actions,
+  .navbar .nav-container > .theme-toggle {
+    margin-left: 0 !important;
+    order: 0 !important;
+  }
+
+  .navbar .nav-links {
+    gap: 10px 18px !important;
+  }
+
+  .navbar .nav-links a {
+    font-size: 15px !important;
+  }
+
+  .pricing-hero,
+  .services-hero {
+    min-height: 560px !important;
+    height: auto !important;
+  }
+
+  .about-hero {
+    height: 360px !important;
+    margin-top: 0 !important;
+  }
+
+  :where(
+    .experience,
+    .services,
+    .appointment,
+    .about-section,
+    .about-gallery,
+    .mission-section,
+    .clients-choice,
+    .contact-section,
+    .contact-map,
+    .services-content,
+    .women-salon,
+    .men-salon,
+    .reviews,
+    .pricing-section,
+    .add-on-pricing,
+    .haircut-section,
+    .haircolor-gallery,
+    .haircolor-section,
+    .hairstyle-section,
+    .facial-section,
+    .manicure-section,
+    .men-haircut-section,
+    .men-hairspa-content,
+    .men-hairstyle-section,
+    .men-facial-section,
+    .beard-trim-section
+  ) {
+    padding-left: var(--trimly-gutter) !important;
+    padding-right: var(--trimly-gutter) !important;
+  }
+
+  :where(
+    .haircut-grid,
+    .color-grid,
+    .hairstyle-grid,
+    .men-haircut-grid,
+    .haircolor-grid,
+    .men-style-grid,
+    .spa-grid,
+    .women-services-grid,
+    .men-services-grid,
+    .add-on-container,
+    .team-grid,
+    .reviews-container
+  ) {
+    display: grid !important;
+    grid-template-columns: repeat(2, minmax(0, 1fr)) !important;
+    gap: 22px !important;
+  }
+}
+
+@media (max-width: 1180px) {
+  .navbar .nav-container {
+    justify-content: space-between !important;
+    align-items: center !important;
+  }
+
+  .navbar .logo {
+    width: auto !important;
+    order: 0 !important;
+  }
+
+  .navbar .nav-menu-toggle {
+    display: inline-flex !important;
+    order: 1 !important;
+  }
+
+  .navbar .main-nav,
+  .navbar .nav-links {
+    flex: 0 1 100% !important;
+    width: 100% !important;
+    order: 3 !important;
+  }
+
+  .navbar .nav-links {
+    display: none !important;
+    flex-direction: column !important;
+    align-items: stretch !important;
+    justify-content: flex-start !important;
+    gap: 6px !important;
+    margin: 0 !important;
+    padding: 12px !important;
+    border: 1px solid rgba(120, 94, 61, 0.14) !important;
+    border-radius: 8px !important;
+    background: rgba(255, 250, 243, 0.98) !important;
+    box-shadow: 0 18px 36px rgba(45, 31, 17, 0.12) !important;
+  }
+
+  .navbar.menu-open .nav-links {
+    display: flex !important;
+  }
+
+  .navbar .nav-links a {
+    width: 100% !important;
+    justify-content: flex-start !important;
+    padding: 10px 12px !important;
+    border-radius: 6px !important;
+  }
+
+  .navbar .nav-links a:hover,
+  .navbar .nav-links a.active {
+    background: rgba(196, 139, 71, 0.12) !important;
+  }
+
+  .navbar .nav-actions {
+    display: none !important;
+    width: 100% !important;
+    order: 4 !important;
+    margin: 0 !important;
+    padding: 12px !important;
+    justify-content: flex-start !important;
+    align-items: center !important;
+    flex-wrap: wrap !important;
+    gap: 10px !important;
+    border: 1px solid rgba(120, 94, 61, 0.14) !important;
+    border-radius: 8px !important;
+    background: rgba(255, 250, 243, 0.98) !important;
+    box-shadow: 0 18px 36px rgba(45, 31, 17, 0.12) !important;
+  }
+
+  .navbar.menu-open .nav-actions {
+    display: flex !important;
+  }
+
+  .navbar .nav-container > .theme-toggle,
+  .navbar .nav-container > .rtl-toggle,
+  .navbar .nav-container > .book-btn,
+  .navbar .nav-container > .nav-appointment-btn {
+    display: none !important;
+    order: 4 !important;
+    margin: 0 !important;
+  }
+
+  .navbar.menu-open .nav-container > .theme-toggle,
+  .navbar.menu-open .nav-container > .rtl-toggle,
+  .navbar.menu-open .nav-container > .book-btn,
+  .navbar.menu-open .nav-container > .nav-appointment-btn {
+    display: inline-flex !important;
+  }
+
+  .navbar.menu-open .nav-container > .theme-toggle,
+  .navbar.menu-open .nav-container > .rtl-toggle {
+    align-self: flex-start !important;
+  }
+
+  .navbar.menu-open .nav-container > .theme-toggle {
+    margin-left: 0 !important;
+  }
+
+  .navbar.menu-open .nav-container > .book-btn,
+  .navbar.menu-open .nav-container > .nav-appointment-btn {
+    width: auto !important;
+    min-height: 42px !important;
+  }
+
+  body.dark-mode .navbar .nav-links {
+    background: rgba(17, 17, 17, 0.98) !important;
+    border-color: rgba(255, 255, 255, 0.12) !important;
+  }
+
+  body.dark-mode .navbar .nav-actions {
+    background: rgba(17, 17, 17, 0.98) !important;
+    border-color: rgba(255, 255, 255, 0.12) !important;
+  }
+}
+
+@media (max-width: 820px) {
+  :root {
+    --trimly-gutter: 20px;
+  }
+
+  .navbar {
+    padding: 10px var(--trimly-gutter) !important;
+  }
+
+  .navbar .nav-container {
+    justify-content: space-between !important;
+    gap: 10px 12px !important;
+  }
+
+  .navbar .logo {
+    width: auto !important;
+    justify-content: flex-start !important;
+    order: 0 !important;
+  }
+
+  .navbar .logo img {
+    width: 82px !important;
+  }
+
+  .navbar .nav-menu-toggle {
+    display: inline-flex !important;
+    order: 1 !important;
+  }
+
+  .navbar .main-nav,
+  .navbar .nav-links {
+    flex: 0 1 100% !important;
+    width: 100% !important;
+    order: 3 !important;
+  }
+
+  .navbar .nav-links {
+    display: none !important;
+    flex-direction: column !important;
+    align-items: stretch !important;
+    justify-content: flex-start !important;
+    gap: 8px 14px !important;
+    margin: 0 !important;
+    padding: 12px !important;
+    border: 1px solid rgba(120, 94, 61, 0.14) !important;
+    border-radius: 8px !important;
+    background: rgba(255, 250, 243, 0.98) !important;
+    box-shadow: 0 18px 36px rgba(45, 31, 17, 0.12) !important;
+  }
+
+  .navbar.menu-open .nav-links {
+    display: flex !important;
+  }
+
+  .navbar .nav-links a {
+    width: 100% !important;
+    justify-content: flex-start !important;
+    font-size: 14px !important;
+    padding: 10px 12px !important;
+    border-radius: 6px !important;
+  }
+
+  .navbar .nav-links a:hover,
+  .navbar .nav-links a.active {
+    background: rgba(196, 139, 71, 0.12) !important;
+  }
+
+  .navbar .nav-actions,
+  .navbar .nav-container > .theme-toggle {
+    margin-left: 0 !important;
+    justify-content: flex-start !important;
+    order: 4 !important;
+  }
+
+  .navbar .book-btn,
+  .navbar .nav-appointment-btn {
+    width: auto !important;
+    min-height: 40px !important;
+    padding: 9px 16px !important;
+    font-size: 14px !important;
+  }
+
+  .top-offer {
+    padding: 9px 14px !important;
+    font-size: 0.78rem !important;
+    line-height: 1.4 !important;
+  }
+
+  .pricing-hero,
+  .services-hero {
+    min-height: 430px !important;
+    height: auto !important;
+    padding: 92px var(--trimly-gutter) 58px !important;
+  }
+
+  .about-hero {
+    height: 300px !important;
+    margin-top: 0 !important;
+  }
+
+  :where(.hero-content h1, .pricing-overlay h1, .about-overlay h1, .overlay h1) {
+    font-size: clamp(30px, 8vw, 46px) !important;
+    line-height: 1.08 !important;
+  }
+
+  :where(.hero-content p, .pricing-overlay p, .about-overlay p, .overlay p) {
+    font-size: clamp(14px, 3vw, 18px) !important;
+    line-height: 1.55 !important;
+  }
+
+  :where(
+    .contact-container,
+    .mission-container,
+    .clients-container,
+    .appointment-container,
+    .price-container,
+    .haircolor-info,
+    .hairstyle-info,
+    .haircolor-content,
+    .hairspa-content-grid,
+    .men-content-container,
+    .manicure-container
+  ) {
+    grid-template-columns: 1fr !important;
+    flex-direction: column !important;
+    align-items: stretch !important;
+  }
+
+  :where(
+    .haircut-grid,
+    .color-grid,
+    .hairstyle-grid,
+    .men-haircut-grid,
+    .haircolor-grid,
+    .men-style-grid,
+    .spa-grid,
+    .women-services-grid,
+    .men-services-grid,
+    .add-on-container,
+    .team-grid,
+    .reviews-container
+  ) {
+    display: grid !important;
+    width: 100% !important;
+    grid-template-columns: repeat(2, minmax(0, 1fr)) !important;
+    gap: 18px !important;
+  }
+
+  :where(.service-cards) {
+    display: grid !important;
+    grid-template-columns: repeat(2, minmax(0, 1fr)) !important;
+    gap: 18px !important;
+  }
+
+  :where(.card, .service-card, .haircut-card, .color-card, .hairstyle-card, .spa-card, .men-card, .haircolor-card, .men-style-card) {
+    width: 100% !important;
+    margin-left: 0 !important;
+    margin-right: 0 !important;
+  }
+
+  :where(.facial-box, .men-facial-box, .facial-box.reverse, .men-facial-box.reverse, .beard-wrapper) {
+    grid-template-columns: 1fr !important;
+  }
+
+  :where(.facial-box.reverse, .men-facial-box.reverse) :where(.facial-img, .men-facial-img) {
+    order: 0 !important;
+  }
+
+  .map-container iframe {
+    height: 340px !important;
+  }
+
+  .footer {
+    text-align: left !important;
+  }
+
+  .footer .footer-grid {
+    grid-template-columns: 1fr !important;
+    gap: 28px !important;
+    justify-items: start !important;
+  }
+
+  .footer .footer-left,
+  .footer .footer-nav,
+  .footer .footer-contact,
+  .footer .footer-social {
+    width: min(100%, 420px) !important;
+    margin: 0 !important;
+    text-align: left !important;
+  }
+
+  .footer .footer-logo {
+    margin: 0 0 16px !important;
+  }
+
+  .footer .newsletter {
+    width: 100% !important;
+    max-width: 360px !important;
+    margin: 0 !important;
+    justify-content: flex-start !important;
+  }
+
+  .footer .newsletter input,
+  .footer .newsletter button {
+    min-height: 44px !important;
+    height: 44px !important;
+    border-radius: 0 !important;
+    text-align: center !important;
+  }
+
+  .footer .newsletter input {
+    flex: 1 1 220px !important;
+    padding: 0 14px !important;
+  }
+
+  .footer .newsletter button {
+    flex: 0 0 auto !important;
+    padding: 0 22px !important;
+  }
+
+  .footer .footer-nav ul {
+    justify-items: start !important;
+  }
+
+  .footer .footer-contact p,
+  .footer .social-icons {
+    justify-content: flex-start !important;
+  }
+
+  #scrollTop {
+    right: 18px !important;
+    bottom: 20px !important;
+    width: 46px !important;
+    height: 46px !important;
+  }
+}
+
+@media (max-width: 560px) {
+  :root {
+    --trimly-gutter: 16px;
+  }
+
+  .navbar .nav-links {
+    gap: 6px 10px !important;
+  }
+
+  .navbar .nav-links a {
+    font-size: 13px !important;
+  }
+
+  .navbar .nav-actions {
+    width: 100% !important;
+    flex-wrap: wrap !important;
+  }
+
+  .navbar .book-btn,
+  .navbar .nav-appointment-btn {
+    width: 100% !important;
+  }
+
+  :where(
+    .haircut-section,
+    .haircolor-gallery,
+    .haircolor-section,
+    .hairstyle-section,
+    .facial-section,
+    .manicure-section,
+    .men-haircut-section,
+    .men-hairspa-content,
+    .men-hairstyle-section,
+    .men-facial-section,
+    .beard-trim-section,
+    .contact-section,
+    .contact-map,
+    .services-content,
+    .women-salon,
+    .men-salon,
+    .add-on-pricing,
+    .price-menu,
+    .combo-offer
+  ) {
+    margin-top: 18px !important;
+    padding: 40px var(--trimly-gutter) 34px !important;
+  }
+
+  :where(.page-title, .section-title, .beard-title, .men-title, .content-title) {
+    font-size: clamp(28px, 9vw, 38px) !important;
+  }
+
+  :where(.page-subtitle, .section-subtitle, .beard-subtitle, .men-subtitle) {
+    font-size: 14px !important;
+    line-height: 1.65 !important;
+    margin-bottom: 24px !important;
+  }
+
+  :where(
+    .haircut-grid,
+    .color-grid,
+    .hairstyle-grid,
+    .men-haircut-grid,
+    .haircolor-grid,
+    .men-style-grid,
+    .spa-grid,
+    .women-services-grid,
+    .men-services-grid,
+    .add-on-container,
+    .service-cards,
+    .team-grid,
+    .reviews-container
+  ) {
+    display: grid !important;
+    grid-template-columns: 1fr !important;
+    gap: 16px !important;
+  }
+
+  :where(
+    .color-card,
+    .hairstyle-card,
+    .spa-card,
+    .men-card,
+    .haircolor-card,
+    .men-style-card,
+    .haircut-card,
+    .service-card
+  ) img {
+    height: 210px !important;
+  }
+
+  :where(.color-box, .style-box, .men-content-box, .spa-content-box, .manicure-box, .spa-box, .facial-box, .men-facial-box, .beard-wrapper) {
+    padding: 18px !important;
+  }
+
+  :where(.facial-img img, .men-facial-img img, .beard-img img) {
+    height: 220px !important;
+    min-height: 220px !important;
+  }
+
+  .footer {
+    padding: 46px var(--trimly-gutter) 0 !important;
+  }
+
+  .footer .newsletter input,
+  .footer .newsletter button {
+    width: 100% !important;
+  }
+
+  .footer .newsletter input,
+  .footer .newsletter button {
+    min-height: 42px !important;
+    height: 42px !important;
+    padding-top: 0 !important;
+    padding-bottom: 0 !important;
+  }
+
+  .map-container iframe {
+    height: 280px !important;
+  }
+}
+
+@media (max-width: 820px) {
+  .footer .newsletter input[type="email"],
+  .footer .newsletter input,
+  .footer .footer-left .newsletter input,
+  footer .newsletter input {
+    display: block !important;
+    min-height: 42px !important;
+    height: 42px !important;
+    max-height: 42px !important;
+    padding: 0 14px !important;
+    line-height: 42px !important;
+  }
+
+  .footer,
+  .footer .footer-left,
+  .footer .footer-nav,
+  .footer .footer-contact,
+  .footer .footer-social {
+    text-align: left !important;
+  }
+
+  .footer .footer-grid {
+    justify-items: start !important;
+  }
+
+  .footer .footer-logo {
+    margin-left: 0 !important;
+    margin-right: 0 !important;
+  }
+
+  .footer .footer-contact p,
+  .footer .social-icons {
+    justify-content: flex-start !important;
+  }
+}
+
+@media (max-width: 1180px) {
+  .footer .newsletter {
+    align-items: stretch !important;
+    width: min(100%, 300px) !important;
+    max-width: 300px !important;
+  }
+
+  .footer .newsletter input[type="email"],
+  .footer .newsletter input,
+  .footer .footer-left .newsletter input,
+  footer .newsletter input {
+    box-sizing: border-box !important;
+    min-height: 42px !important;
+    height: 42px !important;
+    max-height: 42px !important;
+    padding: 0 14px !important;
+    line-height: 42px !important;
+    resize: none !important;
+  }
+
+  .footer .newsletter button,
+  footer .newsletter button {
+    min-height: 42px !important;
+    height: 42px !important;
+    max-height: 42px !important;
+    padding: 0 18px !important;
+    line-height: 42px !important;
+  }
+}
+
+@media (max-width: 1180px) {
+  .navbar .nav-container {
+    display: grid !important;
+    grid-template-columns: auto 1fr auto !important;
+    align-items: center !important;
+    gap: 10px 14px !important;
+  }
+
+  .navbar .logo {
+    grid-column: 1 !important;
+    grid-row: 1 !important;
+    width: auto !important;
+    justify-self: start !important;
+  }
+
+  .navbar .nav-menu-toggle {
+    grid-column: 3 !important;
+    grid-row: 1 !important;
+    justify-self: end !important;
+  }
+
+  .navbar .main-nav,
+  .navbar .nav-links,
+  .navbar .nav-actions {
+    grid-column: 1 / -1 !important;
+  }
+
+  .navbar .main-nav,
+  .navbar .nav-links {
+    grid-row: 2 !important;
+  }
+
+  .navbar .nav-actions {
+    grid-row: 3 !important;
+  }
+
+  .navbar .nav-container > .theme-toggle,
+  .navbar .nav-container > .rtl-toggle,
+  .navbar .nav-container > .book-btn,
+  .navbar .nav-container > .nav-appointment-btn {
+    grid-row: 3 !important;
+  }
+}
+
+@media (min-width: 561px) and (max-width: 1180px) {
+  :where(
+    .team-grid,
+    .haircut-grid,
+    .color-grid,
+    .hairstyle-grid,
+    .men-haircut-grid,
+    .haircolor-grid,
+    .men-style-grid,
+    .spa-grid,
+    .women-services-grid,
+    .men-services-grid,
+    .add-on-container,
+    .service-cards,
+    .reviews-container
+  ) > :last-child:nth-child(odd) {
+    grid-column: 1 / -1 !important;
+    justify-self: center !important;
+    width: min(100%, 360px) !important;
+  }
+}
+

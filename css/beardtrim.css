@@ -1,4 +1,4 @@
-
+﻿
 * {
     margin: 0;
     padding: 0;
@@ -261,22 +261,6 @@ padding-left:15px;
     background: #d89821;
     transform: translateY(-3px);
 }
-
-.swap-btn{
-background:none;
-border:none;
-font-size:22px;
-cursor:pointer;
-color:#f1b74a;
-padding:5px;
-}
-/* RTL MODE */
-
-body.rtl{
-    direction: rtl;
-    text-align: right;
-}
-
 .footer {
     background: #222;
     color: #ddd;

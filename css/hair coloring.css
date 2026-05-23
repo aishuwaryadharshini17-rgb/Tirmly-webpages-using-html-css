@@ -1,4 +1,4 @@
-* {
+﻿* {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
@@ -487,3 +487,196 @@ color:#cccccc;
     color: #aaa;
 }
 
+
+@media (max-width:1024px){
+
+/* ===== NAVBAR ===== */
+.navbar{
+    padding:12px 5%;
+}
+
+.nav-container{
+    justify-content:space-between;
+    width:100%;
+}
+
+.nav-links{
+    margin-left:0;
+    gap:20px;
+}
+
+.nav-right{
+    gap:12px;
+}
+
+.book-btn{
+    margin-left:0;
+    padding:8px 16px;
+    font-size:13px;
+}
+
+/* ===== HAIR COLOR GRID ===== */
+.color-grid{
+    grid-template-columns:repeat(2,1fr);
+    gap:20px;
+}
+
+.color-card img{
+    height:200px;
+}
+
+/* ===== HAIR INFO ===== */
+.haircolor-info{
+    width:90%;
+    gap:25px;
+}
+
+.color-box{
+    padding:25px;
+}
+
+.color-box h2{
+    font-size:24px;
+}
+
+.color-box h3{
+    font-size:20px;
+}
+
+/* ===== FOOTER ===== */
+.footer{
+    padding:100px 5% 20px;
+}
+
+.footer-grid{
+    grid-template-columns:repeat(2,1fr);
+    gap:25px;
+}
+
+/* REMOVE OFFSETS */
+.footer-logo,
+.footer-nav,
+.footer-contact{
+    margin-left:0;
+    margin-top:0;
+}
+
+/* NEWSLETTER STACK */
+.newsletter{
+    flex-direction:column;
+    gap:10px;
+}
+
+.newsletter input,
+.newsletter button{
+    width:100%;
+}
+}
+
+@media (max-width:768px){
+
+/* ===== NAVBAR ===== */
+.navbar{
+    flex-direction:column;
+    gap:10px;
+}
+
+.nav-container{
+    flex-direction:column;
+}
+
+.nav-links{
+    flex-wrap:wrap;
+    justify-content:center;
+    gap:15px;
+}
+
+.nav-right{
+    flex-direction:column;
+    gap:10px;
+}
+
+.book-btn{
+    width:100%;
+    text-align:center;
+}
+
+/* ===== TITLE ===== */
+.section-title{
+    font-size:26px;
+}
+
+/* ===== GRID ===== */
+.color-grid{
+    grid-template-columns:1fr;
+}
+
+/* ===== CARD ===== */
+.color-card{
+    padding:12px;
+}
+
+.color-card img{
+    height:180px;
+}
+
+/* ===== INFO ===== */
+.haircolor-info{
+    width:95%;
+}
+
+.color-box{
+    padding:20px;
+}
+
+/* ===== FOOTER ===== */
+.footer{
+    text-align:center;
+    padding:80px 20px 20px;
+}
+
+.footer-grid{
+    grid-template-columns:1fr;
+    gap:30px;
+}
+
+.footer-contact p{
+    justify-content:center;
+}
+
+.social-icons{
+    justify-content:center;
+}
+}
+
+@media (max-width:480px){
+
+.section-title{
+    font-size:22px;
+}
+
+.color-card h3{
+    font-size:16px;
+}
+
+.color-card p{
+    font-size:13px;
+}
+
+.color-box h2{
+    font-size:20px;
+}
+
+.color-box h3{
+    font-size:18px;
+}
+
+.color-box p,
+.color-box li{
+    font-size:14px;
+}
+
+.footer-bottom{
+    font-size:12px;
+}
+}

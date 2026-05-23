@@ -1,4 +1,4 @@
-
+﻿
 body {
     background: #fff;
     color: #222;
@@ -75,15 +75,6 @@ p {
     align-items: center;
     gap: 12px;
 }
-
-#swap-btn,
-#theme-toggle {
-    border: none;
-    background: none;
-    font-size: 22px;
-    cursor: pointer;
-}
-
 .nav-appointment-btn {
     background: #c48b47;
     color: #5a4a00;
@@ -101,19 +92,6 @@ p {
     background: #a06d34;
     color: #fff;
 }
-
-html[dir="rtl"] .nav-container {
-    flex-direction: row-reverse;
-}
-
-html[dir="rtl"] .nav-links {
-    flex-direction: row-reverse;
-}
-
-html[dir="rtl"] .nav-actions {
-    flex-direction: row-reverse;
-}
-
 @media (max-width: 992px) {
     .nav-container {
         flex-wrap: wrap;
@@ -806,7 +784,52 @@ body.dark-mode .footer-bottom {
     color: #999;
 }
 
+/* =========================
+   MAP SECTION
+========================= */
+.contact-map {
+    background: #f8f8f8;
+    padding: 80px 20px;
+    text-align: center;
+}
 
+/* TITLE */
+.contact-map .section-title {
+    color: #222;
+    font-size: 36px;
+    margin-bottom: 40px;
+}
+
+body.dark-mode .contact-map {
+    background: #0a0a0a;
+}
+
+body.dark-mode .contact-map .section-title {
+    color: #fffcfc;
+}
+
+/* MAP BOX */
+.map-container {
+    max-width: 1100px;
+    margin: auto;
+    border-radius: 15px;
+    overflow: hidden;
+    box-shadow: 0 0 20px rgba(255,140,0,0.3);
+}
+
+/* MAP */
+.map-container iframe {
+    width: 100%;
+    height: 450px;
+    border: 0;
+}
+
+/* RESPONSIVE */
+@media (max-width: 768px) {
+    .map-container iframe {
+        height: 300px;
+    }
+}
 /* =========================
    RESPONSIVE - 1024px
 ========================= */

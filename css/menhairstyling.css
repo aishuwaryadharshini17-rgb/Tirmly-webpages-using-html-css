@@ -1,4 +1,4 @@
-* {
+﻿* {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
@@ -455,39 +455,6 @@ body.dark-mode .men-style-card h3{
 body.dark-mode .men-style-card p{
     color:#ccc;
 }
-
-/* RTL MODE */
-body.rtl-mode{
-    direction:rtl;
-    text-align:right;
-}
-
-body.rtl-mode .navbar{
-    direction:rtl;
-}
-
-body.rtl-mode .nav-container{
-    flex-direction:row-reverse;
-}
-
-body.rtl-mode .nav-right{
-    flex-direction:row-reverse;
-}
-
-body.rtl-mode .nav-links{
-    margin-left:0;
-    margin-right:80px;
-}
-
-body.rtl-mode .book-btn{
-    margin-left:0;
-    margin-right:300px;
-}
-
-body.rtl-mode .men-style-card{
-    text-align:right;
-}
-
 /* REVEAL ANIMATION */
 .reveal-up,
 .reveal-left,

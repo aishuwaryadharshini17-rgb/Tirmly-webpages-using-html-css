@@ -1,4 +1,4 @@
-* {
+﻿* {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
@@ -446,44 +446,6 @@ body.dark-mode .spa-content-box p,
 body.dark-mode .spa-content-box ul{
     color:#fff;
 }
-
-/* RTL MODE */
-body.rtl-mode{
-    direction:rtl;
-    text-align:right;
-}
-
-body.rtl-mode .navbar{
-    direction:rtl;
-}
-
-body.rtl-mode .nav-container{
-    flex-direction:row-reverse;
-}
-
-body.rtl-mode .nav-right{
-    flex-direction:row-reverse;
-}
-
-body.rtl-mode .nav-links{
-    margin-left:0;
-    margin-right:80px;
-}
-
-body.rtl-mode .book-btn{
-    margin-left:0;
-    margin-right:300px;
-}
-
-body.rtl-mode .spa-content-box{
-    text-align:right;
-}
-
-body.rtl-mode .spa-content-box ul{
-    padding-left:0;
-    padding-right:20px;
-}
-
 /* REVEAL ANIMATION */
 .reveal-up,
 .reveal-left,
@@ -584,4 +546,189 @@ body.rtl-mode .spa-content-box ul{
 .reveal-zoom.active {
     opacity: 1;
     transform: translate(0, 0) scale(1);
+}
+/* ===============================
+TABLET (max-width:1024px)
+=============================== */
+@media (max-width:1024px){
+
+/* NAVBAR */
+.navbar{
+    padding:12px 4%;
+}
+
+.nav-links{
+    margin-left:0;              /* FIX */
+    gap:20px;
+    flex-wrap:wrap;
+}
+
+.nav-right{
+    gap:15px;
+}
+
+.book-btn{
+    margin-left:0;              /* FIX */
+    padding:10px 16px;
+    font-size:14px;
+}
+
+/* CONTENT */
+.men-hairspa-content{
+    padding:60px 5%;
+}
+
+.content-title{
+    font-size:30px;
+}
+
+/* GRID → 2 COLUMN */
+.hairspa-content-grid{
+    grid-template-columns:1fr 1fr;
+    gap:20px;
+}
+
+.spa-content-box{
+    padding:25px;
+}
+
+/* FOOTER */
+.footer{
+    padding:100px 5% 20px;
+}
+
+.footer-grid{
+    grid-template-columns:1fr 1fr;
+    gap:30px;
+}
+
+/* remove negative spacing */
+.footer-logo,
+.footer-nav,
+.footer-contact{
+    margin-left:0;
+    margin-top:0;
+}
+
+.newsletter{
+    flex-direction:column;
+    gap:10px;
+}
+
+.newsletter input,
+.newsletter button{
+    width:100%;
+}
+}
+
+
+/* ===============================
+MOBILE (max-width:768px)
+=============================== */
+@media (max-width:768px){
+
+/* NAVBAR */
+.navbar{
+    flex-direction:column;
+    align-items:center;
+    gap:10px;
+}
+
+.nav-container{
+    flex-direction:column;
+    align-items:center;
+    width:100%;
+}
+
+.nav-links{
+    margin-left:0;
+    justify-content:center;
+    flex-wrap:wrap;
+    gap:12px;
+}
+
+.nav-right{
+    flex-direction:column;
+    align-items:center;
+    gap:10px;
+    width:100%;
+}
+
+.book-btn{
+    margin-left:0;
+    width:100%;
+    max-width:250px;
+    text-align:center;
+}
+
+/* CONTENT */
+.content-title{
+    font-size:26px;
+}
+
+.men-hairspa-content{
+    padding:50px 5%;
+}
+
+/* GRID → 1 COLUMN */
+.hairspa-content-grid{
+    grid-template-columns:1fr;
+    gap:20px;
+}
+
+.spa-content-box{
+    text-align:center;
+    padding:20px;
+}
+
+.spa-content-box ul{
+    padding-left:15px;
+}
+
+/* FOOTER */
+.footer{
+    text-align:center;
+    padding:80px 20px 20px;
+}
+
+.footer-grid{
+    grid-template-columns:1fr;
+    gap:25px;
+}
+
+.footer-contact p{
+    justify-content:center;
+}
+
+.social-icons{
+    justify-content:center;
+}
+
+.newsletter{
+    flex-direction:column;
+}
+
+.newsletter input,
+.newsletter button{
+    width:100%;
+}
+}
+
+
+/* ===============================
+SMALL MOBILE (max-width:480px)
+=============================== */
+@media (max-width:480px){
+
+.content-title{
+    font-size:22px;
+}
+
+.spa-content-box{
+    padding:18px;
+}
+
+.logo img{
+    width:100px;
+}
 }
